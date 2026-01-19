@@ -1,5 +1,4 @@
 ---
-icon: cloud
 layout:
   width: default
   title:
@@ -16,9 +15,6 @@ layout:
     visible: true
 ---
 
-# Cloud TTPs
+# Large Mail Attachments
 
-## Mitre ATT\&CK Cloud Matrix
-
-{% embed url="https://attack.mitre.org/matrices/enterprise/cloud/" %}
-
+A user sends internal documents from SharePoint via email to external recipients (Exfiltration over SMTP).

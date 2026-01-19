@@ -1,5 +1,4 @@
 ---
-icon: cloud
 layout:
   width: default
   title:
@@ -16,9 +15,6 @@ layout:
     visible: true
 ---
 
-# Cloud TTPs
+# Mass Download
 
-## Mitre ATT\&CK Cloud Matrix
-
-{% embed url="https://attack.mitre.org/matrices/enterprise/cloud/" %}
-
+A high volume of downloads from a SharePoint site or OneDrive by a user on an unmanaged/personal device, or a potentially "risky" device.

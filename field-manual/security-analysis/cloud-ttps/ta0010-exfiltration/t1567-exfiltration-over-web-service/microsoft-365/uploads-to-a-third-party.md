@@ -1,5 +1,4 @@
 ---
-icon: cloud
 layout:
   width: default
   title:
@@ -16,9 +15,6 @@ layout:
     visible: true
 ---
 
-# Cloud TTPs
+# Uploads to a Third-party
 
-## Mitre ATT\&CK Cloud Matrix
-
-{% embed url="https://attack.mitre.org/matrices/enterprise/cloud/" %}
-
+High-volume egress traffic from a single user session to unsanctioned cloud storage providers (e.g., Mega.nz, Dropbox, WeTransfer) immediately following a data collection phase.

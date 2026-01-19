@@ -1,5 +1,4 @@
 ---
-icon: cloud
 layout:
   width: default
   title:
@@ -16,9 +15,6 @@ layout:
     visible: true
 ---
 
-# Cloud TTPs
+# OneDrive Personal Syncing
 
-## Mitre ATT\&CK Cloud Matrix
-
-{% embed url="https://attack.mitre.org/matrices/enterprise/cloud/" %}
-
+A user signs into their personal OneDrive account on a corporate-managed machine and begins syncing corporate data directly to their personal cloud.

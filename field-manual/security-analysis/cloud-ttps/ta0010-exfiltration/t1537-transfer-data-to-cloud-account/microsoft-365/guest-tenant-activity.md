@@ -1,5 +1,4 @@
 ---
-icon: cloud
 layout:
   width: default
   title:
@@ -16,9 +15,6 @@ layout:
     visible: true
 ---
 
-# Cloud TTPs
+# Guest Tenant Activity
 
-## Mitre ATT\&CK Cloud Matrix
-
-{% embed url="https://attack.mitre.org/matrices/enterprise/cloud/" %}
-
+A user account is "invited" as a guest to an external tenant, followed by the movement of files to that external workspace.

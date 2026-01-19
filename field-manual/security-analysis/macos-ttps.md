@@ -1,5 +1,5 @@
 ---
-icon: cloud
+icon: apple
 layout:
   width: default
   title:
@@ -16,9 +16,5 @@ layout:
     visible: true
 ---
 
-# Cloud TTPs
-
-## Mitre ATT\&CK Cloud Matrix
-
-{% embed url="https://attack.mitre.org/matrices/enterprise/cloud/" %}
+# MacOS TTPs
 

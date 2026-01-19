@@ -1,5 +1,4 @@
 ---
-icon: cloud
 layout:
   width: default
   title:
@@ -16,9 +15,6 @@ layout:
     visible: true
 ---
 
-# Cloud TTPs
+# Automated Flow Exports
 
-## Mitre ATT\&CK Cloud Matrix
-
-{% embed url="https://attack.mitre.org/matrices/enterprise/cloud/" %}
-
+A user creates a "Flow" that triggers on "File Created/Modified" in SharePoint and automatically copies that file to an external Google Drive or a different M365 tenant.
