@@ -1,5 +1,4 @@
 ---
-icon: binoculars
 layout:
   width: default
   title:
@@ -16,5 +15,5 @@ layout:
     visible: true
 ---
 
-# Security Analysis
+# Cloud TTPs
 

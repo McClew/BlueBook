@@ -2,7 +2,15 @@
 
 ## Field Manual
 
-* [Incident Response](README.md)
+* [Security Analysis](README.md)
+  * [Cloud TTPs](field-manual/security-analysis/cloud-ttps/README.md)
+    * [Initial Access](field-manual/security-analysis/cloud-ttps/initial-access/README.md)
+      * [Phishing](field-manual/security-analysis/cloud-ttps/initial-access/phishing.md)
+      * [Brute Forcing](field-manual/security-analysis/cloud-ttps/initial-access/brute-forcing.md)
+    * [Persistence](field-manual/security-analysis/cloud-ttps/persistence.md)
+    * [Privilege Abuse](field-manual/security-analysis/cloud-ttps/privilege-abuse.md)
+    * [Data Exfiltration](field-manual/security-analysis/cloud-ttps/data-exfiltration.md)
+* [Incident Response](<README (1).md>)
   * [Evidence Acquisition](field-manual/incident-response/evidence-acquisition.md)
   * [Log Analysis](field-manual/incident-response/log-analysis/README.md)
     * [Windows Event Logs](field-manual/incident-response/log-analysis/windows-event-logs/README.md)
@@ -44,4 +52,4 @@
 
 ## Playbooks
 
-* [Page 2](playbooks/page-2.md)
+* [\<PLACEHOLDER>](playbooks/less-than-placeholder-greater-than.md)
