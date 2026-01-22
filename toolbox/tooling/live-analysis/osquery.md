@@ -15,5 +15,13 @@ layout:
     visible: true
 ---
 
-# Dynamic File Analysis
+# osquery
+
+{% hint style="info" %}
+#### Download & Install
+
+[https://osquery.io/](https://osquery.io/)
+{% endhint %}
+
+***
 

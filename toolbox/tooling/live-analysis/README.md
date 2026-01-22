@@ -15,5 +15,5 @@ layout:
     visible: true
 ---
 
-# Static File Analysis
+# Live Analysis
 

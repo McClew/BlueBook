@@ -33,6 +33,4 @@ An attacker script creates a large number of sharing links in a very short burst
 
 Sharing links created for files within restricted SharePoint sites (e.g., Board of Directors, HR, M\&A Folders) that have no history of external collaboration.
 
-### Sharing by Privileged Service Accounts
-
 Service or non-human accounts suddenly generating user-facing sharing links.
