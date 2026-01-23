@@ -1,5 +1,5 @@
 ---
-icon: siren-on
+icon: binoculars
 layout:
   width: default
   title:
@@ -16,5 +16,5 @@ layout:
     visible: true
 ---
 
-# Incident Response
+# Security Analysis
 

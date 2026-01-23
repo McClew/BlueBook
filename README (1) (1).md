@@ -1,4 +1,5 @@
 ---
+icon: siren-on
 layout:
   width: default
   title:
@@ -15,5 +16,5 @@ layout:
     visible: true
 ---
 
-# Page 1
+# Incident Response
 
