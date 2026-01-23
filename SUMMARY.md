@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Page 1](README.md)
+* [Field Kit](README.md)
 
 ## Field Manual
 
