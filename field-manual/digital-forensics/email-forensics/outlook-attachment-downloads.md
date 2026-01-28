@@ -15,11 +15,13 @@ layout:
     visible: true
 ---
 
-# Analysing Email Attachments
+# Outlook Attachment Downloads
 
 When a user opens an attachment directly from Outlook, Windows creates a copy of that file in a hidden subdirectory. This is a critical location to investigate during phishing analysis or data exfiltration cases, as files may persist here even if the original email was deleted.
 
 `C:\Users[USER]\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\[RANDOM_STRING]`
+
+***
 
 ## Analysis Steps
 
@@ -55,6 +57,8 @@ If the folder is empty but the Registry key exists, it may indicate the threat a
 {% endstep %}
 {% endstepper %}
 
+***
+
 ## Locating the Path via Registry
 
 The random 8-character subdirectory name is stored in the Windows Registry. Instead of hunting through `INetCache`, we can query the following key to find the exact path for the current user:
@@ -69,6 +73,8 @@ Value Name: `OutlookSecureTempFolder`
 The \[VERSION] varies by Office install (e.g., `16.0` for Outlook 2016/2019/365, `15.0` for Outlook 2013).
 {% endhint %}
 
+***
+
 ## Quick Acquisition
 
 We can use this script to instantly identify the directory and list any files currently residing in this temp directory:
@@ -77,6 +83,8 @@ We can use this script to instantly identify the directory and list any files cu
 $Path = (Get-ItemProperty "HKCU:\Software\Microsoft\Office\*\Outlook\Security").OutlookSecureTempFolder
 Get-ChildItem -Path $Path -Recurse | Select-Object Name, Length, LastWriteTime
 ```
+
+***
 
 ## Forensic Significance
 
