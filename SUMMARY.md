@@ -49,7 +49,8 @@
   * [File System Internals](field-manual/digital-forensics/file-system-internals/README.md)
     * [New Technology File System (NTFS)](field-manual/digital-forensics/file-system-internals/new-technology-file-system-ntfs.md)
   * [Browser Forensics](field-manual/digital-forensics/browser-forensics.md)
-  * [Email Forensics](field-manual/digital-forensics/email-forensics.md)
+  * [Email Forensics](field-manual/digital-forensics/email-forensics/README.md)
+    * [Analysing Email Attachments](field-manual/digital-forensics/email-forensics/analysing-email-attachments.md)
   * [Forensic Report](field-manual/digital-forensics/forensic-report.md)
 * [Reverse Engineering](field-manual/reverse-engineering/README.md)
   * [x86 Assembly](field-manual/reverse-engineering/x86-assembly.md)
@@ -63,6 +64,13 @@
 ## Toolbox
 
 * [Tooling](toolbox/tooling/README.md)
+  * [Threat Intelligence](toolbox/tooling/threat-intelligence/README.md)
+    * [VirusTotal](toolbox/tooling/threat-intelligence/virustotal.md)
+    * [Filescan](toolbox/tooling/threat-intelligence/filescan.md)
+    * [Shodan](toolbox/tooling/threat-intelligence/shodan.md)
+    * [AbuseIPDB](toolbox/tooling/threat-intelligence/abuseipdb.md)
+    * [URLScan](toolbox/tooling/threat-intelligence/urlscan.md)
+    * [ANY.RUN](toolbox/tooling/threat-intelligence/any.run.md)
   * [Log Analysis](toolbox/tooling/log-analysis/README.md)
     * [Chainsaw](toolbox/tooling/log-analysis/chainsaw.md)
   * [Live Analysis](toolbox/tooling/live-analysis/README.md)
