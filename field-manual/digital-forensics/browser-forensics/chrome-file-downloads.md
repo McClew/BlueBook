@@ -70,7 +70,7 @@ To extract download data, we need to query two specific tables within the `Histo
 
 ## Forensic SQL Query
 
-If we are using a tool like `DB Browser for SQLite` or a PowerShell SQLite wrapper, use the following query to correlate the file name with its source:
+If we are using a tool like [db-browser-for-sqlite.md](../../../toolbox/tooling/utilities/db-browser-for-sqlite.md "mention") or a PowerShell SQLite wrapper, use the following query to correlate the file name with its source:
 
 ```sql
 SELECT 
