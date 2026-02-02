@@ -35,15 +35,34 @@ Some Microsoft documentation puts this in the "Sensitive Privilege Use / Non-Sen
 
 ## 4720
 
+**A user account was created**
 
+Attributes show some of the properties that were set at the time the account was created. Notice account is initially disabled.
+
+This event is logged both for local SAM accounts and domain accounts.
+
+You will see a series of other User Account Management events after this event as the remaining properties are punched down, password set and account finally enabled.
 
 ***
 
 ## 4726
 
+**A user account was deleted**
 
+This event is logged both for local SAM accounts and domain accounts.\
+\
+You will also see event ID [4738](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4738) informing you of the same information.
 
 ***
 
 ## 4732
 
+**A member was added to a security-enabled local group**
+
+Active Directory
+
+In Active Directory Users and Computers "Security Enabled" groups are simply referred to as Security groups. AD has 2 types of groups: Security and Distribution. Distribution (security disabled) groups are for distribution lists in Exchange and cannot be assigned permissions or rights. Security (security enabled) groups can be used for permissions, rights and as distribution lists. A domain local group means the group can only be granted access to objects within its domain but can have members from any trusted domain.
+
+Local SAM
+
+All groups are security groups in the computer's SAM. Local SAM groups can be granted access to objects on the local computer only but may have members from the local SAM and any trusted domain.
