@@ -56,6 +56,7 @@
     * [Recovering Deleted Chrome History](field-manual/digital-forensics/browser-forensics/recovering-deleted-chrome-history.md)
   * [Email Forensics](field-manual/digital-forensics/email-forensics/README.md)
     * [Outlook Attachment Downloads](field-manual/digital-forensics/email-forensics/outlook-attachment-downloads.md)
+    * [Identifying Malicious Outlook Persistence](field-manual/digital-forensics/email-forensics/identifying-malicious-outlook-persistence.md)
   * [Forensic Report](field-manual/digital-forensics/forensic-report.md)
 * [Reverse Engineering](field-manual/reverse-engineering/README.md)
   * [x86 Assembly](field-manual/reverse-engineering/x86-assembly.md)
