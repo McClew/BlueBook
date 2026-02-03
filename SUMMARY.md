@@ -66,7 +66,10 @@
   * [Executable Formats](field-manual/reverse-engineering/executable-formats.md)
 * [Security Engineering](field-manual/security-engineering/README.md)
   * [Hardening](field-manual/security-engineering/hardening.md)
-* [DevSecOps](field-manual/devsecops.md)
+* [DevSecOps](field-manual/devsecops/README.md)
+  * [Governance & Risk Management](field-manual/devsecops/governance-and-risk-management.md)
+  * [Secure Development](field-manual/devsecops/secure-development.md)
+  * [Infrastructure as Code](field-manual/devsecops/infrastructure-as-code.md)
 
 ## Toolbox
 
