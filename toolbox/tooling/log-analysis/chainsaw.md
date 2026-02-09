@@ -25,6 +25,20 @@ layout:
 
 ***
 
+## Cheatsheet
+
+{% tabs %}
+{% tab title="Output" %}
+<table><thead><tr><th width="195">Command / Flag</th><th>Description</th></tr></thead><tbody><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+
+***
+
 ## Methods
 
 ### Searching
