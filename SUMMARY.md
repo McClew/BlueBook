@@ -70,6 +70,10 @@
   * [Governance & Risk Management](field-manual/devsecops/governance-and-risk-management.md)
   * [Secure Development](field-manual/devsecops/secure-development.md)
   * [Infrastructure as Code](field-manual/devsecops/infrastructure-as-code.md)
+* [Compliance](field-manual/compliance/README.md)
+  * [CyberEssentials](field-manual/compliance/cyberessentials.md)
+  * [CyberEssentials+](field-manual/compliance/cyberessentials+.md)
+* [Risk Management](field-manual/risk-management.md)
 
 ## Toolbox
 
