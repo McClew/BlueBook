@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
-  metadata:
-    visible: true
----
-
 # Chainsaw
 
 {% hint style="info" %}
@@ -28,12 +11,12 @@ layout:
 ## Cheatsheet
 
 {% tabs %}
-{% tab title="Output" %}
-<table><thead><tr><th width="195">Command / Flag</th><th>Description</th></tr></thead><tbody><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table>
+{% tab title="Common (Win)" %}
+<table><thead><tr><th width="692">Command</th><th data-hidden>Description</th></tr></thead><tbody><tr><td><code>.\chainsaw.exe hunt .\&#x3C;log_collection_dir> -s .\sigma --mapping mappings/sigma-event-logs-all.yml</code></td><td></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="Second Tab" %}
-
+{% tab title="Output & Formatting" %}
+<table><thead><tr><th width="231">Flag</th><th>Description</th></tr></thead><tbody><tr><td><code>-o, --output &#x3C;output></code></td><td>"A path to output results to" and will automatically adjust output type based on the format flags provided.</td></tr><tr><td><code>--json</code></td><td>"Print the output in json format"</td></tr><tr><td><code>--csv</code></td><td>"Print the output in csv format"</td></tr><tr><td><code>--log</code></td><td>"Print the output in log like format"</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 
