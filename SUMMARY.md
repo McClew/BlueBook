@@ -105,7 +105,7 @@
     * [DB Browser for SQLite](toolbox/tooling/utilities/db-browser-for-sqlite.md)
 * [Snippets](toolbox/snippets/README.md)
   * [PowerShell](toolbox/snippets/powershell/README.md)
-    * [Get-OutlookAddIns](toolbox/snippets/powershell/get-outlookaddins.md)
+    * [Find Outlook Add-ins](toolbox/snippets/powershell/find-outlook-add-ins.md)
     * [Get-InboxRule](toolbox/snippets/powershell/get-inboxrule.md)
 
 ## Playbooks
