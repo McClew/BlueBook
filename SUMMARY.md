@@ -106,6 +106,7 @@
 * [Snippets](toolbox/snippets/README.md)
   * [PowerShell](toolbox/snippets/powershell/README.md)
     * [Get-OutlookAddIns](toolbox/snippets/powershell/get-outlookaddins.md)
+    * [Get-InboxRule](toolbox/snippets/powershell/get-inboxrule.md)
 
 ## Playbooks
 
