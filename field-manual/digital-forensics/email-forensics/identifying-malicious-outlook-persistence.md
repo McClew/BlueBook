@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
-  metadata:
-    visible: true
----
-
 # Identifying Malicious Outlook Persistence
 
 A common TTP in Business Email Compromise is the creation of inbox rules that move or delete incoming emails. This allows an attacker to communicate with external victims (e.g., changing BACS details) without the legitimate account owner seeing the replies.

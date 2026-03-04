@@ -57,6 +57,7 @@
   * [Email Forensics](field-manual/digital-forensics/email-forensics/README.md)
     * [Outlook Attachment Downloads](field-manual/digital-forensics/email-forensics/outlook-attachment-downloads.md)
     * [Identifying Malicious Outlook Persistence](field-manual/digital-forensics/email-forensics/identifying-malicious-outlook-persistence.md)
+    * [Inspecting Outlook Add-ins](field-manual/digital-forensics/email-forensics/inspecting-outlook-add-ins.md)
   * [Forensic Report](field-manual/digital-forensics/forensic-report.md)
 * [Reverse Engineering](field-manual/reverse-engineering/README.md)
   * [x86 Assembly](field-manual/reverse-engineering/x86-assembly.md)
@@ -103,7 +104,8 @@
   * [Utilities](toolbox/tooling/utilities/README.md)
     * [DB Browser for SQLite](toolbox/tooling/utilities/db-browser-for-sqlite.md)
 * [Snippets](toolbox/snippets/README.md)
-  * [PowerShell](toolbox/snippets/powershell.md)
+  * [PowerShell](toolbox/snippets/powershell/README.md)
+    * [Get-OutlookAddIns](toolbox/snippets/powershell/get-outlookaddins.md)
 
 ## Playbooks
 

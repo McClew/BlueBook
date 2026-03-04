@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
-  metadata:
-    visible: true
----
-
 # Business Email Compromise
 
 Business Email Compromise (BEC) is a form of phishing attack where a theat actor impesonates colleagues, executives, suppliers or trusted partners via email into transfering funds or revealing sensitive data. BEC often involves convincing emails sent via spoofed email address or compromised accounts to bypass security filters.

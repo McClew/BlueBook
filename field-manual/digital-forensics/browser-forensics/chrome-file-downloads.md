@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
-  metadata:
-    visible: true
----
-
 # Chrome File Downloads
 
 Chrome tracks all user downloads in the History database. This is vital for tracing the "lineage" of a file, identifying the specific URL a malicious payload originated from and confirming if the download was successful.
