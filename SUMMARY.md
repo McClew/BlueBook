@@ -81,7 +81,9 @@
 * [Risk Management](field-manual/risk-management/README.md)
   * [Threat Modelling](field-manual/risk-management/threat-modelling/README.md)
     * [Attack Tree Modelling](field-manual/risk-management/threat-modelling/attack-tree-modelling.md)
-  * [Tabletop Exercises](field-manual/risk-management/tabletop-exercises.md)
+  * [Cyber Exercises](field-manual/risk-management/cyber-exercises/README.md)
+    * [Tabletop Exercises](field-manual/risk-management/cyber-exercises/tabletop-exercises.md)
+    * [Live Play Exercises](field-manual/risk-management/cyber-exercises/live-play-exercises.md)
 
 ## Toolbox
 
