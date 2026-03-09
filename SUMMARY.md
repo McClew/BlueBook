@@ -78,7 +78,9 @@
 * [Compliance](field-manual/compliance/README.md)
   * [CyberEssentials](field-manual/compliance/cyberessentials.md)
   * [CyberEssentials+](field-manual/compliance/cyberessentials+.md)
-* [Risk Management](field-manual/risk-management.md)
+* [Risk Management](field-manual/risk-management/README.md)
+  * [Threat Modelling](field-manual/risk-management/threat-modelling/README.md)
+    * [Attack Tree Modelling](field-manual/risk-management/threat-modelling/attack-tree-modelling.md)
 
 ## Toolbox
 
