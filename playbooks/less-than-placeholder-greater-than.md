@@ -87,7 +87,7 @@ A CDR solution can be integrated to monitor cloud solutions such as Microsoft 36
 
 Threat actors create rules to move all incoming mail - or mail containing keywords like _invoice, payment, hack, spoof,_ or _phish -_ directly to the 'Deleted Items', 'Archive', or 'RSS Subscriptions' folders.
 
-This allows them to hide their activity while continuing to utilise the compromised account for further attacks. See [t1564.008-email-hiding-rules](../field-manual/security-analysis/cloud-ttps/ta0005-defence-evasion/t1564-hide-artifacts/t1564.008-email-hiding-rules/ "mention").
+This allows them to hide their activity while continuing to utilise the compromised account for further attacks. See [t1564.008-email-hiding-rules](../field-manual/security-analysis/ttps/cloud-ttps/ta0005-defence-evasion/t1564-hide-artifacts/t1564.008-email-hiding-rules/ "mention").
 
 #### "Mark as Read" Sweep
 
