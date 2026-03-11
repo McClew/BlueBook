@@ -71,10 +71,13 @@ Connect-ExchangeOnline
 ```
 {% endcode %}
 
-<pre class="language-powershell" data-title="Find every inbox rule in the tenant that forwards or redirects mail" data-overflow="wrap" data-line-numbers><code class="lang-powershell">$AllMailboxes = Get-Mailbox -ResultSize Unlimited
+{% code title="Find every inbox rule in the tenant that forwards or redirects mail" overflow="wrap" lineNumbers="true" %}
+```powershell
+$AllMailboxes = Get-Mailbox -ResultSize Unlimited
 foreach ($Mailbox in $AllMailboxes) {
     Get-InboxRule -Mailbox $Mailbox.DistinguishedName -IncludeHidden | 
-<strong>    Where-Object { $_.ForwardTo -ne $null -or $_.RedirectTo -ne $null -or $_.ForwardAsAttachmentTo -ne $null } |
-</strong>    Select-Object MailboxOwnerID, Name, Enabled, RedirectTo, ForwardTo, Description
+    Where-Object { $_.ForwardTo -ne $null -or $_.RedirectTo -ne $null -or $_.ForwardAsAttachmentTo -ne $null } |
+    Select-Object MailboxOwnerID, Name, Enabled, RedirectTo, ForwardTo, Description
 }
-</code></pre>
+```
+{% endcode %}
