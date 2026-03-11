@@ -10,7 +10,13 @@ A common TTP in Business Email Compromise is the creation of inbox rules that mo
 
 Run this command to find rules designed to bury evidence. Look specifically for rules moving mail to "Deleted Items", "Archive", or "RSS Subscriptions".
 
-{% code title="Identify rules that delete or move messages to sensitive folders" %}
+{% code title="Connect to Exchange Online first" overflow="wrap" lineNumbers="true" %}
+```powershell
+Connect-ExchangeOnline
+```
+{% endcode %}
+
+{% code title="Identify rules that delete or move messages to sensitive folders" overflow="wrap" lineNumbers="true" %}
 ```powershell
 Get-InboxRule -Mailbox "user@company.co.uk" | 
 Where-Object {($_.DeleteMessage -eq $True) -or ($_.MoveToFolder -like "*Deleted*") -or ($_.MoveToFolder -like "*Archive*")} | 
@@ -29,7 +35,13 @@ Rules with names like ".", "z", or "Archive" that were not created by the user.
 
 Attackers often set up mailbox-level forwarding to exfiltrate data in real-time. This command checks for SMTP forwarding addresses.
 
-{% code title="" %}
+{% code title="Connect to Exchange Online first" overflow="wrap" lineNumbers="true" %}
+```powershell
+Connect-ExchangeOnline
+```
+{% endcode %}
+
+{% code title="" overflow="wrap" lineNumbers="true" %}
 ```powershell
 Get-Mailbox -Identity "user@company.co.uk" | 
 Select-Object UserPrincipalName, ForwardingAddress, ForwardingSmtpAddress, DeliverToMailboxAndForward

@@ -57,6 +57,7 @@
   * [Email Forensics](field-manual/digital-forensics/email-forensics/README.md)
     * [Outlook Attachment Downloads](field-manual/digital-forensics/email-forensics/outlook-attachment-downloads.md)
     * [Identifying Malicious Outlook Persistence](field-manual/digital-forensics/email-forensics/identifying-malicious-outlook-persistence.md)
+    * [Hunting for Suspicious M365 Exchange Rules](field-manual/digital-forensics/email-forensics/hunting-for-suspicious-m365-exchange-rules.md)
     * [Inspecting Outlook Add-ins](field-manual/digital-forensics/email-forensics/inspecting-outlook-add-ins.md)
   * [Forensic Report](field-manual/digital-forensics/forensic-report.md)
 * [Reverse Engineering](field-manual/reverse-engineering/README.md)
