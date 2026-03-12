@@ -123,7 +123,7 @@ Moving critical correspondence into deeply nested subfolders (e.g., `Inbox > Dra
 
 #### Phase C: Root Cause Analysis (Post-Containment)
 
-7\. Auth Method Review: Identify the entry vector—was it a successful Phish, an MFA bypass (Session Hijacking), or an exploit of a Legacy Protocol (IMAP/POP3)?
+7\. Auth Method Review: Identify the entry vector - was it a successful Phish, an MFA bypass (Session Hijacking), or an exploit of a Legacy Protocol (IMAP/POP3)?
 
 8\. App Registrations: Check for malicious "OAuth" apps. Attackers often trick users into "Accepting Permissions" for a fake app, giving them permanent access without needing a password.
 
