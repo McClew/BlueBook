@@ -27,7 +27,12 @@ Instead of listing "Question 1, Question 2," use descriptive sub-headers.
 
 #### 5. Timeline of Events
 
-A table showing the chronological order of the attack. | Timestamp (UTC) | Event Description | Evidence Source | | :--- | :--- | :--- | | 2024-05-10 10:15:22 | First Malicious Connection | Nginx Access Log | | 2024-05-10 10:18:05 | File `shell.ps1` Created | $UsnJrnl / MFT |
+A table showing the chronological order of the attack.&#x20;
+
+| Timestamp (UTC)     | Event Description          | Evidence Source  |
+| ------------------- | -------------------------- | ---------------- |
+| 2024-05-10 10:15:22 | First Malicious Connection | Nginx Access Log |
+| 2024-05-10 10:18:05 | File `shell.ps1` Created   | $UsnJrnl / MFT   |
 
 #### 6. Recommendations & Remediation
 
