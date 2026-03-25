@@ -57,4 +57,8 @@ Using the January to December example ($$n=12$$):
 
 ## Exponential Growth Modelling
 
-When calculating
+When calculating Exponential Growth Modelling we can use a single formula to find a specific month in the future:
+
+$$
+\text{Future Value} = \text{Current Value} \times (1 + \text{CMGR})^\text{number of months}
+$$
