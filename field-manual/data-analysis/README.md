@@ -1,5 +1,5 @@
 ---
-icon: chart-pie-simple
+icon: chart-line
 layout:
   width: default
   title:
@@ -18,5 +18,5 @@ layout:
     visible: true
 ---
 
-# Risk Management
+# Data Analysis
 

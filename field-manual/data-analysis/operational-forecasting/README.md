@@ -1,5 +1,4 @@
 ---
-icon: chart-pie-simple
 layout:
   width: default
   title:
@@ -18,5 +17,5 @@ layout:
     visible: true
 ---
 
-# Risk Management
+# Operational Forecasting
 

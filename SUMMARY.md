@@ -88,6 +88,10 @@
   * [Cyber Exercises](field-manual/risk-management/cyber-exercises/README.md)
     * [Tabletop Exercises](field-manual/risk-management/cyber-exercises/tabletop-exercises.md)
     * [Live Play Exercises](field-manual/risk-management/cyber-exercises/live-play-exercises.md)
+* [Data Analysis](field-manual/data-analysis/README.md)
+  * [Operational Forecasting](field-manual/data-analysis/operational-forecasting/README.md)
+    * [Compound Monthly Growth Rate (CMGR)](field-manual/data-analysis/operational-forecasting/compound-monthly-growth-rate-cmgr.md)
+    * [Predicting Time Spent (Efficiency vs. Volume)](field-manual/data-analysis/operational-forecasting/predicting-time-spent-efficiency-vs.-volume.md)
 
 ## Toolbox
 
