@@ -30,7 +30,7 @@ If we find a deleted download record, check the `$MFT` (Master File Table) or `$
 
 ## Identifying the Target Files
 
-In the same directory as your `History` file, look for:
+In the same directory as the `History` file, look for:
 
 * `History-journal`: Created during a rollback state.
 * `History-wal`: The Write-Ahead Log. This contains new/modified data that hasn't been fully merged into the main `History` file yet.
@@ -41,15 +41,15 @@ In the same directory as your `History` file, look for:
 
 ### **The Copy Method**
 
-If you find a `History-wal` file, do not delete it. To see the most recent (and potentially deleted) data:
+If we find a `History-wal` file, do not delete it. To see the most recent (and potentially deleted) data:
 
 1. Copy both `History` and `History-wal` to our analysis workstation.
 2. Keep them in the same folder.
-3. Open the `History` file in a SQLite viewer. The viewer will automatically use the `-wal` file to "replay" the most recent transactions, showing you data that hasn't been committed yet.
+3. Open the `History` file in a SQLite viewer. The viewer will automatically use the `-wal` file to "replay" the most recent transactions, showing data that hasn't been committed yet.
 
 ### **The Grepping Method**
 
-If the database has already been optimised, the records are marked as "free" but the actual text remains in unallocated space until overwritten. You can use `strings` or a hex editor to search the `History` file for keywords:
+If the database has already been optimised, the records are marked as "free" but the actual text remains in unallocated space until overwritten. We can use `strings` or a hex editor to search the `History` file for keywords:
 
 * `http` or `https` (To find URL remnants)
 * `.exe`, `.zip`, `.docm` (To find deleted download references)
@@ -71,4 +71,4 @@ Finding a download record in the WAL/Journal that is _missing_ from the main His
 
 ### Time Gap
 
-The WAL file can often give you a "buffer" of the last few hours or days of activity that haven't been permanently indexed yet.
+The WAL file can often give us a "buffer" of the last few hours or days of activity that haven't been permanently indexed yet.
