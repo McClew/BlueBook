@@ -139,9 +139,12 @@
     * [Get-InboxRule](toolbox/snippets/powershell/get-inboxrule.md)
 * [Bookcase](toolbox/bookcase/README.md)
   * [General](toolbox/bookcase/general.md)
+  * [Study Guides](toolbox/bookcase/study-guides.md)
   * [Security Analysis](toolbox/bookcase/security-analysis.md)
   * [Incident Response](toolbox/bookcase/incident-response.md)
   * [Digital Forensics](toolbox/bookcase/digital-forensics.md)
+  * [Reverse Engineering](toolbox/bookcase/reverse-engineering.md)
+  * [Security Engineering](toolbox/bookcase/security-engineering.md)
   * [Leadership](toolbox/bookcase/leadership.md)
 
 ## Playbooks

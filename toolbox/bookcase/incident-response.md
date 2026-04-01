@@ -19,4 +19,12 @@ layout:
 
 # Incident Response
 
+## General
+
 {% file src="../../.gitbook/assets/Applied Incident Response.pdf" %}
+
+***
+
+## Incident Management
+
+{% file src="../../.gitbook/assets/Incident Management for Industrial Control Systems.pdf" %}

@@ -20,3 +20,8 @@ layout:
 # Leadership
 
 {% file src="../../.gitbook/assets/A Day in the Life of a CISO.pdf" %}
+
+{% file src="../../.gitbook/assets/Cybersecurity Architects Handbook.pdf" %}
+
+{% file src="../../.gitbook/assets/Taming the Storm.pdf" %}
+

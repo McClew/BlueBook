@@ -19,6 +19,15 @@ layout:
 
 # Security Analysis
 
+## General
+
+{% file src="../../.gitbook/assets/Cyber Security Kill Chain – Tactics and Strategies.pdf" %}
+
 {% file src="../../.gitbook/assets/SOC Analyst Career Guide.pdf" %}
 
+***
+
+## Tooling
+
 {% file src="../../.gitbook/assets/Wireshark for Security Professionals.pdf" %}
+
