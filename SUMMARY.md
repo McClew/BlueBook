@@ -137,6 +137,11 @@
   * [PowerShell](toolbox/snippets/powershell/README.md)
     * [Find Outlook Add-ins](toolbox/snippets/powershell/find-outlook-add-ins.md)
     * [Get-InboxRule](toolbox/snippets/powershell/get-inboxrule.md)
+* [Bookcase](toolbox/bookcase/README.md)
+  * [General](toolbox/bookcase/general.md)
+  * [Leadership](toolbox/bookcase/leadership.md)
+  * [Incident Response](toolbox/bookcase/incident-response.md)
+  * [Digital Forensics](toolbox/bookcase/digital-forensics.md)
 
 ## Playbooks
 
