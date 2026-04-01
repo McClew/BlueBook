@@ -63,9 +63,9 @@ Control Type: Technical & Preventative, Detective
 
 Deploy a CDR solution to provide advanced telemetry and automated responses. Key features include:
 
-* Risk-Based Alerts: Integration with Identity Protection to flag "Leaked Credentials" or "Anomalous Token" usage.
-* Impossible Travel: Automatic identification of sessions where the geographical distance between two logins is physically impossible to cover in the time elapsed.
-* New Device Enrolment: Alerts for when a new, unmanaged device is registered to a user account or enrolled in MDM.
+* **Risk-Based Alerts:** Integration with Identity Protection to flag "Leaked Credentials" or "Anomalous Token" usage.
+* **Impossible Travel:** Automatic identification of sessions where the geographical distance between two logins is physically impossible to cover in the time elapsed.
+* **New Device Enrolment:** Alerts for when a new, unmanaged device is registered to a user account or enrolled in MDM.
 
 ***
 
@@ -73,23 +73,23 @@ Deploy a CDR solution to provide advanced telemetry and automated responses. Key
 
 ### Indicators of Attack (IOA)
 
-* Brute Force/Password Spraying: A high volume of "Failure" logs from a single IP address across multiple usernames.
-* MFA Spamming: A surge in MFA push notifications sent to a user in a short window, often during unsociable UK hours.
-* Suspicious User Agent: Logins originating from "Headless" browsers, outdated operating systems, or known TOR exit nodes.
-* Legacy Auth Attempts: Repeated attempts to authenticate via IMAP, POP3, or SMTP, which do not support modern MFA prompts.
+* **Brute Force/Password Spraying:** A high volume of "Failure" logs from a single IP address across multiple usernames.
+* **MFA Spamming:** A surge in MFA push notifications sent to a user in a short window, often during unsociable UK hours.
+* **Suspicious User Agent:** Logins originating from "Headless" browsers, outdated operating systems, or known TOR exit nodes.
+* **Legacy Auth Attempts:** Repeated attempts to authenticate via IMAP, POP3, or SMTP, which do not support modern MFA prompts.
 
 ### Indicators of Compromise (IOC)
 
-* Impossible Travel: A successful login from London followed by a successful login from an overseas region within an hour.
-* MFA Method Changes: The addition of a new "Authenticator App" or phone number that does not belong to the user.
-* Token Theft: A successful login that bypasses MFA entirely, suggesting the use of a stolen session cookie (AiTM attack).
-* ISP Mismatch: A user normally connecting via a known UK ISP (e.g., BT, Virgin Media) suddenly connecting via a foreign hosting provider or VPS.
+* **Impossible Travel:** A successful login from London followed by a successful login from an overseas region within an hour.
+* **MFA Method Changes:** The addition of a new "Authenticator App" or phone number that does not belong to the user.
+* **Token Theft:** A successful login that bypasses MFA entirely, suggesting the use of a stolen session cookie (AiTM attack).
+* **ISP Mismatch:** A user normally connecting via a known UK ISP (e.g., BT, Virgin Media) suddenly connecting via a foreign hosting provider or VPS.
 
 ### Triage & Scope
 
-1. Session Context: Verify if the login matches the user’s typical working hours and device fingerprint.
-2. Breadth Check: Use the SIEM to determine if the suspicious IP address has attempted to access other accounts within the tenant.
-3. Privilege Review: Assess if the targeted account holds "Global Admin," "Security Admin," or "Conditional Access Admin" roles.
+1. **Session Context:** Verify if the login matches the user’s typical working hours and device fingerprint.
+2. **Breadth Check:** Use the SIEM to determine if the suspicious IP address has attempted to access other accounts within the tenant.
+3. **Privilege Review:** Assess if the targeted account holds "Global Admin," "Security Admin," or "Conditional Access Admin" roles.
 
 ***
 
@@ -117,20 +117,20 @@ Attackers may register a "Malicious App" and trick the user into granting it "Re
 
 #### Phase A: Persistence & Access (Immediate)
 
-1. Sign-in Log Review: Filter for "Failure Reason" and "MFA Requirement" to identify how the actor got in.
-2. MFA Audit: Check for any newly registered MFA methods or changed "Default" methods in the user's security info.
-3. Device Enrolment: Review the "Devices" list in Entra ID/Intune for any unfamiliar hardware registered during the window of suspicion.
+1. **Sign-in Log Review:** Filter for "Failure Reason" and "MFA Requirement" to identify how the actor got in.
+2. **MFA Audit:** Check for any newly registered MFA methods or changed "Default" methods in the user's security info.
+3. **Device Enrolment:** Review the "Devices" list in Entra ID/Intune for any unfamiliar hardware registered during the window of suspicion.
 
 #### Phase B: Lateral Movement (Mid-Investigation)
 
-4. Audit Log Analysis: Search for "Add member to role" or "Update policy" events to see if the attacker attempted to elevate their privileges.
-5. App Permissions: Inspect the "Enterprise Applications" for any new apps granted `Mail.Read`, `Notes.Read.All`, or `Files.ReadWrite.All` permissions.
-6. Resource Access: Identify which SharePoint sites or Teams channels were accessed by the suspicious session.
+4. **Audit Log Analysis:** Search for "Add member to role" or "Update policy" events to see if the attacker attempted to elevate their privileges.
+5. **App Permissions:** Inspect the "Enterprise Applications" for any new apps granted `Mail.Read`, `Notes.Read.All`, or `Files.ReadWrite.All` permissions.
+6. **Resource Access:** Identify which SharePoint sites or Teams channels were accessed by the suspicious session.
 
 #### Phase C: Root Cause (Post-Containment)
 
-7. Endpoint Health: Scan the user’s primary workstation for "Infostealer" malware that may have harvested cookies or credentials.
-8. Phishing Link Discovery: Check the user's web history or "Junk" mail for links to known proxy/phishing sites visited prior to the login.
+7. **Endpoint Health:** Scan the user’s primary workstation for "Infostealer" malware that may have harvested cookies or credentials.
+8. **Phishing Link Discovery:** Check the user's web history or "Junk" mail for links to known proxy/phishing sites visited prior to the login.
 
 ***
 
