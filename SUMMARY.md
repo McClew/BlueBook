@@ -148,4 +148,5 @@
 
 ## Playbooks
 
+* [Suspicious Login Event](playbooks/suspicious-login-event.md)
 * [Business Email Compromise](playbooks/less-than-placeholder-greater-than.md)
