@@ -23,13 +23,19 @@ In this example we are calculating the time spent on a ticket based on its 'Issu
 
 We need to find the Average Handle Time (AHT) for each 'Issue Type' to see if we are getting faster or if the complexity is rising.
 
+***
+
 ## Calculate AHT
 
 $$\text{Total Time for Issue Type} \div \text{Volume of Issue Type}$$.
 
+***
+
 ## Identify the "Time Sinks"
 
 Compare the AHT of "Phishing" vs. "Firewall Config."
+
+***
 
 ## The Projection
 
