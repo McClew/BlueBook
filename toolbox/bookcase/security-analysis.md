@@ -21,9 +21,13 @@ layout:
 
 ## General
 
-{% file src="../../.gitbook/assets/Cyber Security Kill Chain – Tactics and Strategies.pdf" %}
-
 {% file src="../../.gitbook/assets/SOC Analyst Career Guide.pdf" %}
+
+***
+
+## Threat Intelligence
+
+{% file src="../../.gitbook/assets/Cyber Security Kill Chain – Tactics and Strategies.pdf" %}
 
 ***
 
