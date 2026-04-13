@@ -5,7 +5,8 @@
 ## Field Manual
 
 * [Security Analysis](<README (1).md>)
-  * [Triaging & Indicators](field-manual/security-analysis/triaging-and-indicators.md)
+  * [Triaging](field-manual/security-analysis/triaging/README.md)
+    * [Email Analysis](field-manual/security-analysis/triaging/email-analysis.md)
   * [Artefact Hunting](field-manual/security-analysis/artefact-hunting.md)
   * [TTPs](field-manual/security-analysis/ttps/README.md)
     * [Windows TTPs](field-manual/security-analysis/ttps/windows-ttps.md)
