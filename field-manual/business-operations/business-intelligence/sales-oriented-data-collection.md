@@ -17,9 +17,9 @@ layout:
     visible: true
 ---
 
-# Data Collection Techniques
+# Sales-Oriented Data Collection
 
-To drive [data-driven-sales.md](data-driven-sales.md "mention"), the technical stack must be viewed as a sensor array for business opportunities. This article outlines the specific telemetry points available within common MSP/MSSP toolsets and how to extract them to build a quantitative business case for the client.
+To drive [data-driven-sales.md](../revenue-generation/data-driven-sales.md "mention"), the technical stack must be viewed as a sensor array for business opportunities. This article outlines the specific telemetry points available within common MSP/MSSP toolsets and how to extract them to build a quantitative business case for the client.
 
 {% hint style="success" icon="handshake" %}
 ### The "Proactive Partnership" Mindset
