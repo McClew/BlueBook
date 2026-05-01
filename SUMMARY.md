@@ -100,6 +100,12 @@
   * [Operational Forecasting](field-manual/data-analysis/operational-forecasting/README.md)
     * [Compound Monthly Growth Rate (CMGR)](field-manual/data-analysis/operational-forecasting/compound-monthly-growth-rate-cmgr.md)
     * [Predicting Time Spent (Efficiency vs. Volume)](field-manual/data-analysis/operational-forecasting/predicting-time-spent-efficiency-vs.-volume.md)
+* [Business Operations](field-manual/business-operations/README.md)
+  * [Revenue Generation](field-manual/business-operations/revenue-generation.md)
+  * [Operational Governance](field-manual/business-operations/operational-governance.md)
+  * [Business Intelligence](field-manual/business-operations/business-intelligence/README.md)
+    * [Data Collection Techniques](field-manual/business-operations/business-intelligence/data-collection-techniques.md)
+    * [Data-Driven Sales](field-manual/business-operations/business-intelligence/data-driven-sales.md)
 
 ## Toolbox
 
