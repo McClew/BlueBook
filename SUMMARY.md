@@ -109,7 +109,8 @@
   * [Business Intelligence](field-manual/business-operations/business-intelligence/README.md)
     * [Sales-Oriented Data Collection](field-manual/business-operations/business-intelligence/sales-oriented-data-collection.md)
   * [MSP Operations](field-manual/business-operations/msp-operations.md)
-  * [MSSP Operations](field-manual/business-operations/mssp-operations.md)
+  * [MSSP Operations](field-manual/business-operations/mssp-operations/README.md)
+    * [SOC Infrastructure](field-manual/business-operations/mssp-operations/soc-infrastructure.md)
 
 ## Toolbox
 
