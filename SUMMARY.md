@@ -104,6 +104,7 @@
   * [Revenue Generation](field-manual/business-operations/revenue-generation/README.md)
     * [Data-Driven Sales](field-manual/business-operations/revenue-generation/data-driven-sales.md)
     * [Data Monetisation](field-manual/business-operations/revenue-generation/data-monetisation.md)
+    * [Driving MSP MRR](field-manual/business-operations/revenue-generation/driving-msp-mrr.md)
   * [Operational Governance](field-manual/business-operations/operational-governance.md)
   * [Business Intelligence](field-manual/business-operations/business-intelligence/README.md)
     * [Sales-Oriented Data Collection](field-manual/business-operations/business-intelligence/sales-oriented-data-collection.md)
