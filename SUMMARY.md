@@ -138,6 +138,7 @@
     * [Dynamic Analysis](toolbox/tooling/reverse-engineering/dynamic-analysis/README.md)
       * [Process Hacker](toolbox/tooling/reverse-engineering/dynamic-analysis/process-hacker.md)
       * [Regshot](toolbox/tooling/reverse-engineering/dynamic-analysis/regshot.md)
+      * [ViperMonkey](toolbox/tooling/reverse-engineering/dynamic-analysis/vipermonkey.md)
   * [Network Analysis](toolbox/tooling/network-analysis/README.md)
     * [Wireshark](toolbox/tooling/network-analysis/wireshark.md)
     * [Fiddler](toolbox/tooling/network-analysis/fiddler.md)
