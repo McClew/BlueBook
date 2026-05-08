@@ -136,6 +136,7 @@
     * [Static Analysis](toolbox/tooling/reverse-engineering/static-analysis/README.md)
       * [Ghidra](toolbox/tooling/reverse-engineering/static-analysis/ghidra.md)
     * [Dynamic Analysis](toolbox/tooling/reverse-engineering/dynamic-analysis/README.md)
+      * [Fiddler](toolbox/tooling/reverse-engineering/dynamic-analysis/fiddler.md)
       * [Process Hacker](toolbox/tooling/reverse-engineering/dynamic-analysis/process-hacker.md)
       * [Regshot](toolbox/tooling/reverse-engineering/dynamic-analysis/regshot.md)
       * [ViperMonkey](toolbox/tooling/reverse-engineering/dynamic-analysis/vipermonkey.md)
