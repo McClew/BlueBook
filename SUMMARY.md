@@ -136,6 +136,8 @@
     * [BrowsingHistoryView](toolbox/tooling/digital-forensics/browsinghistoryview.md)
     * [Magnet AXIOM](toolbox/tooling/digital-forensics/magnet-axiom.md)
   * [Reverse Engineering](toolbox/tooling/reverse-engineering/README.md)
+    * [Packer Detection](toolbox/tooling/reverse-engineering/packer-detection/README.md)
+      * [DIE-Engine](toolbox/tooling/reverse-engineering/packer-detection/die-engine.md)
     * [Static Analysis](toolbox/tooling/reverse-engineering/static-analysis/README.md)
       * [Ghidra](toolbox/tooling/reverse-engineering/static-analysis/ghidra.md)
       * [HxD](toolbox/tooling/reverse-engineering/static-analysis/hxd.md)
