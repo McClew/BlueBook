@@ -27,3 +27,4 @@ layout:
 
 ***
 
+ILSpy is the open-source .NET assembly browser and decompiler with support for PDB generation, ReadyToRun, Metadata, and more.
