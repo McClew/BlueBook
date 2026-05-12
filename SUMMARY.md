@@ -146,6 +146,7 @@
       * [DROID](toolbox/tooling/reverse-engineering/static-analysis/droid.md)
       * [Ghidra](toolbox/tooling/reverse-engineering/static-analysis/ghidra.md)
       * [HxD](toolbox/tooling/reverse-engineering/static-analysis/hxd.md)
+      * [oletools](toolbox/tooling/reverse-engineering/static-analysis/oletools.md)
       * [PeStudio](toolbox/tooling/reverse-engineering/static-analysis/pestudio.md)
     * [Dynamic Analysis](toolbox/tooling/reverse-engineering/dynamic-analysis/README.md)
       * [Fiddler](toolbox/tooling/reverse-engineering/dynamic-analysis/fiddler.md)
