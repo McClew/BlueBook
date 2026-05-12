@@ -140,6 +140,7 @@
       * [DIE-Engine](toolbox/tooling/reverse-engineering/packer-detection/die-engine.md)
     * [Static Analysis](toolbox/tooling/reverse-engineering/static-analysis/README.md)
       * [CFF Explorer](toolbox/tooling/reverse-engineering/static-analysis/cff-explorer.md)
+      * [DROID](toolbox/tooling/reverse-engineering/static-analysis/droid.md)
       * [Ghidra](toolbox/tooling/reverse-engineering/static-analysis/ghidra.md)
       * [HxD](toolbox/tooling/reverse-engineering/static-analysis/hxd.md)
       * [PeStudio](toolbox/tooling/reverse-engineering/static-analysis/pestudio.md)
