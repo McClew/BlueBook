@@ -70,6 +70,7 @@
     * [Static Analysis](field-manual/reverse-engineering/malware-analysis/static-analysis/README.md)
       * [Static Analysis Process](field-manual/reverse-engineering/malware-analysis/static-analysis/static-analysis-process.md)
       * [File Type Indicators](field-manual/reverse-engineering/malware-analysis/static-analysis/file-type-indicators.md)
+      * [Packer Identification](field-manual/reverse-engineering/malware-analysis/static-analysis/packer-identification.md)
     * [Dynamic Analysis](field-manual/reverse-engineering/malware-analysis/dynamic-analysis/README.md)
       * [Process Activities](field-manual/reverse-engineering/malware-analysis/dynamic-analysis/process-activities.md)
       * [Network Activities](field-manual/reverse-engineering/malware-analysis/dynamic-analysis/network-activities.md)
