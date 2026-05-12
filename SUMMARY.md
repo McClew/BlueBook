@@ -140,6 +140,8 @@
   * [Reverse Engineering](toolbox/tooling/reverse-engineering/README.md)
     * [Packer Detection](toolbox/tooling/reverse-engineering/packer-detection/README.md)
       * [DIE-Engine](toolbox/tooling/reverse-engineering/packer-detection/die-engine.md)
+    * [Decompilers](toolbox/tooling/reverse-engineering/decompilers/README.md)
+      * [ILSpy](toolbox/tooling/reverse-engineering/decompilers/ilspy.md)
     * [Static Analysis](toolbox/tooling/reverse-engineering/static-analysis/README.md)
       * [BinText](toolbox/tooling/reverse-engineering/static-analysis/bintext.md)
       * [CFF Explorer](toolbox/tooling/reverse-engineering/static-analysis/cff-explorer.md)
