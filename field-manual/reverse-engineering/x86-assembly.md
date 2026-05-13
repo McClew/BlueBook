@@ -10,6 +10,62 @@ The following table outlines the primary instructions used to manipulate data. U
 
 ***
 
+## Registers
+
+Registers are the variables in the assembly language. The size of each register in x86 architecture is 32 bits. Registers are located in the processor and each processor can have its own proprietary registers.
+
+### Data Registers
+
+Data registers are the ones that contain data.
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+#### EAX (Accumulator Register)
+
+The most basic register used in arithmetic operations is the "EAX" register. It stores the results of arithmetic operations and the return values of functions. For example, it is used for operations such as addition and multiplication.
+
+#### EBX (Base Register)
+
+It is the register that holds the base address of the program.
+
+#### ECX (Counter Register)
+
+The “**ECX**” is the register that is used as counter. It is used in loop and string operations.
+
+#### EDX (Data Register)
+
+It is a register that is generally used for holding data. It is also used in I/O (Input/Output) operations.
+
+### Pointer Registers
+
+Pointer registers are the ones that hold memory addresses.
+
+#### EBP (Base Pointer)
+
+EBP is the one that holds the lowest address of the Stack and is used for local variables.
+
+#### ESP (Stack Pointer)
+
+It is the register that holds the top address of the stack. Displays the last element that entered the Stack.
+
+#### EIP (Instruction Pointer)
+
+The EIP register may be the most important register as it holds the address of the next instruction to be executed in the program flow. In other words, if the value of this register is changed, the flow of the program can be interfered with.
+
+#### 2.1.9. Index Registers
+
+Index registers are used for index information storage.
+
+#### ESI (Source Index)
+
+It is the register that holds the source index information for string operations. It holds the address of where the data will be read.
+
+#### EDI (Destination Index)
+
+It is the register that holds the destination index information for string operations. It holds the address of where the data will be written.
+
+***
+
 ## stdcall vs fastcall
 
 Calling conventions define the "contract" between the function calling the code (the caller) and the function being executed (the callee). If you are following data in a debugger, knowing where to look for arguments is vital.
