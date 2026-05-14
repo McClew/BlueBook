@@ -81,6 +81,7 @@
   * [Windows Internals](field-manual/reverse-engineering/windows-internals/README.md)
     * [Portable Executables](field-manual/reverse-engineering/windows-internals/portable-executables.md)
     * [Processes](field-manual/reverse-engineering/windows-internals/processes.md)
+    * [Dynamic-Link Libraries (DDL)](field-manual/reverse-engineering/windows-internals/dynamic-link-libraries-ddl.md)
   * [x86 Assembly](field-manual/reverse-engineering/x86-assembly.md)
 * [Security Engineering](field-manual/security-engineering/README.md)
   * [Hardening](field-manual/security-engineering/hardening.md)
