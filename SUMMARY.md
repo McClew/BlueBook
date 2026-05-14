@@ -142,6 +142,7 @@
       * [DIE-Engine](toolbox/tooling/reverse-engineering/packer-detection/die-engine.md)
     * [Disassemblers, Decompilers & Debuggers](toolbox/tooling/reverse-engineering/disassemblers-decompilers-and-debuggers/README.md)
       * [Ghidra](toolbox/tooling/reverse-engineering/disassemblers-decompilers-and-debuggers/ghidra.md)
+      * [GNU Debugger (GDB)](toolbox/tooling/reverse-engineering/disassemblers-decompilers-and-debuggers/gnu-debugger-gdb.md)
       * [ILSpy](toolbox/tooling/reverse-engineering/disassemblers-decompilers-and-debuggers/ilspy.md)
     * [Static Analysis](toolbox/tooling/reverse-engineering/static-analysis/README.md)
       * [BinText](toolbox/tooling/reverse-engineering/static-analysis/bintext.md)
