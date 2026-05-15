@@ -158,6 +158,7 @@
       * [PeStudio](toolbox/tooling/reverse-engineering/static-analysis/pestudio.md)
     * [Dynamic Analysis](toolbox/tooling/reverse-engineering/dynamic-analysis/README.md)
       * [Fiddler](toolbox/tooling/reverse-engineering/dynamic-analysis/fiddler.md)
+      * [Noriben](toolbox/tooling/reverse-engineering/dynamic-analysis/noriben.md)
       * [Process Hacker](toolbox/tooling/reverse-engineering/dynamic-analysis/process-hacker.md)
       * [Regshot](toolbox/tooling/reverse-engineering/dynamic-analysis/regshot.md)
       * [ViperMonkey](toolbox/tooling/reverse-engineering/dynamic-analysis/vipermonkey.md)
