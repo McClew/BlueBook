@@ -50,7 +50,46 @@ We can examine the DLL imports of `shell.exe` (residing in the `C:\Samples\Malwa
 
 ![](https://cdn.services-k8s.prod.aws.htb.systems/content/modules/227/imports_.png)
 
+***
+
 ## Export Functions <a href="#export-functions" id="export-functions"></a>
 
 * Export functions are the functions that a binary exposes for use by other modules or applications.
 * These functions provide an interface for other software to interact with the binary.
+
+***
+
+## Import Hashing (IMPHASH) <a href="#import-hashing-imphash" id="import-hashing-imphash"></a>
+
+`IMPHASH`, an abbreviation for "Import Hash", is a cryptographic hash calculated from the import functions of a Windows Portable Executable (PE) file.
+
+Its algorithm functions by first converting all imported function names to lowercase. Following this, the DLL names and function names are fused together and arranged in alphabetical order. Finally, an MD5 hash is generated from the resulting string.
+
+Therefore, two PE files with identical import functions, in the same sequence, will share an `IMPHASH` value.
+
+We can find the `IMPHASH` in the `Details` tab of the VirusTotal results.
+
+### Calulcating IMPHASH with pefile
+
+We can use the [pefile](https://pypi.org/project/pefile/) Python module to compute the IMPHASH of a file as follows.
+
+{% code title="imphash_calc.py" lineNumbers="true" %}
+```python
+import sys
+import pefile
+import peutils
+
+pe_file = sys.argv[1]
+pe = pefile.PE(pe_file)
+imphash = pe.get_imphash()
+
+print(imphash)
+```
+{% endcode %}
+
+To check the IMPHASH of malware the below command could be used:
+
+```bash
+python3 imphash_calc.py <FILE_PATH>
+9ecee117164e0b870a53dd187cdd7174
+```
