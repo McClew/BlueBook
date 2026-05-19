@@ -8,7 +8,6 @@ A script to perform this analysis is: [find-word-add-ins.md](../../../toolbox/sn
 
 {% code lineNumbers="true" %}
 ```powershell
-# Define the registry paths where Word add-ins are registered
 $RegistryPaths = @(
     "HKCU:\Software\Microsoft\Office\Word\Addins",
     "HKLM:\SOFTWARE\Microsoft\Office\Word\Addins",
