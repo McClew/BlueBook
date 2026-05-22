@@ -83,6 +83,7 @@
       * [Network Activities](field-manual/reverse-engineering/malware-analysis/dynamic-analysis/network-activities.md)
       * [Registry Activities](field-manual/reverse-engineering/malware-analysis/dynamic-analysis/registry-activities.md)
       * [File Activities](field-manual/reverse-engineering/malware-analysis/dynamic-analysis/file-activities.md)
+      * [Sandbox Counter-Evasion](field-manual/reverse-engineering/malware-analysis/dynamic-analysis/sandbox-counter-evasion.md)
   * [Windows Internals](field-manual/reverse-engineering/windows-internals/README.md)
     * [Portable Executables](field-manual/reverse-engineering/windows-internals/portable-executables.md)
     * [Processes](field-manual/reverse-engineering/windows-internals/processes.md)
