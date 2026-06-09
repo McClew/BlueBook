@@ -99,6 +99,7 @@
   * [Secure Development](field-manual/devsecops/secure-development.md)
   * [Infrastructure as Code](field-manual/devsecops/infrastructure-as-code.md)
 * [Strategic Leadership](field-manual/strategic-leadership/README.md)
+  * [Operational Context Questionnaire (OCQ)](field-manual/strategic-leadership/operational-context-questionnaire-ocq.md)
   * [Information System Audits](field-manual/strategic-leadership/information-system-audits/README.md)
     * [Audit Planning](field-manual/strategic-leadership/information-system-audits/audit-planning.md)
     * [Audit Charter](field-manual/strategic-leadership/information-system-audits/audit-charter.md)
