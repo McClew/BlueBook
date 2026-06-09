@@ -93,7 +93,9 @@ Instead of hard-coding client exceptions directly into SIEM or EDR detection rul
 >
 > When an EDR alert fires for a potentially malicious administrative tool execution (`PsExec.exe`), the detection engine parses a lookup table populated by the OCQ data:
 >
-> \$$\text{If } \textit{Executing\\\_User} \in \text{Lookup}(\text{"Approved\\\_IT\\\_Admins"}) \rightarrow \text{Set Severity to Low / Suppress}\$$\$$\text{If } \textit{Executing\\\_User} \notin \text{Lookup}(\text{"Approved\\\_IT\\\_Admins"}) \rightarrow \text{Escalate to Critical Incident}\$$
+> $$\text{If } \textit{Executing\_User} \in \text{Lookup}(\text{"Approved\_IT\_Admins"}) \rightarrow \text{Set Severity to Low / Suppress}$$
+>
+> $$\text{If } \textit{Executing\_User} \notin \text{Lookup}(\text{"Approved\_IT\_Admins"}) \rightarrow \text{Escalate to Critical Incident}$$
 
 ### The Exception Sign-Off Matrix
 
