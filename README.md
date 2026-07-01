@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Field Kit
 
 ## Field Manual
@@ -10,7 +31,7 @@ The key sections of the field manual are listed below:
 
 Knwoledge articles for analysing security alerts and monitoring for TTPs.
 
-#### Indcident Response
+#### Incident Response
 
 Guides on evidence aquisition, initial triaging and containment techniques.
 
