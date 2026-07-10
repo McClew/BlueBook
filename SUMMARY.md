@@ -53,6 +53,8 @@
       * [Malware & Tampering](field-manual/incident-response/log-analysis/windows-event-logs/malware-and-tampering.md)
 * [Digital Forensics](field-manual/digital-forensics/README.md)
   * [Windows Artifacts](field-manual/digital-forensics/windows-artifacts/README.md)
+    * [Execution Artifacts](field-manual/digital-forensics/windows-artifacts/execution-artifacts/README.md)
+      * [Artifact Index](field-manual/digital-forensics/windows-artifacts/execution-artifacts/artifact-index.md)
     * [New Technology File System (NTFS)](field-manual/digital-forensics/windows-artifacts/new-technology-file-system-ntfs/README.md)
       * [Master File Table (MFT)](field-manual/digital-forensics/windows-artifacts/new-technology-file-system-ntfs/master-file-table-mft.md)
       * [NTFS Metadata](field-manual/digital-forensics/windows-artifacts/new-technology-file-system-ntfs/ntfs-metadata.md)
