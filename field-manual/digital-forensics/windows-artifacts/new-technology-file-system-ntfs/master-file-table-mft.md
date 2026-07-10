@@ -1,10 +1,29 @@
-# New Technology File System (NTFS)
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
 
-## The Master File Table (MFT) Structure
+# Master File Table (MFT)
 
 The MFT is the heart of NTFS. It is a structured database that contains at least one entry for every file and directory on the volume.
 
-### MFT Records
+## MFT Records
 
 * Size: Each MFT record is typically 1024 bytes (1KB).
 * Header: Contains the "FILE" signature, sequence numbers, and offsets to the first attribute.
@@ -12,7 +31,7 @@ The MFT is the heart of NTFS. It is a structured database that contains at least
   * Resident: If a file is small enough, the data is stored directly within the MFT record.
   * Non-Resident: For larger files, the MFT record contains "Data Runs" (pointers) to clusters on the disk where the actual data resides.
 
-### Critical Metadata Files
+## Critical Metadata Files
 
 NTFS uses "Metafiles" (starting with `$`) to manage the file system:
 

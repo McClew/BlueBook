@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Recovering Deleted Chrome History
 
 SQLite uses temporary files to manage transactions. When a user deletes their history, the "deleted" data often persists in these auxiliary files until the database is "checkpointed" or optimised.

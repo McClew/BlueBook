@@ -1,3 +1,24 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Outlook Attachment Downloads
 
 When a user opens an attachment directly from Outlook, Windows creates a copy of that file in a hidden subdirectory. This is a critical location to investigate during phishing analysis or data exfiltration cases, as files may persist here even if the original email was deleted.
