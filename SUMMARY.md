@@ -60,6 +60,7 @@
     * [Persistence Artifacts](field-manual/digital-forensics/windows-forensics/persistence-artifacts.md)
     * [New Technology File System (NTFS)](field-manual/digital-forensics/windows-forensics/new-technology-file-system-ntfs/README.md)
       * [Master File Table (MFT)](field-manual/digital-forensics/windows-forensics/new-technology-file-system-ntfs/master-file-table-mft.md)
+      * [MAC(b) Times](field-manual/digital-forensics/windows-forensics/new-technology-file-system-ntfs/mac-b-times.md)
       * [NTFS Metadata](field-manual/digital-forensics/windows-forensics/new-technology-file-system-ntfs/ntfs-metadata.md)
       * [File Slack & Unallocated Space](field-manual/digital-forensics/windows-forensics/new-technology-file-system-ntfs/file-slack-and-unallocated-space.md)
       * [Update Sequence Number (USN) Journal](field-manual/digital-forensics/windows-forensics/new-technology-file-system-ntfs/update-sequence-number-usn-journal.md)
