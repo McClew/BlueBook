@@ -52,6 +52,8 @@
       * [Network & Object Access](field-manual/incident-response/log-analysis/windows-event-logs/network-and-object-access.md)
       * [Malware & Tampering](field-manual/incident-response/log-analysis/windows-event-logs/malware-and-tampering.md)
 * [Digital Forensics](field-manual/digital-forensics/README.md)
+  * [Evidence Acquisition Techniques](field-manual/digital-forensics/evidence-acquisition-techniques/README.md)
+    * [Forensic Imaging](field-manual/digital-forensics/evidence-acquisition-techniques/forensic-imaging.md)
   * [Windows Forensics](field-manual/digital-forensics/windows-forensics/README.md)
     * [Execution Artifacts](field-manual/digital-forensics/windows-forensics/execution-artifacts/README.md)
       * [Artifact Index](field-manual/digital-forensics/windows-forensics/execution-artifacts/artifact-index.md)
