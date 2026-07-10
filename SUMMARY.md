@@ -65,6 +65,7 @@
       * [Alternate Data Streams (ADS)](field-manual/digital-forensics/windows-artifacts/new-technology-file-system-ntfs/alternate-data-streams-ads.md)
       * [Volume Shadow Copies](field-manual/digital-forensics/windows-artifacts/new-technology-file-system-ntfs/volume-shadow-copies.md)
       * [Security Descriptors & ACLs](field-manual/digital-forensics/windows-artifacts/new-technology-file-system-ntfs/security-descriptors-and-acls.md)
+    * [System Resource Usage Monitor (SRUM)](field-manual/digital-forensics/windows-artifacts/system-resource-usage-monitor-srum.md)
   * [Browser Forensics](field-manual/digital-forensics/browser-forensics/README.md)
     * [Chrome File Downloads](field-manual/digital-forensics/browser-forensics/chrome-file-downloads.md)
     * [Recovering Deleted Chrome History](field-manual/digital-forensics/browser-forensics/recovering-deleted-chrome-history.md)
