@@ -21,15 +21,21 @@ layout:
 
 # Amcache
 
-Amcache is a registry hive created by Windows to track programs that have been installed or run on the machine, serving as a primary target during malware triage.
-
-* Path: `C:\Windows\AppCompat\Programs\Amcache.hve`
-* Forensic Value: Records application installation time, path, file compilation timestamps, and cryptographic hashes.
-
-***
+Amcache is an independent registry hive that tracks applications, drivers, and setup installations. It is arguably one of the most powerful triage locations for discovering unknown malware or anti-forensics tools.
 
 {% hint style="info" %}
 #### Survivable Threat Intelligence
 
-Amcache is an absolute goldmine because it records the SHA-1 file hash of the executable. Even if an attacker executes a malicious tool and subsequently deletes it from the disk, the Amcache hive usually preserves this hash, enabling you to run it against intelligence databases like VirusTotal.
+Amcache keeps tracking records even if an application was executed only once and subsequently wiped using an anti-forensics tool or secure-deletion utility. Because `Amcache.hve` is written to disk as an independent log file transaction, the registry keys persist even when the target executable no longer exists anywhere on the master file table (MFT).
 {% endhint %}
+
+**Path:** `C:\Windows\AppCompat\Programs\Amcache.hve`
+
+It records application installation time, path, file compilation timestamps, and cryptographic hashes.
+
+<figure><img src="../../../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+
+Amcache acts as an upgrade to the older `RecentFileCache.bcf`. It is a fully-formed standalone registry structure written directly to disk.
+
+* **The Cryptographic Hash:** Its most critical asset is the recording of file cryptographic hashes (specifically SHA-1).
+* **Compilation Metadata:** It stores the PE (Portable Executable) compilation timestamp extracted directly from the file header, allowing you to identify time-stomping anomalies if the disk modification date does not match the compile date.
