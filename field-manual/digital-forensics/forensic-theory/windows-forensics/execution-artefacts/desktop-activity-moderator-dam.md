@@ -31,7 +31,24 @@ For investigators, DAM provides an identical telemetry format to BAM (capturing 
 
 DAM populates keys directly inside the SYSTEM registry hive, structure-mapped by the Security Identifier (SID) of the executing user account.
 
-* Primary Path: `HKLM\SYSTEM\CurrentControlSet\Services\dam\UserSettings\{USER_SID}`
-* Alternative Active State Path: `HKLM\SYSTEM\CurrentControlSet\Services\dam\state\UserSettings\{USER_SID}`
+* **Primary Path:** \
+  `HKLM\SYSTEM\CurrentControlSet\Services\dam\UserSettings\{USER_SID}`
+* **Alternative Active State Path:** \
+  `HKLM\SYSTEM\CurrentControlSet\Services\dam\state\UserSettings\{USER_SID}`
 
 Values within this key contain the absolute file path to the executed desktop application. The value data contains a binary blob holding a 64-bit Windows FILETIME timestamp in Coordinated Universal Time (UTC). The operating system updates this specific value data when the application is launched or when it is evaluated during a power-state transition.
+
+***
+
+## Forensic Gaps & Limitations
+
+Just like BAM, relying solely on DAM will introduce blind spots to your timeline analysis if you don't know its inherent constraints:
+
+* **Temporal Decay:** DAM logs are not a permanent record of past activity. Inactive entries or entries for executables that have since been removed from the file system are routinely purged by the OS after 7 days.
+* **Removable Storage Bypass:** Applications executed directly from external media (such as USB thumb drives) or mounted network file shares are completely bypassed by the DAM driver to avoid disrupting peripheral power states.
+
+{% hint style="warning" %}
+#### Timestamp Drift
+
+DAM execution timestamps can occasionally exhibit a drift or update delay of several minutes depending on when the system flushes its power management states to disk. You must never use DAM as a definitive standalone clock timestamp; always cross-reference it with the high-fidelity timestamps found in Prefetch files or UserAssist logs.
+{% endhint %}

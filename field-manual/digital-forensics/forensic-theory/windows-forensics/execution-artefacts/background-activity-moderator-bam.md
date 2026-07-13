@@ -23,16 +23,22 @@ layout:
 
 BAM is a modern Windows service that manages the power consumption of desktop and background applications.
 
-* Path: `HKLM\SYSTEM\CurrentControlSet\Services\bam\UserSettings\{SID}`
-* Forensic Value: Maps the absolute execution path and a 64-bit Windows FILETIME execution timestamp directly to a specific user's Security Identifier (SID).
+***
+
+## Registry Location and Schema
+
+BAM populates keys directly inside the SYSTEM registry hive, structure-mapped by the Security Identifier (SID) of the executing user account.
+
+* **Primary Path:** \
+  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\bam\State\UserSettings{SID}`
+* **Alternative Active State Path:** \
+  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\bam\UserSettings{SID}`
 
 ***
 
-{% hint style="warning" %}
-#### Limited Record Lifetime & Sources
+## Forensic Gaps & Limitations
 
-Unlike heavier forensic logs, BAM records are not permanent. Inactive entries are automatically pruned after 7 days of inactivity.
+Just like [desktop-activity-moderator-dam.md](desktop-activity-moderator-dam.md "mention"), relying solely on BAM will introduce blind spots to your timeline analysis if you don't know its inherent constraints:
 
-Crucially, BAM completely ignores executables launched directly from network shares or removable storage devices (like USB thumb drives).
-{% endhint %}
-
+* **Temporal Decay:** BAM logs are not a permanent record of past activity. Inactive entries or entries for executables that have since been removed from the file system are routinely purged by the OS after 7 days.
+* **Removable Storage Bypass:** Applications executed directly from external media (such as USB thumb drives) or mounted network file shares are completely bypassed by the BAM driver to avoid disrupting peripheral power states.
