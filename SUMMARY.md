@@ -71,6 +71,7 @@
       * [Inspecting Word Add-ins](field-manual/digital-forensics/ir-forensics/office-forensics/inspecting-word-add-ins.md)
       * [Auditing Word Code Execution](field-manual/digital-forensics/ir-forensics/office-forensics/auditing-word-code-execution.md)
       * [Auditing Word Trusted Documents](field-manual/digital-forensics/ir-forensics/office-forensics/auditing-word-trusted-documents.md)
+  * [Cybercrime Forensics](field-manual/digital-forensics/cybercrime-forensics.md)
   * [Forensic Theory](field-manual/digital-forensics/forensic-theory/README.md)
     * [Windows Forensics](field-manual/digital-forensics/forensic-theory/windows-forensics/README.md)
       * [Execution Artefacts](field-manual/digital-forensics/forensic-theory/windows-forensics/execution-artefacts/README.md)
