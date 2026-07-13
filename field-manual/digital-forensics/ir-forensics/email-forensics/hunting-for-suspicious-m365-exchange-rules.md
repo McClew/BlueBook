@@ -15,6 +15,8 @@ layout:
     visible: true
   tags:
     visible: true
+  actions:
+    visible: true
 ---
 
 # Hunting for Suspicious M365 Exchange Rules
@@ -35,7 +37,7 @@ When reviewing the output, hunt for these specific red flags:
 
 Standard Outlook interfaces (Web and Desktop) often fail to show Hidden Rules. These are frequently used by attackers to "black hole" security alerts or IT notifications.
 
-A collection of snippets can be found at [get-inboxrule.md](../../../toolbox/snippets/digital-forensics/get-inboxrule.md "mention").
+A collection of snippets can be found at [get-inboxrule.md](../../../../toolbox/snippets/digital-forensics/get-inboxrule.md "mention").
 
 {% code title="Connect to Exchange Online first" overflow="wrap" lineNumbers="true" %}
 ```powershell

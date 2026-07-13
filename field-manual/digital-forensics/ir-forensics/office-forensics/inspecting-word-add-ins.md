@@ -25,7 +25,7 @@ Malicious actors may use Word Add-ins to establish persistence or execute unauth
 
 ***
 
-A script to perform this analysis is: [find-word-add-ins.md](../../../toolbox/snippets/digital-forensics/find-word-add-ins.md "mention").
+A script to perform this analysis is: [find-word-add-ins.md](../../../../toolbox/snippets/digital-forensics/find-word-add-ins.md "mention").
 
 {% code lineNumbers="true" %}
 ```powershell

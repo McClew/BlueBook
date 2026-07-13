@@ -25,7 +25,7 @@ layout:
 
 ***
 
-A script to perform this analysis is: [word-trusted-documents.md](../../../toolbox/snippets/digital-forensics/word-trusted-documents.md "mention").
+A script to perform this analysis is: [word-trusted-documents.md](../../../../toolbox/snippets/digital-forensics/word-trusted-documents.md "mention").
 
 {% code lineNumbers="true" %}
 ```powershell

@@ -25,7 +25,7 @@ layout:
 
 ***
 
-A script to perform this analysis is: [word-code-execution-audit.md](../../../toolbox/snippets/digital-forensics/word-code-execution-audit.md "mention").
+A script to perform this analysis is: [word-code-execution-audit.md](../../../../toolbox/snippets/digital-forensics/word-code-execution-audit.md "mention").
 
 {% code lineNumbers="true" %}
 ```powershell

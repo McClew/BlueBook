@@ -37,7 +37,7 @@ Always check if `History-wal` exists. If it does, its size will tell you how muc
 {% step %}
 #### Use Forensic Tools
 
-Tools like [db-browser-for-sqlite.md](../../../toolbox/tooling/utilities/db-browser-for-sqlite.md "mention") will sufice, but specialised tools like [browsinghistoryview.md](../../../toolbox/tooling/digital-forensics/browsinghistoryview.md "mention") or [magnet-axiom.md](../../../toolbox/tooling/digital-forensics/magnet-axiom.md "mention") are better at automatically parsing the deleted records in SQLite.
+Tools like [db-browser-for-sqlite.md](../../../../toolbox/tooling/utilities/db-browser-for-sqlite.md "mention") will sufice, but specialised tools like [browsinghistoryview.md](../../../../toolbox/tooling/digital-forensics/browsinghistoryview.md "mention") or [magnet-axiom.md](../../../../toolbox/tooling/digital-forensics/magnet-axiom.md "mention") are better at automatically parsing the deleted records in SQLite.
 {% endstep %}
 
 {% step %}

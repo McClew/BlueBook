@@ -51,7 +51,7 @@ Generate `SHA256` hashes of files in this directory to check against threat inte
 
 Tools:
 
-* [virustotal.md](../../../toolbox/tooling/threat-intelligence/virustotal.md "mention")
+* [virustotal.md](../../../../toolbox/tooling/threat-intelligence/virustotal.md "mention")
 {% endstep %}
 
 {% step %}

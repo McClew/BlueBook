@@ -25,7 +25,7 @@ Malicious actors may use Outlook Add-ins to establish persistence or execute una
 
 ***
 
-A script to perform this analysis is: [find-outlook-add-ins.md](../../../toolbox/snippets/digital-forensics/find-outlook-add-ins.md "mention").
+A script to perform this analysis is: [find-outlook-add-ins.md](../../../../toolbox/snippets/digital-forensics/find-outlook-add-ins.md "mention").
 
 {% code lineNumbers="true" %}
 ```powershell
