@@ -19,5 +19,5 @@ layout:
     visible: true
 ---
 
-# Cybercrime Forensics
+# Application Forensics
 
