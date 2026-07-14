@@ -114,6 +114,7 @@
         * [Log Clearance](field-manual/digital-forensics/forensic-theory/windows-forensics/windows-anti-forensics/log-clearance.md)
         * [Volume Shadow Copy (VSS) Deletion](field-manual/digital-forensics/forensic-theory/windows-forensics/windows-anti-forensics/volume-shadow-copy-vss-deletion.md)
         * [Secure File Wiping](field-manual/digital-forensics/forensic-theory/windows-forensics/windows-anti-forensics/secure-file-wiping.md)
+        * [Threat Execution Hijacking](field-manual/digital-forensics/forensic-theory/windows-forensics/windows-anti-forensics/threat-execution-hijacking.md)
       * [New Technology File System (NTFS)](field-manual/digital-forensics/forensic-theory/windows-forensics/new-technology-file-system-ntfs/README.md)
         * [NTFS Metadata](field-manual/digital-forensics/forensic-theory/windows-forensics/new-technology-file-system-ntfs/ntfs-metadata.md)
         * [Master File Table (MFT)](field-manual/digital-forensics/forensic-theory/windows-forensics/new-technology-file-system-ntfs/master-file-table-mft/README.md)
