@@ -15,7 +15,12 @@ layout:
     visible: true
   tags:
     visible: true
+  actions:
+    visible: true
 ---
 
-# CyberEssentials+
+# Remediation & Reporting
 
+* Drafting the Executive Report (Structuring logic for non-technical audiences)
+* Developing Remediation Plans (Collaborating with internal IT teams)
+* Post-Remediation Validation
