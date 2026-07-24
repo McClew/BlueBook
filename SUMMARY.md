@@ -176,6 +176,7 @@
 * [Compliance](field-manual/compliance/README.md)
   * [Cyber Essentials](field-manual/compliance/cyber-essentials/README.md)
     * [Role & Skills](field-manual/compliance/cyber-essentials/role-and-skills.md)
+    * [Effective Communication](field-manual/compliance/cyber-essentials/effective-communication.md)
     * [Scoping & Assessment](field-manual/compliance/cyber-essentials/scoping-and-assessment.md)
     * [Technical Controls](field-manual/compliance/cyber-essentials/technical-controls.md)
     * [Remediation & Reporting](field-manual/compliance/cyber-essentials/remediation-and-reporting.md)
