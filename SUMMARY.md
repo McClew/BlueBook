@@ -180,7 +180,7 @@
     * [Effective Communication](field-manual/consultancy/ce-advisor/effective-communication.md)
     * [The Boundary & Scoping](field-manual/consultancy/ce-advisor/the-boundary-and-scoping.md)
     * [CE Gap Analysis](field-manual/consultancy/ce-advisor/ce-gap-analysis.md)
-    * [Technical Controls](field-manual/consultancy/ce-advisor/technical-controls.md)
+    * [The Five Technical Controls](field-manual/consultancy/ce-advisor/the-five-technical-controls.md)
     * [Remediation & Reporting](field-manual/consultancy/ce-advisor/remediation-and-reporting.md)
     * [CE+](field-manual/consultancy/ce-advisor/ce+.md)
     * [Advisor Resources](field-manual/consultancy/ce-advisor/advisor-resources/README.md)
