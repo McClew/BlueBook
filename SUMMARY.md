@@ -182,7 +182,7 @@
     * [The Five Technical Controls](field-manual/consultancy/ce-advisor/the-five-technical-controls.md)
     * [CE Gap Analysis](field-manual/consultancy/ce-advisor/ce-gap-analysis.md)
     * [Reporting & Remediation](field-manual/consultancy/ce-advisor/reporting-and-remediation.md)
-    * [CE+](field-manual/consultancy/ce-advisor/ce+.md)
+    * [CE+ Technical Audit](field-manual/consultancy/ce-advisor/ce+-technical-audit.md)
     * [Advisor Resources](field-manual/consultancy/ce-advisor/advisor-resources/README.md)
       * [NCSC Small Organisation Guide](field-manual/consultancy/ce-advisor/advisor-resources/ncsc-small-organisation-guide.md)
 * [Risk Management](field-manual/risk-management/README.md)
