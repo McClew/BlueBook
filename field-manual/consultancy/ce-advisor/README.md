@@ -15,7 +15,9 @@ layout:
     visible: true
   tags:
     visible: true
+  actions:
+    visible: true
 ---
 
-# CyberEssentials
+# CE Advisor
 
