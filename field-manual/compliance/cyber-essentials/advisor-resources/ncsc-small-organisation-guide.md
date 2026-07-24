@@ -58,13 +58,28 @@ Protecting access to crucial services (like banking, social media, or IT adminis
 
 Keeping smartphones, laptops, and tablets safe by applying security updates, turning on built-in security features (like firewalls and antivirus), and using screen locks.
 
+<table><thead><tr><th width="257.33331298828125">Recommendation</th><th width="466.66668701171875">CE Requirement?</th></tr></thead><tbody><tr><td><strong>Switch on your firewall</strong></td><td><p><i class="fa-siren-on" style="color:$danger;">:siren-on:</i> <strong>CE Requirement</strong>: A software firewall must be enabled and configured on every in-scope device to protect it when it leaves the corporate network, alongside a boundary firewall for the office.</p><p><em>(Maps to: Firewalls and Routers)</em></p></td></tr><tr><td><strong>Apply updates promptly (Turn on automatic updates)</strong></td><td><p><i class="fa-siren-on" style="color:$danger;">:siren-on:</i> <strong>CE Requirement:</strong> All software, apps, and operating systems must be kept up to date. Any "High" or "Critical" security updates must be applied within 14 days of release.</p><p><em>(Maps to: Security Update Management)</em></p></td></tr><tr><td><strong>Use Antivirus / Anti-malware software</strong></td><td><p><i class="fa-siren-on" style="color:$danger;">:siren-on:</i> <strong>CE Requirement:</strong> Devices must be protected from malicious software. For most standard OSs (Windows/macOS), this means running updated anti-malware software (like Windows Defender) that scans files upon access.</p><p><em>(Maps to: Malware Protection)</em></p></td></tr><tr><td><strong>Lock your devices (PIN, password, or biometrics)</strong></td><td><p><i class="fa-siren-on" style="color:$danger;">:siren-on:</i> <strong>CE Requirement:</strong> All in-scope devices must require a password, PIN, or biometric authentication to unlock them.</p><p><em>(Maps to: User Access Control / Secure Configuration)</em></p></td></tr><tr><td><strong>Remove unused software and apps</strong></td><td><p><i class="fa-siren-on" style="color:$danger;">:siren-on:</i> <strong>CE Requirement:</strong> Only approved software should be installed. Any unused applications or services must be removed or disabled to reduce the attack surface.</p><p><em>(Maps to: Secure Configuration)</em></p></td></tr></tbody></table>
+
 ### Backing up your data
 
 Ensuring critical business data is copied and stored securely, separate from the main network, to recover from ransomware, theft, or hardware failure.
+
+{% hint style="info" %}
+#### User Awareness Caveat
+
+A Cyber Advisor should advise clients to train their staff, but a lack of phishing training will not cause them to fail a CE assessment.
+{% endhint %}
+
+<table><thead><tr><th width="257.33331298828125">Recommendation</th><th width="466.66668701171875">CE Requirement?</th></tr></thead><tbody><tr><td><strong>Identify what data is critical to the business</strong></td><td><em>Not a CE Requirement.</em></td></tr><tr><td><strong>Keep your backups separate from your computer and network (Offline/Cold storage or secure cloud)</strong></td><td><em>Not a CE Requirement:</em> A company with zero backups will still pass Cyber Essentials if their technical controls are in place.</td></tr><tr><td><strong>Test your backups regularly to ensure they work</strong></td><td><em>Not a CE Requirement:</em> While backups are critical for business survival and are a massive part of NCSC guidance, Cyber Essentials does not assess backups.</td></tr></tbody></table>
 
 ### Spotting cyber attacks
 
 Training staff to recognise phishing emails, suspicious messages, and knowing what to do if they click a bad link (fostering a blame-free reporting culture).
 
-***
+{% hint style="info" %}
+#### Backups Caveat
 
+A Cyber Advisor should advise clients to back up their data, but a lack of backups will not cause them to fail a CE assessment.
+{% endhint %}
+
+<table><thead><tr><th width="257.33331298828125">Recommendation</th><th width="466.66668701171875">CE Requirement?</th></tr></thead><tbody><tr><td><strong>Train staff to spot the signs of phishing</strong></td><td><em>Not a CE Requirement:</em> Cyber Essentials is a technical baseline standard. It assesses the configuration of IT infrastructure, not the cybersecurity awareness of the staff or the presence of training policies.</td></tr><tr><td><strong>Create a blame-free reporting culture</strong></td><td><em>Not a CE Requirement:</em> Cyber Essentials is a technical baseline standard. It assesses the configuration of IT infrastructure, not the cybersecurity awareness of the staff or the presence of training policies.</td></tr><tr><td><strong>Use the NCSC's Suspicious Email Reporting Service (SERS)</strong></td><td><em>Not a CE Requirement:</em> Cyber Essentials is a technical baseline standard. It assesses the configuration of IT infrastructure, not the cybersecurity awareness of the staff or the presence of training policies.</td></tr></tbody></table>
