@@ -176,6 +176,7 @@
 * [Compliance](field-manual/compliance.md)
 * [Consultancy](field-manual/consultancy/README.md)
   * [Data Points](field-manual/consultancy/data-points.md)
+  * [AI Governance](field-manual/consultancy/ai-governance.md)
   * [CE Advisor](field-manual/consultancy/ce-advisor/README.md)
     * [Role & Skills](field-manual/consultancy/ce-advisor/role-and-skills.md)
     * [Effective Communication](field-manual/consultancy/ce-advisor/effective-communication.md)
