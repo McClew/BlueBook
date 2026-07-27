@@ -418,6 +418,68 @@ jobs:
 
 ***
 
+## Configuring Manual-Only Triggers
+
+In the workflow file, set the `on:` block at the top of the YAML configuration.
+
+#### Example 1: Manual-Only Drift Detection & Auto-Remediation
+
+To ensure drift detection and auto-remediation _only_ execute when an engineer specifically clicks the button in GitHub, remove the `schedule` (cron) trigger:
+
+```yaml
+name: M365DSC Drift Detection & Remediation
+
+# ONLY allow manual triggers via the GitHub web UI or CLI
+on:
+  workflow_dispatch:
+    inputs:
+      auto_remediate:
+        description: 'Automatically fix configuration drift if found?'
+        required: true
+        type: boolean
+        default: false
+
+jobs:
+  assess-tenant:
+    runs-on: windows-latest
+    # ... rest of your steps ...
+```
+
+{% hint style="info" %}
+#### Action Parameters
+
+The `inputs` section above creates a interactive checkbox inside GitHub when the workflow is triggered manually. Engineers can decide at run-time whether to simply check for drift (`false`) or actively fix it (`true`).
+{% endhint %}
+
+#### Example 2:  Manual-Only Tenant Export & Documentation
+
+To run tenant exports and generate HTML/Excel reports on demand:
+
+```yaml
+name: M365DSC Automated Export & Documentation
+
+# ONLY allow manual triggers
+on:
+  workflow_dispatch:
+
+jobs:
+  export-and-report:
+    runs-on: windows-latest
+    # ... rest of your steps ...
+```
+
+#### How to Trigger Manual Workflows in GitHub
+
+Once `workflow_dispatch` is configured and pushed to your default branch (`main`):
+
+1. Go to your repository on GitHub.com.
+2. Click the Actions tab along the top menu.
+3. Select the workflow name (e.g., _M365DSC Drift Detection_) from the left sidebar.
+4. Click the Run workflow dropdown menu on the right.
+5. Choose your branch, fill in any custom inputs (if configured), and click the green Run workflow button.
+
+***
+
 ## Monorepo vs. Multi-Repository Architectures
 
 When managing multiple environments or client tenants (especially within an MSP structure), choosing the correct repository layout is critical.
