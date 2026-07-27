@@ -175,6 +175,7 @@
     * [Audit Charter](field-manual/strategic-leadership/information-system-audits/audit-charter.md)
 * [Compliance](field-manual/compliance.md)
 * [Consultancy](field-manual/consultancy/README.md)
+  * [Data Points](field-manual/consultancy/data-points.md)
   * [CE Advisor](field-manual/consultancy/ce-advisor/README.md)
     * [Role & Skills](field-manual/consultancy/ce-advisor/role-and-skills.md)
     * [Effective Communication](field-manual/consultancy/ce-advisor/effective-communication.md)
@@ -274,6 +275,7 @@
   * [Reverse Engineering](toolbox/bookcase/reverse-engineering.md)
   * [Security Engineering](toolbox/bookcase/security-engineering.md)
   * [Leadership](toolbox/bookcase/leadership.md)
+  * [Data Sources](toolbox/bookcase/data-sources.md)
 
 ## Playbooks
 
