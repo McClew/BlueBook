@@ -105,14 +105,172 @@ Export-PfxCertificate -Cert $cert -FilePath "C:\Certs\M365DSC-Auth.pfx" -Passwor
 2. Go to Certificates & secrets > Certificates > Upload certificate, and upload `M365DSC-Auth.cer`.
 3. Note down the Application (Client) ID, Directory (Tenant) ID, and the Certificate Thumbprint.
 
-### Step 3: Configure CI/CD Secrets (GitHub / Azure DevOps)
+### Step 3: Convert the `.pfx` Certificate to Base64
 
-Do not hardcode keys or thumbprints into your public or private code repositories. Store them as repository or environment secrets:
+GitHub Secrets only accept plain text strings, not binary files like `.pfx`. We need to convert the certificate into a Base64 encoded string first.
+
+Open PowerShell on the machine where the certificate was created and run:
+
+{% code overflow="wrap" %}
+```powershell
+# Path to your exported .pfx certificate
+$pfxPath = "C:\Certs\M365DSC-Auth.pfx"
+
+# Convert the binary file to a Base64 text string
+$base64Content = [Convert]::ToBase64String([System.IO.File]::ReadAllBytes($pfxPath))
+
+# Copy the Base64 string directly to your clipboard
+$base64Content | Set-Clipboard
+
+Write-Host "Certificate converted and copied to clipboard!" -ForegroundColor Green
+```
+{% endcode %}
+
+### Step 4: Choose Where to Store the Secrets in GitHub
+
+We have two choices depending on your architecture:
+
+* **Option A:** Repository Secrets (Simplest - Single Tenant): Available to all workflows in the repository.
+* **Option B:** Environment Secrets (Recommended for MSPs / Multi-Tenant): Isolated per environment (e.g., `Client-Alpha`, `Client-Beta`), allowing us to reuse the same variable names for different tenants.
+
+### Step 5: Configure CI/CD Secrets
+
+Do not hardcode keys or thumbprints into the public or private code repositories. Store them as repository or environment secrets:
 
 * `M365_TENANT_ID`: The Directory ID of the target tenant.
 * `M365_CLIENT_ID`: The Application ID of the App Registration.
 * `M365_CERT_THUMBPRINT`: The certificate thumbprint.
 * `M365_CERT_BASE64`: The contents of the `.pfx` file converted to a Base64 string for dynamic loading into transient pipeline runners.
+
+{% hint style="warning" %}
+#### Important Security Rules
+
+* **Once saved, secrets cannot be viewed:** GitHub never shows the string value again after saving. You can only update or overwrite it.
+* **Log Masking:** GitHub Actions automatically detects and redacts these secret values from the execution logs, replacing them with `***`.
+* **Branch Protection:** For production environments, enable Branch Protection Rules on `main` to require a Pull Request review before anyone can trigger a pipeline that utilizes these secrets.
+{% endhint %}
+
+***
+
+## Utilising Stored Secrets
+
+Once secrets are securely stored in GitHub (either as Repository Secrets or Environment Secrets), they must be injected into the workflow runner at runtime.
+
+Because GitHub Actions runners start as completely clean, ephemeral virtual machines, the pipeline must dynamically extract these secrets to reconstruct the authentication certificate and authenticate against the Microsoft Graph and Exchange Online APIs.
+
+### Accessing Secrets in YAML Syntax
+
+GitHub Actions exposes secrets through the `${{ secrets.SECRET_NAME }}` context object. We pass these values into PowerShell steps via workflow environment variables or direct command arguments.
+
+{% code title="Examples of accessing secrets in workflow steps:" overflow="wrap" %}
+```yaml
+env:
+  TENANT_ID: ${{ secrets.M365_TENANT_ID }}
+  CLIENT_ID: ${{ secrets.M365_CLIENT_ID }}
+  CERT_THUMBPRINT: ${{ secrets.M365_CERT_THUMBPRINT }}
+  CERT_BASE64: ${{ secrets.M365_CERT_BASE64 }}
+  CERT_PASSWORD: ${{ secrets.M365_CERT_PASSWORD }}
+```
+{% endcode %}
+
+{% hint style="info" %}
+#### Security note
+
+GitHub automatically redacts secret values in step outputs and execution logs, masking them as `***`.
+{% endhint %}
+
+### Step 1: Reconstructing the Certificate in Memory
+
+The runner reads the `M365_CERT_BASE64` text secret, decodes it back into binary byte data, and installs it into the local user's Windows Certificate Store (`Cert:\CurrentUser\My`).
+
+{% code overflow="wrap" %}
+```yaml
+- name: Reconstruct and Import Certificate
+  shell: powershell
+  env:
+    CERT_BASE64: ${{ secrets.M365_CERT_BASE64 }}
+    CERT_PASSWORD: ${{ secrets.M365_CERT_PASSWORD }}
+  run: |
+    # 1. Convert the Base64 text string back to raw certificate bytes
+    $certBytes = [System.Convert]::FromBase64String($env:CERT_BASE64)
+    
+    # 2. Instantiate the X509Certificate2 object in memory
+    $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2(
+        $certBytes, 
+        $env:CERT_PASSWORD, 
+        [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable
+    )
+    
+    # 3. Add the certificate to the temporary runner's store
+    $store = Get-Item "Cert:\CurrentUser\My"
+    $store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
+    $store.Add($cert)
+    $store.Close()
+    
+    Write-Host "Authentication certificate installed successfully."
+```
+{% endcode %}
+
+### Step 2: Passing Parameters to Compile the Configuration
+
+Once the certificate resides in the local store, pass the `M365_CLIENT_ID`, `M365_TENANT_ID`, and `M365_CERT_THUMBPRINT` secret's directly into your M365DSC compilation script:
+
+{% code overflow="wrap" %}
+```yaml
+- name: Compile M365DSC Configuration
+  shell: powershell
+  run: |
+    # Dot-source your DSC configuration script
+    . .\Baselines\M365SecurityBase.ps1
+
+    # Execute the configuration function with secret arguments
+    M365SecurityBase `
+      -ApplicationId "${{ secrets.M365_CLIENT_ID }}" `
+      -TenantId "${{ secrets.M365_TENANT_ID }}" `
+      -CertificateThumbprint "${{ secrets.M365_CERT_THUMBPRINT }}"
+```
+{% endcode %}
+
+### Step 3: Authenticating Against Microsoft 365
+
+During execution, `Start-DscConfiguration` matches the `-CertificateThumbprint` against the installed certificate to sign the OAuth 2.0 token request sent to Entra ID (`[https://login.microsoftonline.com/](https://login.microsoftonline.com/)<TenantID>/oauth2/v2.0/token`).
+
+{% code overflow="wrap" %}
+```yaml
+- name: Apply Configuration to Tenant
+  shell: powershell
+  run: |
+    # Start-DscConfiguration consumes the compiled .mof file
+    # Authentication occurs automatically using the matched thumbprint and App Registration
+    Start-DscConfiguration -Path .\M365SecurityBase -Wait -Verbose -Force
+```
+{% endcode %}
+
+### Handling Multi-Tenant Environment Secrets
+
+If configured for multiple client tenants within a single monorepo, assign secrets to specific GitHub Environments rather than repository root secrets.
+
+In the workflow, add the `environment` property to tell GitHub which client credentials to pull dynamically:
+
+{% code overflow="wrap" %}
+```yaml
+jobs:
+  deploy-client-alpha:
+    runs-on: windows-latest
+    # Pulls M365_CLIENT_ID, M365_TENANT_ID, etc., specifically from the 'Client-Alpha' environment
+    environment: Client-Alpha
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run M365DSC
+        shell: powershell
+        run: |
+          # The secrets context automatically evaluates to Client-Alpha's credentials
+          Write-Host "Targeting Tenant ID: ${{ secrets.M365_TENANT_ID }}"
+```
+{% endcode %}
 
 ***
 
@@ -413,3 +571,12 @@ jobs:
         run: |
           Start-DscConfiguration -Path .\M365SecurityBase -Wait -Verbose -Force
 ```
+
+***
+
+## Useful IDE Support
+
+If the configurations are modified using Visual Studio Code, install the official PowerShell Extension.
+
+* **IntelliSense / Auto-Complete:** When typing inside a `Node` block in your `.ps1` file, press `Ctrl + Space`. VS Code will display a dropdown list of all available M365DSC resources and valid property names.
+* **Syntax Validation:** If you misspell a parameter name or pass a string into a field that expects a boolean (`$true`/`$false`), VS Code will highlight the error in red before you even commit your code to GitHub.
