@@ -29,4 +29,4 @@ layout:
 
 ## Automated Configuration Management
 
-[microsoft365dsc.md](../../toolbox/tooling/configuration-and-hardening/microsoft365dsc.md "mention")
+[microsoft365dsc.md](../../../toolbox/tooling/configuration-and-hardening/microsoft365dsc.md "mention")
