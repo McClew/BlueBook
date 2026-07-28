@@ -178,6 +178,7 @@
   * [Infrastructure as Code](field-manual/devsecops/infrastructure-as-code.md)
 * [Compliance](field-manual/compliance.md)
 * [Risk Management](field-manual/risk-management/README.md)
+  * [Risk Calculation](field-manual/risk-management/risk-calculation.md)
   * [Threat Modelling](field-manual/risk-management/threat-modelling/README.md)
     * [Attack Tree Modelling](field-manual/risk-management/threat-modelling/attack-tree-modelling.md)
   * [Cyber Exercises](field-manual/risk-management/cyber-exercises/README.md)
