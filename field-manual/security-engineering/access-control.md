@@ -29,13 +29,13 @@ layout:
 
 In DAC, the creator or owner of the resource dictates who gets access and what privileges they have (read, write, execute).
 
-**Mechanism:** Access Control Lists (ACLs) attached to the resource.
+<mark style="color:$info;">**Mechanism:**</mark> Access Control Lists (ACLs) attached to the resource.
 
-**Pros:** Highly flexible and easy for users to manage their own data sharing.
+<i class="fa-chevron-up" style="color:$success;">:chevron-up:</i> <mark style="color:$success;">**Pros:**</mark> Highly flexible and easy for users to manage their own data sharing.
 
-**Cons:** Vulnerable to user error and malware; if a user is compromised, all data they own or have access to is also compromised.
+<i class="fa-chevron-down" style="color:$danger;">:chevron-down:</i> <mark style="color:$danger;">**Cons:**</mark> Vulnerable to user error and malware; if a user is compromised, all data they own or have access to is also compromised.
 
-**Implementation Example:** A user right-clicking a Google Drive document and manually granting "Edit" permissions to a colleague's email address.
+<mark style="color:$info;">**Implementation Example:**</mark> A user right-clicking a Google Drive document and manually granting "Edit" permissions to a colleague's email address.
 
 ***
 
@@ -43,13 +43,13 @@ In DAC, the creator or owner of the resource dictates who gets access and what p
 
 In MAC, the system enforces access decisions based on strict policies, regardless of what the data owner wants. It relies on comparing a user's clearance level with a data object's classification label.
 
-**Mechanism:** Security Labels (e.g., Top Secret, Secret, Confidential) and Clearance matches.
+<mark style="color:$info;">**Mechanism:**</mark> Security Labels (e.g., Top Secret, Secret, Confidential) and Clearance matches.
 
-**Pros:** Extremely secure; limits the damage of compromised accounts because users cannot override the system's security labels.
+<i class="fa-chevron-up" style="color:$success;">:chevron-up:</i> <mark style="color:$success;">**Pros:**</mark> Extremely secure; limits the damage of compromised accounts because users cannot override the system's security labels.
 
-**Cons:** Very rigid, difficult to implement, and creates high administrative overhead.
+<i class="fa-chevron-down" style="color:$danger;">:chevron-down:</i> <mark style="color:$danger;">**Cons:**</mark> Very rigid, difficult to implement, and creates high administrative overhead.
 
-**Implementation Example:** SE-Linux (Security-Enhanced Linux) restricting a process from accessing a file, even if the user running the process is an administrator, because the process lacks the specific "Top Secret" label.
+<mark style="color:$info;">**Implementation Example:**</mark> SE-Linux (Security-Enhanced Linux) restricting a process from accessing a file, even if the user running the process is an administrator, because the process lacks the specific "Top Secret" label.
 
 ***
 
@@ -57,13 +57,13 @@ In MAC, the system enforces access decisions based on strict policies, regardles
 
 In RBAC, access is granted based on the user's role or job function within the organization, rather than their individual identity. Users are assigned to roles, and permissions are assigned to those roles.
 
-**Mechanism:** Group memberships and role assignments.
+<mark style="color:$info;">**Mechanism:**</mark> Group memberships and role assignments.
 
-**Pros:** Radically simplifies administration for onboarding, offboarding, and role changes (e.g., if someone changes departments, you just change their role group, rather than updating 50 individual file permissions).
+<i class="fa-chevron-up" style="color:$success;">:chevron-up:</i> <mark style="color:$success;">**Pros:**</mark> Radically simplifies administration for onboarding, offboarding, and role changes (e.g., if someone changes departments, you just change their role group, rather than updating 50 individual file permissions).
 
-**Cons:** Can lead to "role explosion" if roles are not carefully defined and audited.
+<i class="fa-chevron-down" style="color:$danger;">:chevron-down:</i> <mark style="color:$danger;">**Cons:**</mark> Can lead to "role explosion" if roles are not carefully defined and audited.
 
-**Implementation Example:** Adding a new hire to the "HR\_Managers" Active Directory group, which automatically grants them access to the payroll system and employee records share.
+<mark style="color:$info;">**Implementation Example:**</mark> Adding a new hire to the "HR\_Managers" Active Directory group, which automatically grants them access to the payroll system and employee records share.
 
 ***
 
@@ -71,13 +71,13 @@ In RBAC, access is granted based on the user's role or job function within the o
 
 ABAC is the most granular model. It evaluates a set of attributes (subject, object, action, and environmental conditions) against a set of rules to make a dynamic access decision.
 
-**Mechanism:** IF/THEN policy engines evaluating real-time variables.
+<mark style="color:$info;">**Mechanism:**</mark> IF/THEN policy engines evaluating real-time variables.
 
-**Pros:** Context-aware and highly adaptable; the foundation of modern Zero Trust security.
+<i class="fa-chevron-up" style="color:$success;">:chevron-up:</i> <mark style="color:$success;">**Pros:**</mark> Context-aware and highly adaptable; the foundation of modern Zero Trust security.
 
-**Cons:** Complex to initially design and requires a robust centralized policy engine.
+<i class="fa-chevron-down" style="color:$danger;">:chevron-down:</i> <mark style="color:$danger;">**Cons:**</mark> Complex to initially design and requires a robust centralized policy engine.
 
-**Implementation Example:** An AWS IAM policy that allows a developer to access a database _only_ if they are using a company-issued device, connected from a known corporate IP address, and accessing it during standard business hours.
+<mark style="color:$info;">**Implementation Example:**</mark> An AWS IAM policy that allows a developer to access a database _only_ if they are using a company-issued device, connected from a known corporate IP address, and accessing it during standard business hours.
 
 ***
 

@@ -161,6 +161,7 @@
   * [x86 Assembly](field-manual/reverse-engineering/x86-assembly.md)
 * [Security Engineering](field-manual/security-engineering/README.md)
   * [Access Control](field-manual/security-engineering/access-control.md)
+  * [Cryptography](field-manual/security-engineering/cryptography.md)
   * [Hardening](field-manual/security-engineering/hardening.md)
   * [Microsoft365 Configuration](field-manual/security-engineering/microsoft365-configuration.md)
 * [Security Assessment](field-manual/security-assessment/README.md)
