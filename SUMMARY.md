@@ -165,15 +165,15 @@
 * [Security Assessment](field-manual/security-assessment/README.md)
   * [Attack Path Management](field-manual/security-assessment/attack-path-management.md)
   * [AD & Domain Auditing](field-manual/security-assessment/ad-and-domain-auditing.md)
+  * [Information System Audits](field-manual/security-assessment/information-system-audits/README.md)
+    * [Audit Planning](field-manual/security-assessment/information-system-audits/audit-planning.md)
+    * [Audit Charter](field-manual/security-assessment/information-system-audits/audit-charter.md)
 * [DevSecOps](field-manual/devsecops/README.md)
   * [Governance & Risk Management](field-manual/devsecops/governance-and-risk-management.md)
   * [Secure Development](field-manual/devsecops/secure-development.md)
   * [Infrastructure as Code](field-manual/devsecops/infrastructure-as-code.md)
-* [Strategic Leadership](field-manual/strategic-leadership/README.md)
-  * [Operational Context Questionnaire (OCQ)](field-manual/strategic-leadership/operational-context-questionnaire-ocq.md)
-  * [Information System Audits](field-manual/strategic-leadership/information-system-audits/README.md)
-    * [Audit Planning](field-manual/strategic-leadership/information-system-audits/audit-planning.md)
-    * [Audit Charter](field-manual/strategic-leadership/information-system-audits/audit-charter.md)
+* [Leadership](field-manual/leadership/README.md)
+  * [The Five Dysfunctions](field-manual/leadership/the-five-dysfunctions.md)
 * [Compliance](field-manual/compliance.md)
 * [Consultancy](field-manual/consultancy/README.md)
   * [Data Points](field-manual/consultancy/data-points.md)
@@ -209,6 +209,7 @@
   * [MSP Operations](field-manual/business-operations/msp-operations.md)
   * [MSSP Operations](field-manual/business-operations/mssp-operations/README.md)
     * [SOC Infrastructure](field-manual/business-operations/mssp-operations/soc-infrastructure.md)
+    * [Operational Context Questionnaire (OCQ)](field-manual/business-operations/mssp-operations/operational-context-questionnaire-ocq.md)
 
 ## Toolbox
 
