@@ -184,6 +184,8 @@
     * [Risk Acceptance](field-manual/risk-management/risk-assessment/risk-acceptance.md)
     * [Communication & Consultation](field-manual/risk-management/risk-assessment/communication-and-consultation.md)
     * [Risk Monitoring & Review](field-manual/risk-management/risk-assessment/risk-monitoring-and-review.md)
+  * [Business Continuity Planning (BCP)](field-manual/risk-management/business-continuity-planning-bcp/README.md)
+    * [Business Impact Analysis (BIA)](field-manual/risk-management/business-continuity-planning-bcp/business-impact-analysis-bia.md)
   * [Threat Modelling](field-manual/risk-management/threat-modelling/README.md)
     * [Attack Tree Modelling](field-manual/risk-management/threat-modelling/attack-tree-modelling.md)
   * [Cyber Exercises](field-manual/risk-management/cyber-exercises/README.md)
