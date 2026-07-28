@@ -27,4 +27,5 @@ layout:
 
 {% file src="../../.gitbook/assets/CIS Community Defense Model v2.0 2022.pdf" %}
 
-<table data-search="true"><thead><tr><th data-type="files">Sources</th></tr></thead><tbody><tr><td><a href="../../.gitbook/assets/Microsoft Digital Defense Report 2024.pdf">Microsoft Digital Defense Report 2024.pdf</a></td></tr><tr><td><a href="../../.gitbook/assets/CIS Community Defense Model v2.0 2022.pdf">CIS Community Defense Model v2.0 2022.pdf</a></td></tr><tr><td><a href="../../.gitbook/assets/Verizon DBIR Report 2025.pdf">Verizon DBIR Report 2025.pdf</a></td></tr></tbody></table>
+{% file src="../../.gitbook/assets/Knowbe4 Phishing by Industry Benchmarking Report 2026.pdf" %}
+

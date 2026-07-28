@@ -29,7 +29,7 @@ layout:
 
 ## Security Control Efficacy
 
-<table data-search="true"><thead><tr><th width="274">Service</th><th width="104">Efficacy</th><th width="367">Source</th></tr></thead><tbody><tr><td>M365 MFA Enabled</td><td>99.20%</td><td><a data-mention href="data-points.md">data-points.md</a>: Microsoft Digital Defense 2025</td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+<table data-search="true"><thead><tr><th width="274">Service</th><th width="104">Efficacy</th><th width="367">Source</th></tr></thead><tbody><tr><td>M365 MFA Enabled</td><td>99.20%</td><td><a data-mention href="data-points.md">data-points.md</a>: Microsoft Digital Defense 2025</td></tr><tr><td>Security Awareness Training (12-month programme)</td><td>86%</td><td><a data-mention href="data-points.md">data-points.md</a>: Knowbe4 Phishing by Industry Benchmarking Report 2026</td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
 
 ***
 
