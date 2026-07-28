@@ -78,3 +78,77 @@ ABAC is the most granular model. It evaluates a set of attributes (subject, obje
 **Cons:** Complex to initially design and requires a robust centralized policy engine.
 
 **Implementation Example:** An AWS IAM policy that allows a developer to access a database _only_ if they are using a company-issued device, connected from a known corporate IP address, and accessing it during standard business hours.
+
+***
+
+## Applicability Assessment
+
+Below are some scenarios showing how the different Access Controls can be assessed based on applicability, allowing us to pick the best Access Control for the clients situation and requirements:
+
+### Example 1: The High-Turnover Hospital
+
+A large hospital experiences frequent staff changes. Nurses often cover different wards, and temporary staff are common. The administration needs a way to quickly grant and revoke access to patient records based on a staff member's current assignment, minimising administrative overhead.
+
+Which model is best?
+
+{% stepper %}
+{% step %}
+#### Identify the key constraint
+
+The core issue is "frequent staff changes" and the need to "quickly grant and revoke access... minimising administrative overhead."
+{% endstep %}
+
+{% step %}
+#### Evaluate DAC
+
+DAC relies on data owners managing access. In a hospital, having doctors or patients manually manage access for every new nurse would be chaotic and unscalable.
+{% endstep %}
+
+{% step %}
+#### Evaluate MAC
+
+MAC uses rigid clearance levels. While security is important, MAC is often too inflexible for dynamic environments where rapid access changes are needed.
+{% endstep %}
+
+{% step %}
+#### Evaluate RBAC
+
+RBAC assigns permissions to roles (e.g., "ER Nurse," "Pediatrics Nurse"). When a temp joins, they are assigned the role; when they leave, the role is removed. This perfectly addresses the need for efficient administration in a high-turnover environment.
+
+RBAC is the correct choice.
+{% endstep %}
+{% endstepper %}
+
+### Example 2: The Defense Contractor
+
+A company developing targeting systems for the military requires strict control over design documents. Employees must only access information strictly necessary for their specific component. Furthermore, it is unacceptable for any employee to independently decide to share these documents, even if they created them.
+
+Which model is best?
+
+{% stepper %}
+{% step %}
+#### Identify the key constraint
+
+The constraints are "strict control," "only access information strictly necessary," and critically, "unacceptable for any employee to independently decide to share."
+{% endstep %}
+
+{% step %}
+#### Evaluate DAC
+
+DAC explicitly allows creators (owners) to share documents. This directly violates the requirement that employees cannot independently share data.
+{% endstep %}
+
+{% step %}
+#### Evaluate RBAC
+
+While RBAC can enforce least privilege, it doesn't inherently prevent a user with access from copying or sharing data if the underlying system allows it.
+{% endstep %}
+
+{% step %}
+#### Evaluate MAC
+
+MAC enforces access through system-defined labels and clearances. Users _cannot_ override these rules to share data, even data they created. This strict, system-enforced control is exactly what's required for military-grade confidentiality.
+
+MAC is the correct choice.
+{% endstep %}
+{% endstepper %}
