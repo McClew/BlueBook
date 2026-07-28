@@ -160,6 +160,7 @@
     * [Dynamic-Link Libraries (DDL)](field-manual/reverse-engineering/windows-internals/dynamic-link-libraries-ddl.md)
   * [x86 Assembly](field-manual/reverse-engineering/x86-assembly.md)
 * [Security Engineering](field-manual/security-engineering/README.md)
+  * [Access Control](field-manual/security-engineering/access-control.md)
   * [Hardening](field-manual/security-engineering/hardening.md)
   * [Microsoft365 Configuration](field-manual/security-engineering/microsoft365-configuration.md)
 * [Security Assessment](field-manual/security-assessment/README.md)
