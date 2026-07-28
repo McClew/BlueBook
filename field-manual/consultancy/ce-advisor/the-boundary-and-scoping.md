@@ -27,12 +27,12 @@ Before a Cyber Advisor can assess if a company meets the five technical controls
 
 ## Defining the Boundary
 
-The scope of a Cyber Essentials assessment is defined by the network boundary. Everything inside the boundary that has access to the internet is **IN SCOPE**.
+The scope of a Cyber Essentials assessment is defined by the network boundary. Everything inside the boundary that has access to the internet is <mark style="color:$success;">**IN SCOPE**</mark>.
 
 {% hint style="info" icon="exclamation" %}
 #### The Golden Rule of Scoping
 
-If a device accesses organisational data or services and it connects to the internet, it is **IN SCOPE**.
+If a device accesses organisational data or services and it connects to the internet, it is <mark style="color:$success;">**IN SCOPE**</mark>.
 {% endhint %}
 
 ### Whole Organisation vs. Sub-set
@@ -41,7 +41,7 @@ The NCSC strongly recommends scoping the "Whole Organisation." However, a compan
 
 ### Out of Scope
 
-Devices that do not access organisational data or devices that are completely disconnected from the internet are **OUT OF SCOPE**.
+Devices that do not access organisational data or devices that are completely disconnected from the internet are <mark style="color:$danger;">**OUT OF SCOPE**</mark>.
 
 ***
 
@@ -51,7 +51,7 @@ In most modern workplaces the boundary is no longer just the office network, it 
 
 ### BYOD
 
-If a staff member uses their personal device (e.g. laptop or mobile) to access company data, that personal device is **IN SCOPE**.
+If a staff member uses their personal device (e.g. laptop or mobile) to access company data, that personal device is <mark style="color:$success;">**IN SCOPE**</mark>.
 
 {% hint style="info" %}
 #### Advising the Client
@@ -66,7 +66,7 @@ Advisors should suggest:&#x20;
 
 ### Remote Working
 
-Under the CE v3.3 standard,, a home workers ISP-provided router is **OUT OF SCOPE**.
+Under the CE v3.3 standard, a home workers ISP-provided router is <mark style="color:$danger;">**OUT OF SCOPE**</mark>.
 
 Because the home router is out of scope, the boundary firewall shifts to the device itself. Therefore, a remote worker's laptop **MUST** have a software firewall (host-based firewall) enabled and configured to block unapproved incoming connections.
 

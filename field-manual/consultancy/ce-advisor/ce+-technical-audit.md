@@ -48,10 +48,10 @@ During a CE+ audit, the assessor will not test every single device in the compan
 
 According to the _CE+ Test Specification_, the auditor will perform specific technical tests, primarily focusing on the following areas:
 
-* **Vulnerability Scanning (Patching):** The assessor will run an authenticated (credentialed) vulnerability scan against the sample devices using tools like Nessus or Qualys. If the scan finds any "High" or "Critical" vulnerabilities (CVSS 7.0 or above) that have been missing a patch for more than 14 days, it is an automatic failure.
-* **Malware Protection Testing:** The assessor will attempt to execute malicious code. They typically do this by emailing safe test files (like the EICAR test string) and attempting to download them via the web browser to see if the system's anti-malware actively blocks or quarantines the file upon access.
-* **Account Separation:** The assessor will check the logged-in user on the sampled machines to verify they are not running as a Local Administrator for everyday tasks.
-* **MFA Verification:** The assessor will ask users to log into cloud services (like Microsoft 365) to physically witness the MFA prompt occurring.
+* <mark style="color:$warning;">**Vulnerability Scanning (Patching):**</mark> The assessor will run an authenticated (credentialed) vulnerability scan against the sample devices using tools like Nessus or Qualys. If the scan finds any "High" or "Critical" vulnerabilities (CVSS 7.0 or above) that have been missing a patch for more than 14 days, it is an automatic failure.
+* <mark style="color:$warning;">**Malware Protection Testing:**</mark> The assessor will attempt to execute malicious code. They typically do this by emailing safe test files (like the EICAR test string) and attempting to download them via the web browser to see if the system's anti-malware actively blocks or quarantines the file upon access.
+* <mark style="color:$warning;">**Account Separation:**</mark> The assessor will check the logged-in user on the sampled machines to verify they are not running as a Local Administrator for everyday tasks.
+* <mark style="color:$warning;">**MFA Verification:**</mark> The assessor will ask users to log into cloud services (like Microsoft 365) to physically witness the MFA prompt occurring.
 
 ***
 
@@ -61,7 +61,7 @@ This is where an Assured Service Provider provides massive value. Failing a CE+ 
 
 ### CE+ Prep Playbook
 
-1. **Conduct Pre-Audit Vulnerability Scans:** Do not trust the IT provider's patch management dashboard. Run your own credentialed vulnerability scans on a sample of devices (especially remote laptops and BYOD). Find the missing patches before the auditor's Nessus scanner does.
-2. **Run the EICAR Tests:** Manually send the EICAR test file via email to the client's inboxes and attempt to open it. Verify that their endpoint protection triggers an alert and blocks the file.
-3. **Audit Cloud Access Logs:** Do not just ask "Is MFA on?" Check the Azure AD or Google Workspace sign-in logs. Look for legacy authentication protocols that might be bypassing MFA.
-4. **Evidence Gathering:** Help the client collect screenshot evidence of Mobile Device Management (MDM) configurations, firewall rules, and password policies to speed up the auditor's workflow.
+1. <mark style="color:$info;">**Conduct Pre-Audit Vulnerability Scans:**</mark> Do not trust the IT provider's patch management dashboard. Run your own credentialed vulnerability scans on a sample of devices (especially remote laptops and BYOD). Find the missing patches before the auditor's Nessus scanner does.
+2. <mark style="color:$info;">**Run the EICAR Tests:**</mark> Manually send the EICAR test file via email to the client's inboxes and attempt to open it. Verify that their endpoint protection triggers an alert and blocks the file.
+3. <mark style="color:$info;">**Audit Cloud Access Logs:**</mark> Do not just ask "Is MFA on?" Check the Azure AD or Google Workspace sign-in logs. Look for legacy authentication protocols that might be bypassing MFA.
+4. <mark style="color:$info;">**Evidence Gathering:**</mark> Help the client collect screenshot evidence of Mobile Device Management (MDM) configurations, firewall rules, and password policies to speed up the auditor's workflow.
