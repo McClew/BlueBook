@@ -161,6 +161,7 @@
   * [x86 Assembly](field-manual/reverse-engineering/x86-assembly.md)
 * [Security Engineering](field-manual/security-engineering/README.md)
   * [Foundations](field-manual/security-engineering/foundations/README.md)
+    * [Network Models](field-manual/security-engineering/foundations/network-models.md)
     * [Access Control](field-manual/security-engineering/foundations/access-control.md)
     * [Cryptography](field-manual/security-engineering/foundations/cryptography.md)
   * [Hardening](field-manual/security-engineering/hardening/README.md)
