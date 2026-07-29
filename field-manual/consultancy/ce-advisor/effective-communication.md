@@ -25,6 +25,18 @@ Cyber Advisors primary value is acting as a translator between the strict techni
 
 ***
 
+## Securing Buy-in Through Translation
+
+When presenting a gap analysis report to a client, quoting the CE standard verbatim: "You fail to meet the requirement for application sandboxing" will alienate them. Instead, we must root the explanation in the business risks outline in the [ncsc-small-organisation-guide.md](advisor-resources/ncsc-small-organisation-guide.md "mention"). Explain _why_ using the Guide, and implement the _how_ using the CE Standard.
+
+> "If you ensure all your equipment is configured to receive automatic updates, you will be protected against the majority of cyber attacks."
+>
+> \- [ncsc-small-organisation-guide.md](advisor-resources/ncsc-small-organisation-guide.md "mention"): Protecting your organisation from malware
+
+When a client pushes back on the cost or disruption of an upgrade, frame the CE technical requirement (Security Update Management) as the solution to the business risk (malware disrupting their operations).
+
+***
+
 ## Communicating with SME Business Leaders
 
 Business leaders will focus on three things: <mark style="color:$warning;">**Cost**</mark>, <mark style="color:$warning;">**Business Operations**</mark> and <mark style="color:$warning;">**Reputation**</mark>.
@@ -90,3 +102,63 @@ When challenged on required remediation steps, frame the response like below:
 2. <mark style="color:$primary;">**Pivot to the Standard:**</mark> Use the CE standard and requirements to explain that the control is _required_. Ensure the statement is expressed neutrally and without judgement.
 3. <mark style="color:$primary;">**Explain the "Why":**</mark> Explain the importance of the control in regards to the CE standard and why it is a requirement.
 {% endhint %}
+
+***
+
+## Examples of Communication
+
+### Example 1: Addressing Unsupported Operating Systems
+
+The gap analysis shows a Dell Latitude 5450 running Windows 8.1 Pro. This fails the CE _Security Update Management_ and _Secure Configuration_ controls, as the OS is end-of-life and no longer receives security updates.
+
+{% stepper %}
+{% step %}
+#### Identify the Small Business Guide hook
+
+_Keeping devices safe._
+
+Mentally map the CE failure to the Small Business Guide's advice on "Keeping your smartphones and tablets (and laptops) safe" - specifically the rule to switch on automatic updates and use supported software.
+{% endstep %}
+
+{% step %}
+#### Translate the technical risk to business risk
+
+Instead of saying "Windows 8.1 fails CE requirement 4.2," say:&#x20;
+
+> "Nia, your Dell laptop running Windows 10 is no longer supported by Microsoft. This means if a new flaw is discovered, Microsoft won't fix it, leaving StayUp vulnerable to attacks that could disrupt your building projects."
+{% endstep %}
+
+{% step %}
+#### Propose the CE-compliant remediation
+
+Offer a proportionate solution:
+
+> "To meet the prime contractor's requirement for Cyber Essentials, we need to either upgrade this laptop to Windows 11 if the hardware supports it, or replace the device."
+{% endstep %}
+{% endstepper %}
+
+### Example 2: Implementing Strict Access Controls
+
+The gap analysis shows Richard and Greg share a single local administrator account on the office PCs, and they use simple passwords.
+
+{% stepper %}
+{% step %}
+#### Identify the Small Business Guide hook
+
+_Using passwords to protect your data._
+
+Map this to the Guide's advice on password management, multi-factor authentication, and ensuring staff only have the access they need to do their jobs.
+{% endstep %}
+
+{% step %}
+#### Explain the risk to the owner
+
+> "Currently, Richard and Greg are using accounts that can install any software on your systems. If they click a bad link, the malware gets those same administrative powers. We need to protect your data by separating their daily work from administrative tasks."
+{% endstep %}
+
+{% step %}
+#### Present the remediation plan
+
+> "We will set up standard user accounts for their daily tasks. We will also implement a strict password policy - such as using three random words - and enforce Multi-Factor Authentication (MFA) on your cloud services to lock down access."
+{% endstep %}
+{% endstepper %}
