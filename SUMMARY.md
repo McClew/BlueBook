@@ -207,6 +207,7 @@
     * [Reporting & Remediation](field-manual/consultancy/ce-advisor/reporting-and-remediation.md)
     * [CE+ Technical Audit](field-manual/consultancy/ce-advisor/ce+-technical-audit.md)
     * [Advisor Resources](field-manual/consultancy/ce-advisor/advisor-resources/README.md)
+      * [Executive Gap Analysis Report Template](field-manual/consultancy/ce-advisor/advisor-resources/executive-gap-analysis-report-template.md)
       * [NCSC Small Organisation Guide](field-manual/consultancy/ce-advisor/advisor-resources/ncsc-small-organisation-guide.md)
 * [Leadership](field-manual/leadership/README.md)
   * [The Five Dysfunctions](field-manual/leadership/the-five-dysfunctions.md)
