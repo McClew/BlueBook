@@ -62,6 +62,95 @@ The Cyber Advisor standard mandates a Professional, Collaborative, and Non-Judge
 * <mark style="color:$info;">**Acknowledge IT Workloads:**</mark> If working with an MSP or internal IT, treat them as partners, not subjects of an audit. Agree on timelines that respect their existing SLA commitments.
 * <mark style="color:$info;">**Find Cost-Effective Paths:**</mark> If a business is running a legacy, unsupported Windows 10 machine to operate a vital, expensive piece of manufacturing hardware, do not simply tell them to "buy a new machine." Work with IT to sympathetically remove the machine from scope (e.g., by completely air-gapping it from the internet or placing it behind a strict internal firewall).
 
+### Prioritising Remediation & Minimising Disruption
+
+If a business owner is provided unsympathetic advice to implement all fixes simultaneously on a Monday morning without proper consideration of the businesses needs the organisation could be operationally affected and causing a loss of trust.
+
+To prevent this, use the Impact vs. Disruption Matrix to phase the remediation plan.
+
+#### The Two Core Factors
+
+When looking at a list of CE failures, evaluate each one against two questions:
+
+1. <mark style="color:$info;">Security Risk:</mark> How likely is this specific vulnerability to be exploited, and how bad would it be if it was? (e.g., No MFA on internet-facing email is a massive, immediate risk).
+2. <mark style="color:$info;">Business Disruption:</mark> How much will fixing this impact the end-user's ability to do their daily job? (e.g., Replacing a core software platform is highly disruptive; changing a router admin password is zero disruption).
+
+#### The 4-Phase Remediation Framework
+
+When presenting the remediation plan to a client, we should group the required fixes into these four phases. This shows the client you respect their operational uptime.
+
+{% stepper %}
+{% step %}
+<mark style="color:$success;">**The "Quick Wins" (High Risk, Zero/Low Disruption)**</mark>
+
+These are critical security holes that the IT team or advisor can fix in the background. End-users will likely not even notice these changes.
+
+**Examples:**&#x20;
+
+* Changing the default factory password on the boundary firewall/router.
+* Removing dormant or unused user accounts.
+* Removing administrative privileges from standard users (assuming they don't actually need them for daily tasks).
+* Turning on the software firewall on company laptops.
+
+**Consulting approach:**
+
+> _"We can do these immediately in the background. Your staff won't notice any downtime, but it instantly makes you much safer."_
+{% endstep %}
+
+{% step %}
+<mark style="color:$warning;">**Scheduled Security Bumps (High Risk, Medium Disruption)**</mark>
+
+These are critical fixes that _will_ require the user to change their behavior or take action. They cannot be done as a surprise.
+
+**Examples:**
+
+* Rolling out Multi-Factor Authentication (MFA) across Google Workspace/Microsoft 365.
+* Enforcing a new password policy (forcing users to log out and create new passwords).
+* Pushing a backlog of operating system updates that will force laptops to reboot.
+
+**Consulting approach:**
+
+> _"These are critical to stop hackers, but they will affect how your team logs in. We will schedule this for Friday afternoon, provide a simple 'How-To' guide for the staff, and I will be on standby to help anyone who gets locked out."_
+{% endstep %}
+
+{% step %}
+<mark style="color:$danger;">**Strategic/Capital Expenditure (High Risk, High Disruption)**</mark>
+
+These are fixes that require buying new equipment or migrating to new systems. They take time, budget, and planning.
+
+**Examples:**&#x20;
+
+* Replacing an End-of-Life (EOL) operating system.
+* Moving away from an unsupported, legacy business application.
+
+**Consulting approach:**
+
+> _"We cannot fix this overnight because it requires buying a new laptop and migrating your files. Let's isolate that Windows 8.1 machine as much as possible right now, and set a target date next month for the hardware replacement so we can budget for it."_
+{% endstep %}
+
+{% step %}
+<mark style="color:$primary;">**Policy & Cleanup (Low Risk, Low Disruption)**</mark>
+
+These are technicalities required for CE compliance, but they aren't the most pressing immediate threats compared to the above.
+
+**Examples:**
+
+* Setting up auto-run blocks (autorun/autoplay) on USB drives.
+* Uninstalling bloatware or unapproved applications that aren't actively malicious but violate the "approved software" control.
+
+**Consulting approach:**
+
+> _"Once the major risks are handled, we will quietly push these final configuration changes to ensure you pass the certification audit."_
+{% endstep %}
+{% endstepper %}
+
+#### Golden Rules for Minimising Business Disruption
+
+1. <mark style="color:$warning;">**Never "Surprise" the User:**</mark> Always communicate changes before they happen. Tell them _why_ it's happening using the "<mark style="color:$info;">So What?</mark>" framework ([ncsc-small-organisation-guide.md](advisor-resources/ncsc-small-organisation-guide.md "mention")).
+2. <mark style="color:$warning;">**Batch the Reboots:**</mark> If you are installing antivirus, updating Windows, and applying a software patch, do them all in the same maintenance window so the user only has to reboot their machine once.
+3. <mark style="color:$warning;">**Respect Peak Hours:**</mark> Schedule network downtime (like a router firmware update) for out-of-hours or their quietest operational period.
+4. <mark style="color:$warning;">**Pilot Testing:**</mark> If implementing Application Allowlisting, test it on one IT/Admin device first to ensure it doesn't accidentally block core business software (like QuickBooks) before rolling it out to the whole office.
+
 ***
 
 ## Post-Remediation Validation
