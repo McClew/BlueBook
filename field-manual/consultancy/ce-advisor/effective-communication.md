@@ -35,6 +35,20 @@ When presenting a gap analysis report to a client, quoting the CE standard verba
 
 When a client pushes back on the cost or disruption of an upgrade, frame the CE technical requirement (Security Update Management) as the solution to the business risk (malware disrupting their operations).
 
+### The Jargon Trap
+
+Technical professionals often suffer from the "curse of knowledge," casually using acronyms and specific IT terms that confuse business owners. When assessing a business we must strip away terms like "SSO", "firewall rulesets", "subnets", and "heuristics."
+
+Instead of talking about _how_ the technology works under the hood, focus on _what_ the technology does for the business. A key indicator that you are using jargon is if the term requires a prerequisite understanding of networking or computer science to make sense.
+
+### The Translation Framework
+
+To successfully communicate with business leaders, use the "<mark style="color:$info;">So What?</mark>" framework for every Cyber Essentials control you discuss. State the requirement, ask yourself "<mark style="color:$info;">so what?</mark>", and explain the business impact.
+
+For example, instead of saying "<mark style="background-color:$danger;">You need to patch vulnerabilities with a CVSS score of 7 or above within 14 days,</mark>" we translate it to: "<mark style="background-color:$success;">We need to update your software within two weeks of a high-risk flaw being discovered, otherwise hackers can use that known flaw to break into your systems.</mark>"
+
+
+
 ***
 
 ## Communicating with SME Business Leaders
