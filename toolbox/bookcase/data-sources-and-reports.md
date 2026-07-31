@@ -29,3 +29,8 @@ layout:
 
 {% file src="../../.gitbook/assets/Knowbe4 Phishing by Industry Benchmarking Report 2026.pdf" %}
 
+{% file src="../../.gitbook/assets/SANS Incident Handlers Handbook.pdf" %}
+
+{% file src="../../.gitbook/assets/Mandient M-Trends Report.pdf" %}
+
+{% file src="../../.gitbook/assets/NIST.SP.800-61r2.pdf" %}

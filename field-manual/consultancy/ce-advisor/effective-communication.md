@@ -72,13 +72,13 @@ If a disagreement with leadership occurs, use a technique called **Objective Ali
 Much like relying on a standard with an advisor, handling leadership requires removing personal opinions and anchoring the conversation to **business data, corporate goals, or external regulations**.
 
 1. <mark style="color:$primary;">**Defuse & Mollify:**</mark> Lower the intensity of the conversation before the conflict can start. Find a way of agreeing with their statement and avoid being drawn into an argument.\
-   &#xNAN;_"<mark style="background-color:$success;">I completely agree that accelerating the product launch is our top priority.</mark>"_
+   _"<mark style="background-color:$success;">I completely agree that accelerating the product launch is our top priority.</mark>"_
 2. <mark style="color:$primary;">**Shift to a Shared Goal:**</mark> After validating their own objectives or opinions, find a way to combine your advice/goal with theirs:\
-   &#xNAN;_"<mark style="background-color:$success;">To ensure we don't face costly compliance delays at the finish line, the SOC 2 framework requires us to complete the penetration test before we go live. Let's look at how we can schedule that concurrently.</mark>"_
+   _"<mark style="background-color:$success;">To ensure we don't face costly compliance delays at the finish line, the SOC 2 framework requires us to complete the penetration test before we go live. Let's look at how we can schedule that concurrently.</mark>"_
 3. <mark style="color:$primary;">**Anchor to Risk Appetite:**</mark> Leadership is responsible for managing organisational risk, not just technical details. Translate the technical conflict into financial or operation impact.\
-   &#xNAN;_"<mark style="background-color:$success;">I understand your goal is to minimise user friction by removing multi-factor authentication. However, doing so breaches our current cyber insurance policy requirements, which would invalidate our coverage in a breach. Should we schedule a review with the risk committee to evaluate this gap?</mark>"_
+   _"<mark style="background-color:$success;">I understand your goal is to minimise user friction by removing multi-factor authentication. However, doing so breaches our current cyber insurance policy requirements, which would invalidate our coverage in a breach. Should we schedule a review with the risk committee to evaluate this gap?</mark>"_
 4. <mark style="color:$primary;">**Separate Person from Process:**</mark> When leaders face a pushback, they may perceive it as a challenge to their authority. Maintain neutrality by blaming the process or the criteria. Use objective data, metrics, or third-party audits as the "bad guy" so you and the leader remain on the same team.\
-   &#xNAN;_"<mark style="background-color:$success;">The latest performance metrics show the system cannot handle this traffic load without a load balancer. It isn't a matter of design preference; the hardware limitations dictate that we must scale up to prevent a Q3 outage.</mark>"_
+   _"<mark style="background-color:$success;">The latest performance metrics show the system cannot handle this traffic load without a load balancer. It isn't a matter of design preference; the hardware limitations dictate that we must scale up to prevent a Q3 outage.</mark>"_
 {% endhint %}
 
 ***
