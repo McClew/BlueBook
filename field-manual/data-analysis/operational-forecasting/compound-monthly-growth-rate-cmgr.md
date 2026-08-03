@@ -15,25 +15,27 @@ layout:
     visible: true
   tags:
     visible: true
+  actions:
+    visible: true
 ---
 
 # Compound Monthly Growth Rate (CMGR)
 
 Looking at the month-over-month (MoM) change of data points can be noisy. The CMGR smoothens the volatility to show us the "average" growth speed from one point in time to now. _The examples in this section all revolve around monthly calculations for MSP Tickets._
 
-#### Positives
+#### <i class="fa-chevron-up" style="color:$success;">:chevron-up:</i> <mark style="color:$success;">Positives</mark>
 
-* **Granular Visibility:** In fast-moving industries (like tech), waiting a year to see growth trends can be a death sentence. CMGR allows us to see how month-to-month changes impact long-term trajectory.
-* **Smooths Out Volatility:** Unlike simple average growth, CMGR accounts for the "compounding effect." It provides a steady, normalised rate that hides the "noise" of one anomalous month while still accurately representing the data.
-* **Ideal for Early-Stage Forecasting:** If you are a startup with 6 months of data, an annual rate (CAGR) is mostly guesswork. CMGR uses the actual, short-term data you have to project more realistic near-term targets.
-* **Benchmark for Burn Rate:** It helps businesses understand if their revenue growth is outpacing their monthly expenses (burn), which is vital for survival.
+* <mark style="color:$success;">**Granular Visibility:**</mark> In fast-moving industries (like tech), waiting a year to see growth trends can be a death sentence. CMGR allows us to see how month-to-month changes impact long-term trajectory.
+* <mark style="color:$success;">**Smooths Out Volatility:**</mark> Unlike simple average growth, CMGR accounts for the "compounding effect." It provides a steady, normalised rate that hides the "noise" of one anomalous month while still accurately representing the data.
+* <mark style="color:$success;">**Ideal for Early-Stage Forecasting:**</mark> If you are a startup with 6 months of data, an annual rate (CAGR) is mostly guesswork. CMGR uses the actual, short-term data you have to project more realistic near-term targets.
+* <mark style="color:$success;">**Benchmark for Burn Rate:**</mark> It helps businesses understand if their revenue growth is outpacing their monthly expenses (burn), which is vital for survival.
 
-#### Negatives
+#### <i class="fa-chevron-down" style="color:$danger;">:chevron-down:</i> <mark style="color:$danger;">Negatives</mark>
 
-* **Sensitivity to Outliers:** Because the timeframe is shorter, anomalous data can heavily distort the CMGR. These effects are only seen when the outlier is used as one of the data points.
-* **Ignores Seasonality:** CMGR assumes a steady climb. If the data responds to seasonal effects, a CMGR calculated between these points in time can be highly inaccurate.
-* **The "Compounding Trap":** The short-term view that CMGR provides can be highly misleading. This can lead to over, or under-optimism, and decisions that are not sustainable long-term.
-* **Short-Term Focus:** It can encourage "growth at all costs" mentalities, leading teams to focus on quick wins to keep the monthly metric up rather than building sustainable, long-term value.
+* <mark style="color:$danger;">**Sensitivity to Outliers:**</mark> Because the timeframe is shorter, anomalous data can heavily distort the CMGR. These effects are only seen when the outlier is used as one of the data points.
+* <mark style="color:$danger;">**Ignores Seasonality:**</mark> CMGR assumes a steady climb. If the data responds to seasonal effects, a CMGR calculated between these points in time can be highly inaccurate.
+* <mark style="color:$danger;">**The "Compounding Trap":**</mark> The short-term view that CMGR provides can be highly misleading. This can lead to over, or under-optimism, and decisions that are not sustainable long-term.
+* <mark style="color:$danger;">**Short-Term Focus:**</mark> It can encourage "growth at all costs" mentalities, leading teams to focus on quick wins to keep the monthly metric up rather than building sustainable, long-term value.
 
 ***
 
