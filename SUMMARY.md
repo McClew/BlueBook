@@ -5,6 +5,7 @@
 ## Field Manual
 
 * [Security Analysis](<README (1).md>)
+  * [Common Mistakes](field-manual/security-analysis/common-mistakes.md)
   * [Triaging](field-manual/security-analysis/triaging/README.md)
     * [Email Analysis](field-manual/security-analysis/triaging/email-analysis.md)
   * [Artefact Hunting](field-manual/security-analysis/artefact-hunting.md)
