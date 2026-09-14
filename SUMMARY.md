@@ -210,6 +210,7 @@
     * [Advisor Resources](field-manual/consultancy/ce-advisor/advisor-resources/README.md)
       * [Executive Gap Analysis Report Template](field-manual/consultancy/ce-advisor/advisor-resources/executive-gap-analysis-report-template.md)
       * [NCSC Small Organisation Guide](field-manual/consultancy/ce-advisor/advisor-resources/ncsc-small-organisation-guide.md)
+      * [NCSC Cloud Security Guidance](field-manual/consultancy/ce-advisor/advisor-resources/ncsc-cloud-security-guidance.md)
 * [Leadership](field-manual/leadership/README.md)
   * [The Five Dysfunctions](field-manual/leadership/the-five-dysfunctions.md)
 * [Business Operations](field-manual/business-operations/README.md)
