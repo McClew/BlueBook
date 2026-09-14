@@ -65,9 +65,9 @@ Keeping smartphones, laptops, and tablets safe by applying security updates, tur
 Ensuring critical business data is copied and stored securely, separate from the main network, to recover from ransomware, theft, or hardware failure.
 
 {% hint style="info" %}
-#### User Awareness Caveat
+#### Backups Caveat
 
-A Cyber Advisor should advise clients to train their staff, but a lack of phishing training will not cause them to fail a CE assessment.
+A Cyber Advisor should advise clients to backup their data, but a lack of backups will not cause them to fail a CE assessment.
 {% endhint %}
 
 <table><thead><tr><th width="257.33331298828125">Recommendation</th><th width="466.66668701171875">CE Requirement?</th></tr></thead><tbody><tr><td><strong>Identify what data is critical to the business</strong></td><td><em>Not a CE Requirement.</em></td></tr><tr><td><strong>Keep your backups separate from your computer and network (Offline/Cold storage or secure cloud)</strong></td><td><em>Not a CE Requirement:</em> A company with zero backups will still pass Cyber Essentials if their technical controls are in place.</td></tr><tr><td><strong>Test your backups regularly to ensure they work</strong></td><td><em>Not a CE Requirement:</em> While backups are critical for business survival and are a massive part of NCSC guidance, Cyber Essentials does not assess backups.</td></tr></tbody></table>
@@ -77,9 +77,9 @@ A Cyber Advisor should advise clients to train their staff, but a lack of phishi
 Training staff to recognise phishing emails, suspicious messages, and knowing what to do if they click a bad link (fostering a blame-free reporting culture).
 
 {% hint style="info" %}
-#### Backups Caveat
+#### User Awareness Caveat
 
-A Cyber Advisor should advise clients to backup their data, but a lack of backups will not cause them to fail a CE assessment.
+A Cyber Advisor should advise clients to train their staff, but a lack of phishing training will not cause them to fail a CE assessment.
 {% endhint %}
 
 <table><thead><tr><th width="257.33331298828125">Recommendation</th><th width="466.66668701171875">CE Requirement?</th></tr></thead><tbody><tr><td><strong>Train staff to spot the signs of phishing</strong></td><td><em>Not a CE Requirement:</em> Cyber Essentials is a technical baseline standard. It assesses the configuration of IT infrastructure, not the cybersecurity awareness of the staff or the presence of training policies.</td></tr><tr><td><strong>Create a blame-free reporting culture</strong></td><td><em>Not a CE Requirement:</em> Cyber Essentials is a technical baseline standard. It assesses the configuration of IT infrastructure, not the cybersecurity awareness of the staff or the presence of training policies.</td></tr><tr><td><strong>Use the NCSC's Suspicious Email Reporting Service (SERS)</strong></td><td><em>Not a CE Requirement:</em> Cyber Essentials is a technical baseline standard. It assesses the configuration of IT infrastructure, not the cybersecurity awareness of the staff or the presence of training policies.</td></tr></tbody></table>

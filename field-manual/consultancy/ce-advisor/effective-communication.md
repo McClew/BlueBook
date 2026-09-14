@@ -123,7 +123,7 @@ When challenged on required remediation steps, frame the response like below:
 
 ### Example 1: Addressing Unsupported Operating Systems
 
-The gap analysis shows a Dell Latitude 5450 running Windows 8.1 Pro. This fails the CE _Security Update Management_ and _Secure Configuration_ controls, as the OS is end-of-life and no longer receives security updates.
+The gap analysis shows a Dell Latitude 5450 running Windows 10 Pro. This fails the CE _Security Update Management_ and _Secure Configuration_ controls, as the OS is end-of-life and no longer receives security updates.
 
 {% stepper %}
 {% step %}
@@ -137,7 +137,7 @@ Mentally map the CE failure to the Small Business Guide's advice on "Keeping you
 {% step %}
 #### Translate the technical risk to business risk
 
-Instead of saying "Windows 8.1 fails CE requirement 4.2," say:&#x20;
+Instead of saying "Windows 10 fails CE requirement 4.2," say:&#x20;
 
 > "Nia, your Dell laptop running Windows 10 is no longer supported by Microsoft. This means if a new flaw is discovered, Microsoft won't fix it, leaving StayUp vulnerable to attacks that could disrupt your building projects."
 {% endstep %}
