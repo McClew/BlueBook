@@ -17,16 +17,9 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
-# Microsoft365 Configuration
+# Cloud
 
-## Title
-
-
-
-***
-
-## Automated Configuration Management
-
-[microsoft365dsc.md](../../../toolbox/tooling/configuration-and-hardening/microsoft365dsc.md "mention")
