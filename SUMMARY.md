@@ -294,6 +294,9 @@
   * [Digital Forensics](toolbox/bookcase/digital-forensics.md)
   * [Reverse Engineering](toolbox/bookcase/reverse-engineering.md)
   * [Security Engineering](toolbox/bookcase/security-engineering.md)
+  * [Risk Management](toolbox/bookcase/risk-management.md)
+  * [AI, Data Science & Analysis](toolbox/bookcase/ai-data-science-and-analysis.md)
+  * [Business & Consultancy](toolbox/bookcase/business-and-consultancy.md)
   * [Leadership](toolbox/bookcase/leadership.md)
   * [Data Sources & Reports](toolbox/bookcase/data-sources-and-reports.md)
 

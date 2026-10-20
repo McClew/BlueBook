@@ -15,9 +15,21 @@ layout:
     visible: true
   tags:
     visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Security Engineering
+
+## Architecture
+
+{% file src="../../.gitbook/assets/Cybersecurity Architects Handbook.pdf" %}
+
+{% file src="../../.gitbook/assets/Enterprise Architecture for Digital Business Integrated Transformation Strategies.epub" %}
+
+***
 
 ## SecOps
 
@@ -42,3 +54,5 @@ layout:
 {% file src="../../.gitbook/assets/Threat Modeling - Designing for Security.pdf" %}
 
 {% file src="../../.gitbook/assets/Threat Modeling Best Practices.pdf" %}
+
+{% file src="../../.gitbook/assets/Cybersecurity Architects Handbook.pdf" %}

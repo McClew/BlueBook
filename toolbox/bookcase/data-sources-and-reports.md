@@ -17,6 +17,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Data Sources & Reports
@@ -25,9 +27,7 @@ layout:
 
 {% file src="../../.gitbook/assets/Microsoft Digital Defense Report 2024.pdf" %}
 
-> Although modern MFA techniques reduce the risk of> \
-> identity compromise by 99.2%, many organizations> \
-> have been slow to adopt them
+> Although modern MFA techniques reduce the risk of identity compromise by 99.2%, many organizations have been slow to adopt them
 
 {% file src="../../.gitbook/assets/CIS Community Defense Model v2.0 2022.pdf" %}
 
