@@ -167,6 +167,7 @@
     * [Classification & Clearance](field-manual/security-engineering/foundations/classification-and-clearance.md)
     * [Cryptography](field-manual/security-engineering/foundations/cryptography.md)
   * [Networking](field-manual/security-engineering/networking/README.md)
+    * [Cabling](field-manual/security-engineering/networking/cabling.md)
     * [Wi-Fi](field-manual/security-engineering/networking/wi-fi.md)
   * [Cloud](field-manual/security-engineering/cloud/README.md)
     * [Microsoft 365](field-manual/security-engineering/cloud/microsoft-365/README.md)
