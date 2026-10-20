@@ -23,9 +23,11 @@ layout:
 
 # Business & Consultancy
 
-## General
+## Management
 
 {% file src="../../.gitbook/assets/How to Start Your Own Cybersecurity Consulting Business.epub" %}
+
+{% file src="../../.gitbook/assets/A Guide to IT Contracting Checklists, Tools, and Techniques.epub" %}
 
 ***
 
