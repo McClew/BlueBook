@@ -148,8 +148,10 @@ The mode describes how a system handles users with different clearances and data
 
 <table><thead><tr><th width="160">Mode</th><th>All users cleared for…</th><th>Formal approval for…</th><th>Need-to-know for…</th></tr></thead><tbody><tr><td><strong>Dedicated</strong></td><td>All data</td><td>All data</td><td>All data</td></tr><tr><td><strong>System High</strong></td><td>All data</td><td>All data</td><td><mark style="color:$warning;">Some data</mark></td></tr><tr><td><strong>Compartmented</strong></td><td>All data</td><td><mark style="color:$warning;">Some data</mark></td><td><mark style="color:$warning;">Some data</mark></td></tr><tr><td><strong>Multilevel</strong></td><td><mark style="color:$warning;">Some data</mark></td><td><mark style="color:$warning;">Some data</mark></td><td><mark style="color:$warning;">Some data</mark></td></tr></tbody></table>
 
-{% hint style="success" %}
-**Memory aid:** read the table from the right-hand column leftwards. _Need-to-know_ is relaxed first (System High), then _formal approval_ (Compartmented), then _clearance_ (Multilevel). Only Multilevel relies on the system itself to separate users who are not cleared for everything.
+{% hint style="success" icon="brain-circuit" %}
+#### Memory Aid
+
+Read the table from the right-hand column leftwards. _Need-to-know_ is relaxed first (System High), then _formal approval_ (Compartmented), then _clearance_ (Multilevel). Only Multilevel relies on the system itself to separate users who are not cleared for everything.
 {% endhint %}
 
 ***
