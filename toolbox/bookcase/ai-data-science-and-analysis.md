@@ -27,6 +27,8 @@ layout:
 
 {% file src="../../.gitbook/assets/Intelligent Systems for Engineers and Scientists.epub" %}
 
+{% file src="../../.gitbook/assets/Augmented Intelligence.epub" %}
+
 ***
 
 ## Data Pipelines & Engineering
@@ -38,5 +40,7 @@ layout:
 ## Data Strategy
 
 {% file src="../../.gitbook/assets/Making Data Work.epub" %}
+
+{% file src="../../.gitbook/assets/Data Analytics Initiatives.epub" %}
 
 ***

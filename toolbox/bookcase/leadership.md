@@ -33,6 +33,12 @@ layout:
 
 ***
 
+## Project Leadership
+
+{% file src="../../.gitbook/assets/Enterprise Project Management.epub" %}
+
+***
+
 ## Governance
 
 {% file src="../../.gitbook/assets/Strategic IT Governance 2.0 How CIOs Succeed at Digital Innovation.epub" %}
