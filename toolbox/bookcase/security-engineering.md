@@ -29,6 +29,8 @@ layout:
 
 {% file src="../../.gitbook/assets/Enterprise Architecture for Digital Business Integrated Transformation Strategies.epub" %}
 
+{% file src="/broken/files/KCdswYVRaVUppcxCaIZc" %}
+
 ***
 
 ## SecOps
