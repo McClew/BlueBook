@@ -17,6 +17,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # The Boundary & Scoping
@@ -27,7 +29,15 @@ Before a Cyber Advisor can assess if a company meets the five technical controls
 
 ## Defining the Boundary
 
-The scope of a Cyber Essentials assessment is defined by the network boundary. Everything inside the boundary that has access to the internet is <mark style="color:$success;">**IN SCOPE**</mark>.
+The scope of a Cyber Essentials assessment is defined by the boundary the organisation declares: the business unit managing it, the network boundary, and the physical location.
+
+<i class="fa-siren-on" style="color:red;">:siren-on:</i> The scope must be agreed with the Certification Body before the assessment begins.
+
+{% hint style="danger" %}
+#### In-scope by Default
+
+Start from the assumption that everything is <mark style="color:$success;">**IN SCOPE**</mark> unless it has been specifically excluded using a **sub-set**.
+{% endhint %}
 
 {% hint style="info" icon="exclamation" %}
 #### The Golden Rule of Scoping
@@ -37,11 +47,57 @@ If a device accesses organisational data or services and it connects to the inte
 
 ### Whole Organisation vs. Sub-set
 
-The NCSC strongly recommends scoping the "Whole Organisation." However, a company can assess a "sub-set", - for example, just the HR department - but only if that sub-set is completely segregated from the rest of the network via a firewall or VLAN.
+A **sub-set** is part of the organisation’s network that is segregated from the rest by a **firewall or VLAN**. Segregation must happen at Layer 2 or 3; user groups and micro-segmentation do not count. A sub-set can be used to mark either what’s in scope or what’s out of scope.
+
+There are three possible outcomes:
+
+| Scope type                                          | When it applies                                                                                                                                                                            | Certificate wording                                                      | Included cyber insurance |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------ |
+| **Whole Organisation**                              | Nothing excluded                                                                                                                                                                           | “Whole Organisation”                                                     | Eligible                 |
+| **Whole Organisation with an out-of-scope sub-set** | Excluded devices sit in a sub-set with **all inbound and outbound internet traffic blocked** at its boundary. Used for unsupported or unpatchable devices (legacy OS, OT/CNC controllers). | “Whole Organisation”                                                     | Eligible                 |
+| **Partial scope**                                   | The excluded part **still has internet access** (e.g. a development network, or certifying only one department)                                                                            | Exclusion named, e.g. “Whole Organisation excluding development network” | Not eligible             |
+
+* The NCSC strongly recommends Whole Organisation.
+* Any partial scope must be justified to the assessor.
+* A CE+ assessment must use the same scope as the CE certificate it follows.
 
 ### Out of Scope
 
-Devices that do not access organisational data or devices that are completely disconnected from the internet are <mark style="color:$danger;">**OUT OF SCOPE**</mark>.
+A device is <mark style="color:$danger;">**OUT OF SCOPE**</mark> if:
+
+* it does not access organisational data or services, **or**
+* it sits in a defined sub-set that blocks all inbound and outbound internet traffic at the sub-set boundary.
+
+Also out of scope:
+
+* Home workers’ ISP-provided routers, unless the organisation supplied the router.
+* Phones used only for native calls, native texts, or as an MFA device.
+
+<div data-with-frame="true"><figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Example of an allowed sub-set for a legacy device from official IASME <a href="https://iasme.atlassian.net/wiki/pages/viewpage.action?pageId=2977595427">wiki</a>.</p></figcaption></figure></div>
+
+**Can never be excluded:**
+
+* Cloud services.
+* Staff BYOD that accesses organisational data or services.
+* End-user devices as a whole (a scope without them isn’t acceptable).
+
+{% hint style="info" icon="network-wired" %}
+#### Traffic Across the Sub-set Boundary
+
+A limited internal rule between an out-of-scope sub-set and in-scope devices doesn’t bring the sub-set back into scope by itself, as long as all internet traffic is blocked.
+
+However, assessors may scrutinise it. Keep it tightly scoped (specific source, destination and port, deny everything else), document the business need, and describe it to the Certification Body when agreeing the scope.
+{% endhint %}
+
+{% hint style="info" icon="memo" %}
+#### Evidence to Keep for a De-scoped Device
+
+* A scope statement
+* A network diagram showing the sub-set
+* Firewall/VLAN rule exports
+* An asset list marking the device as out of scope
+* A test showing the device can’t reach the internet
+{% endhint %}
 
 ***
 
