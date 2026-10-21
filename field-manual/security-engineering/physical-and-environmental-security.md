@@ -1,26 +1,32 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
+
 # Physical & Environmental Security
 
-Physical and environmental controls protect the facility and everything in it from power problems, heat, water, fire and electromagnetic threats. <mark style="color:$primary;">**If the power, cooling or building fails, every logical control fails with it.**</mark> These controls mainly protect **availability**, with emanation security also protecting **confidentiality**.
+Physical and environmental controls protect the facility and everything in it from power problems, heat, water, fire and electromagnetic threats. <mark style="color:$primary;">**If the power, cooling or building fails, every logical control fails with it.**</mark> These controls mainly protect <mark style="color:$success;">**availability**</mark>, with emanation security also protecting <mark style="color:$success;">**confidentiality**</mark>.
 
 {% hint style="info" %}
-For how network media themselves resist EMI and power fluctuations, see [Cabling](networking/cabling.md).
-{% endhint %}
-
-***
-
-## Power Anomalies
-
-The exam terms come in **pairs**: the same problem, _momentary_ or _prolonged_.
-
-<table><thead><tr><th width="160">Condition</th><th width="160">Momentary</th><th>Prolonged</th></tr></thead><tbody><tr><td><strong>High voltage</strong></td><td><mark style="color:$warning;"><strong>Spike</strong></mark></td><td><mark style="color:$warning;"><strong>Surge</strong></mark></td></tr><tr><td><strong>Low voltage</strong></td><td><mark style="color:$info;"><strong>Sag / Dip</strong></mark></td><td><mark style="color:$info;"><strong>Brownout</strong></mark></td></tr><tr><td><strong>Loss of power</strong></td><td><mark style="color:$danger;"><strong>Fault</strong></mark></td><td><mark style="color:$danger;"><strong>Blackout</strong></mark></td></tr></tbody></table>
-
-Two more terms to know:
-
-* **Inrush current:** the initial surge drawn when equipment is switched on. Powering up many devices at once can trip breakers or cause a sag for everything else on the circuit.
-* **Noise:** EMI or RFI interference carried on the power line (transient noise), often from motors, fluorescent lighting or other equipment sharing the circuit.
-
-{% hint style="success" %}
-**Memory aid:** **S**pike and **S**urge are both too much; **S**ag comes before **B**rownout; **F**ault comes before **B**lackout. The second word of each pair is the long one.
+For how network media themselves resist EMI and power fluctuations, see [networking](networking/ "mention") > [cabling.md](networking/cabling.md "mention").
 {% endhint %}
 
 ***
@@ -28,6 +34,15 @@ Two more terms to know:
 ## Power Protection
 
 <table><thead><tr><th width="200">Control</th><th>Protects Against</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Surge Protector</strong></td><td>Spikes, surges</td><td>Diverts excess voltage. Does nothing for low voltage or loss of power.</td></tr><tr><td><strong>Line / Power Conditioner</strong></td><td>Noise, sags, surges</td><td>Smooths and regulates the supply. No battery, so no protection from outages.</td></tr><tr><td><strong>UPS</strong></td><td>Short outages, sags, brownouts</td><td>Battery bridge long enough to shut down cleanly or for a generator to start.</td></tr><tr><td><strong>Generator</strong></td><td>Prolonged outages</td><td>Needs fuel supply, regular load testing and a UPS to cover its start-up time.</td></tr><tr><td><strong>Redundant Supply</strong></td><td>Single-point failures</td><td>Dual power supplies in devices, dual PDUs, and ideally dual feeds from separate substations.</td></tr></tbody></table>
+
+### Power Anomalies
+
+<table><thead><tr><th width="227">Condition</th><th width="259">Momentary</th><th>Prolonged</th></tr></thead><tbody><tr><td><strong>High voltage</strong></td><td><mark style="color:$warning;"><strong>Spike</strong></mark></td><td><mark style="color:$warning;"><strong>Surge</strong></mark></td></tr><tr><td><strong>Low voltage</strong></td><td><mark style="color:$info;"><strong>Sag / Dip</strong></mark></td><td><mark style="color:$info;"><strong>Brownout</strong></mark></td></tr><tr><td><strong>Loss of power</strong></td><td><mark style="color:$danger;"><strong>Fault</strong></mark></td><td><mark style="color:$danger;"><strong>Blackout</strong></mark></td></tr></tbody></table>
+
+### Terminology
+
+* <mark style="color:$info;">**Inrush current:**</mark> the initial surge drawn when equipment is switched on. Powering up many devices at once can trip breakers or cause a sag for everything else on the circuit.
+* <mark style="color:$info;">**Noise:**</mark> EMI or RFI interference carried on the power line (transient noise), often from motors, fluorescent lighting or other equipment sharing the circuit.
 
 ### UPS Types
 
@@ -52,7 +67,9 @@ Equipment **always** runs from the inverter: AC is converted to DC and back to c
 {% endstepper %}
 
 {% hint style="warning" %}
-A UPS is **not** long-term power. Its job is to bridge the gap until the generator takes over, or to allow a controlled shutdown.
+#### <mark style="color:$warning;">A UPS is not long-term power</mark>
+
+Its job is to bridge the gap until the generator takes over, or to allow a controlled shutdown.
 {% endhint %}
 
 ***
@@ -62,14 +79,14 @@ A UPS is **not** long-term power. Its job is to bridge the gap until the generat
 ### Temperature
 
 * Too hot shortens component life and causes failures. Too cold risks condensation when equipment warms.
-* ASHRAE's recommended data centre range is **18–27 °C** at the equipment air inlet.
+* ASHRAE's recommended data centre range is **18-27 °C** at the equipment air inlet.
 * Use **hot aisle / cold aisle** layouts so exhaust air isn't drawn back into intakes.
 
 ### Humidity
 
 <table><thead><tr><th width="160">Level</th><th>Risk</th></tr></thead><tbody><tr><td><strong>Too low</strong></td><td><mark style="color:$warning;"><strong>Static electricity</strong></mark>: electrostatic discharge can damage components.</td></tr><tr><td><strong>Too high</strong></td><td><mark style="color:$info;"><strong>Condensation and corrosion</strong></mark> of contacts and circuits.</td></tr></tbody></table>
 
-Security texts commonly cite **40–60% relative humidity** as the target range. Anti-static flooring, wrist straps and grounding further reduce static risk.
+Security texts commonly cite **40-60% relative humidity** as the target range. Anti-static flooring, wrist straps and grounding further reduce static risk.
 
 ### Airflow & Water
 
@@ -120,17 +137,3 @@ Electronic equipment and copper cabling leak electromagnetic signals that can be
 * **White noise:** broadcasting random noise to mask real emanations.
 * **Control zones:** keeping a large enough physical distance, or shielded area, between sensitive equipment and anywhere an attacker could position receiving equipment.
 * **Media choice:** fiber does not emit electromagnetic signals (see [Cabling](networking/cabling.md)).
-
-***
-
-## Exam Traps
-
-{% hint style="danger" %}
-* **Momentary vs prolonged.** Spike/surge, sag/brownout, fault/blackout. Read the duration in the question.
-* **Surge protectors don't help with outages,** and line conditioners have no battery.
-* **Online (double-conversion) UPS** is the only type with zero transfer time.
-* **Low humidity = static. High humidity = corrosion.**
-* **Pre-action** is the preferred water system for data centres. **Deluge** never is.
-* **CO₂** is a life-safety risk; people come before equipment.
-* **Electrical fire** is Class **C** in the US exam, but has no class letter in the UK.
-{% endhint %}
