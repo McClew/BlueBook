@@ -69,9 +69,11 @@ Not tested on the SSCP, but relevant to UK work. Keep it separate from the US sc
 
 ## Clearance & Need-to-Know
 
-Clearance answers _"Can this person be trusted with information at this level?"_ Need-to-know answers _"Does this person's job actually require this information?"_
+<mark style="color:$primary;">Clearance answers</mark> <mark style="color:$primary;"></mark>_<mark style="color:$primary;">"Can this person be trusted with information at this level?"</mark>_
 
-Both must be true for access to be granted.
+<mark style="color:$primary;">Need-to-know answers</mark> <mark style="color:$primary;"></mark>_<mark style="color:$primary;">"Does this person's job actually require this information?"</mark>_
+
+<mark style="color:red;">Both must be true for access to be granted.</mark>
 
 <mark style="color:$info;">**Implementation Example:**</mark> An analyst with Top Secret clearance working on a naval project cannot read a Top Secret file about an unrelated aircraft programme. They are cleared for the level but have no need-to-know.
 
@@ -81,10 +83,10 @@ Compartments (also called categories, or caveats) enforce need-to-know **within*
 
 ### UK Vetting Levels (Reference)
 
-* **BPSS**: Baseline Personnel Security Standard, pre-employment checks.
-* **CTC**: Counter-Terrorist Check.
-* **SC**: Security Check, for regular access to SECRET.
-* **DV**: Developed Vetting, for regular access to TOP SECRET.
+* <mark style="color:$info;">**BPSS**</mark><mark style="color:$info;">:</mark> Baseline Personnel Security Standard, pre-employment checks.
+* <mark style="color:$info;">**CTC**</mark><mark style="color:$info;">:</mark> Counter-Terrorist Check.
+* <mark style="color:$info;">**SC**</mark><mark style="color:$info;">:</mark> Security Check, for regular access to <mark style="color:$warning;">SECRET</mark>.
+* <mark style="color:$info;">**DV**</mark><mark style="color:$info;">:</mark> Developed Vetting, for regular access to <mark style="color:red;">TOP SECRET</mark>.
 
 ***
 
@@ -103,7 +105,7 @@ A subject is cleared at `SECRET {A, B}`. Which objects can they read?
 {% step %}
 #### Object: CONFIDENTIAL {A}
 
-Level: Secret ≥ Confidential ✅. Categories: {A, B} ⊇ {A} ✅.
+Level: Secret ≥ Confidential <i class="fa-check" style="color:$success;">:check:</i>. Categories: {A, B} ⊇ {A} <i class="fa-check" style="color:$success;">:check:</i>.
 
 <mark style="color:$success;">**Access granted.**</mark>
 {% endstep %}
@@ -111,7 +113,7 @@ Level: Secret ≥ Confidential ✅. Categories: {A, B} ⊇ {A} ✅.
 {% step %}
 #### Object: CONFIDENTIAL {C}
 
-Level: Secret ≥ Confidential ✅. Categories: {A, B} does not contain C ❌.
+Level: Secret ≥ Confidential <i class="fa-check" style="color:$success;">:check:</i>. Categories: {A, B} does not contain C <i class="fa-xmark" style="color:$danger;">:xmark:</i>.
 
 <mark style="color:$danger;">**Access denied.**</mark> No need-to-know for compartment C, even though the level is lower.
 {% endstep %}
@@ -119,7 +121,7 @@ Level: Secret ≥ Confidential ✅. Categories: {A, B} does not contain C ❌.
 {% step %}
 #### Object: TOP SECRET {A}
 
-Level: Secret < Top Secret ❌.
+Level: Secret < Top Secret <i class="fa-xmark" style="color:$danger;">:xmark:</i>.
 
 <mark style="color:$danger;">**Access denied.**</mark> Clearance is too low, even though the category matches.
 {% endstep %}
@@ -127,7 +129,7 @@ Level: Secret < Top Secret ❌.
 {% step %}
 #### Object: SECRET {A, B}
 
-Level equal ✅. Categories equal ✅.
+Level equal <i class="fa-check" style="color:$success;">:check:</i>. Categories equal <i class="fa-check" style="color:$success;">:check:</i>.
 
 <mark style="color:$success;">**Access granted.**</mark> Equal labels dominate each other.
 {% endstep %}
@@ -137,8 +139,8 @@ Level equal ✅. Categories equal ✅.
 
 When levels and categories are combined, the full set of possible labels forms a **lattice**: a partially ordered structure where some labels can be compared and others cannot (e.g. `SECRET {A}` and `SECRET {B}` are incomparable; neither dominates the other).
 
-* **Least Upper Bound (LUB):** the lowest label that dominates both of two labels. For `SECRET {A}` and `CONFIDENTIAL {B}` it is `SECRET {A, B}`.
-* **Greatest Lower Bound (GLB):** the highest label that both labels dominate. For `SECRET {A, B}` and `TOP SECRET {B, C}` it is `SECRET {B}`.
+* <mark style="color:$info;">**Least Upper Bound (LUB):**</mark> the lowest label that dominates both of two labels. For `SECRET {A}` and `CONFIDENTIAL {B}` it is `SECRET {A, B}`.
+* <mark style="color:$info;">**Greatest Lower Bound (GLB):**</mark> the highest label that both labels dominate. For `SECRET {A, B}` and `TOP SECRET {B, C}` it is `SECRET {B}`.
 
 ***
 
@@ -200,16 +202,3 @@ The two formal models most often paired with classification are opposites of eac
 * **Aggregation:** combining several pieces of lower-classified data produces information that is more sensitive than any single piece (e.g. individual troop movements vs. the full deployment plan).
 * **Inference:** deducing higher-classified information from lower-classified data you can access.
 * **Countermeasure:** **polyinstantiation**, where a database holds multiple versions of a record at different classification levels so lower-cleared users see a cover version rather than an obvious gap.
-
-***
-
-## Exam Traps
-
-{% hint style="danger" %}
-* **Clearance ≠ access.** Need-to-know is always required as well.
-* **The system decides, not the owner.** In MAC, users cannot override labels, even on data they created.
-* **Categories aren't ranked.** Having more categories doesn't make a label "higher"; it only makes it broader. Two labels at the same level with different categories are incomparable.
-* **Don't mix schemes.** If a question uses Top Secret/Secret/Confidential, don't answer with commercial labels such as Private or Sensitive.
-* **BLP vs Biba direction.** BLP: no read **up**, no write **down**. Biba: no read **down**, no write **up**.
-* **Rule-Based vs Role-Based.** Both abbreviate to RBAC. Read the question carefully.
-{% endhint %}
