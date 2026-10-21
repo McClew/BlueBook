@@ -211,6 +211,7 @@
     * [The Boundary & Scoping](field-manual/consultancy/ce-advisor/the-boundary-and-scoping.md)
     * [The Five Technical Controls](field-manual/consultancy/ce-advisor/the-five-technical-controls.md)
     * [CE Gap Analysis](field-manual/consultancy/ce-advisor/ce-gap-analysis.md)
+    * [CE Readiness Checklist](field-manual/consultancy/ce-advisor/ce-readiness-checklist.md)
     * [Reporting & Remediation](field-manual/consultancy/ce-advisor/reporting-and-remediation.md)
     * [CE+ Technical Audit](field-manual/consultancy/ce-advisor/ce+-technical-audit.md)
     * [Advisor Resources](field-manual/consultancy/ce-advisor/advisor-resources/README.md)
