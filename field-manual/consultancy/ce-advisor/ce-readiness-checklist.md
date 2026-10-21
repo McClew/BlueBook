@@ -1,13 +1,36 @@
-# CE Readiness Checklist
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
 
-This is the single source of truth for checking whether an organisation meets Cyber Essentials, both before certification and in post-certification compliance reviews.
+# CE Readiness Checklist
 
 <mark style="color:$info;">**Standard:**</mark> NCSC _Cyber Essentials: Requirements for IT Infrastructure v3.3_ (April 2026)
 
 <mark style="color:$info;">**Question set:**</mark> IASME **Danzell**. Applies to all assessment accounts created on or after **27 April 2026**. Accounts created earlier had six months to certify against v3.2 / Willow.
 
 {% hint style="danger" %}
-Items marked **🔴 AUTO-FAIL** fail the whole assessment on their own, regardless of every other answer.
+#### Auto-fail
+
+Items marked <i class="fa-ban" style="color:$danger;">:ban:</i> <mark style="color:red;">**AUTO-FAIL**</mark> fail the whole assessment on their own, regardless of every other answer.
 {% endhint %}
 
 {% hint style="info" %}
@@ -35,7 +58,7 @@ Items marked **🔴 AUTO-FAIL** fail the whole assessment on their own, regardle
 
 ## 0. Scope & Pre-Assessment
 
-Scope is not a technical control, but every control check is meaningless if the scope is wrong. See [The Boundary & Scoping](the-boundary-and-scoping.md).
+Scope is not a technical control, but every control check is meaningless if the scope is wrong. See [the-boundary-and-scoping.md](the-boundary-and-scoping.md "mention").
 
 ### Boundary
 
@@ -132,14 +155,10 @@ Scope is not a technical control, but every control check is meaningless if the 
 * [ ] All software is supported on the **date the certificate is issued**. Flag any end-of-support dates that fall within the certification year.
 * [ ] Mobile and tablet OS versions still receive vendor security updates.
 * [ ] Automatic updates are enabled wherever possible.
-* [ ] 🔴 **AUTO-FAIL (A6.4):** all high-risk or critical security updates and vulnerability fixes for **operating systems and router/firewall firmware** are installed within **14 days** of release.
-* [ ] 🔴 **AUTO-FAIL (A6.5):** all high-risk or critical security updates and vulnerability fixes for **applications, including associated files and extensions**, are installed within **14 days** of release.
+* [ ] <i class="fa-ban" style="color:$danger;">:ban:</i> <mark style="color:$danger;">AUTO-FAIL</mark> <mark style="color:$danger;"></mark><mark style="color:$danger;">**(A6.4)**</mark>**:** all high-risk or critical security updates and vulnerability fixes for **operating systems and router/firewall firmware** are installed within **14 days** of release.
+* [ ] <i class="fa-ban" style="color:$danger;">:ban:</i> <mark style="color:$danger;">AUTO-FAIL</mark> <mark style="color:$danger;"></mark><mark style="color:$danger;">**(A6.5)**</mark>**:** all high-risk or critical security updates and vulnerability fixes for **applications, including associated files and extensions**, are installed within **14 days** of release.
 * [ ] Patch compliance is verified across the **entire** scope, not just a sample (patch reports from RMM/MDM, vulnerability scans).
 * [ ] Vulnerability fixes that are not traditional patches (registry fixes, configuration changes, vendor scripts) are tracked and applied within the same window.
-
-{% hint style="success" %}
-**Recommended, not mandatory:** apply **all** released updates within 14 days, whatever their severity.
-{% endhint %}
 
 ***
 
@@ -159,7 +178,7 @@ Scope is not a technical control, but every control check is meaningless if the 
 
 ### Multi-Factor Authentication
 
-* [ ] 🔴 **AUTO-FAIL:** MFA is enabled on **every cloud service where it is available**, whether it is free, included or a paid option.
+* [ ] <i class="fa-ban" style="color:$danger;">:ban:</i> <mark style="color:$danger;">**AUTO-FAIL**</mark>**:** MFA is enabled on **every cloud service where it is available**, whether it is free, included or a paid option.
 * [ ] MFA is implemented wherever else it is available, prioritising administrative accounts and accounts accessible from the internet.
 * [ ] The password element of MFA is at least **8 characters** with **no maximum length**.
 * [ ] Additional factors are one of: a managed or enterprise device, an app on a trusted device, a physically separate token, or a known or trusted account.
@@ -227,7 +246,7 @@ Scope is not a technical control, but every control check is meaningless if the 
 
 ## 7. Cyber Essentials Plus Readiness
 
-Only applies if the organisation is going on to CE+. See [CE+ Technical Audit](ce+-technical-audit.md).
+Only applies if the organisation is going on to CE+. See [ce+-technical-audit.md](ce+-technical-audit.md "mention").
 
 * [ ] The VSA is completed and **finalised before CE+ testing begins**. Answers **cannot be changed** in response to CE+ results.
 * [ ] Updates are applied across the **whole** CE+ scope, not only the devices likely to be sampled.
