@@ -172,6 +172,7 @@
   * [Cloud](field-manual/security-engineering/cloud/README.md)
     * [Microsoft 365](field-manual/security-engineering/cloud/microsoft-365/README.md)
       * [M365 Hardening](field-manual/security-engineering/cloud/microsoft-365/m365-hardening.md)
+  * [Physical & Environmental Security](field-manual/security-engineering/physical-and-environmental-security.md)
 * [Security Assessment](field-manual/security-assessment/README.md)
   * [Attack Path Management](field-manual/security-assessment/attack-path-management.md)
   * [AD & Domain Auditing](field-manual/security-assessment/ad-and-domain-auditing.md)
