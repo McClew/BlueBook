@@ -172,6 +172,7 @@
   * [Cloud](field-manual/security-engineering/cloud/README.md)
     * [Microsoft 365](field-manual/security-engineering/cloud/microsoft-365/README.md)
       * [M365 Hardening](field-manual/security-engineering/cloud/microsoft-365/m365-hardening.md)
+  * [Mobile](field-manual/security-engineering/mobile.md)
   * [Physical & Environmental Security](field-manual/security-engineering/physical-and-environmental-security/README.md)
     * [Site & Facility Design](field-manual/security-engineering/physical-and-environmental-security/site-and-facility-design.md)
     * [Physical Access Controls](field-manual/security-engineering/physical-and-environmental-security/physical-access-controls.md)

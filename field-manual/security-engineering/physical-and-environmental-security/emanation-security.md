@@ -29,4 +29,5 @@ Electronic equipment and copper cabling leak electromagnetic signals that can be
 * **Faraday cage:** an enclosure (room, rack or bag) that blocks electromagnetic signals in both directions.
 * **White noise:** broadcasting random noise to mask real emanations.
 * **Control zones:** keeping a large enough physical distance, or shielded area, between sensitive equipment and anywhere an attacker could position receiving equipment.
-* **Media choice:** fiber does not emit electromagnetic signals (see [Cabling](../networking/cabling.md)).
+* **Media choice:** fiber does not emit electromagnetic signals (see [cabling.md](../networking/cabling.md "mention")).
+
