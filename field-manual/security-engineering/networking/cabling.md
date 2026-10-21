@@ -69,7 +69,7 @@ Understanding why signals degrade explains why some media are chosen for hostile
 
 <mark style="color:$info;">**Implementation Example:**</mark> Keep copper data cabling away from power cables and EMI sources. Where they must meet, cross at 90° rather than running in parallel.
 
-For protecting the facility itself from power problems (UPS, generators, surge protection), see [physical-and-environmental-security.md](../physical-and-environmental-security.md "mention").
+For protecting the facility itself from power problems (UPS, generators, surge protection), see [physical-and-environmental-security](../physical-and-environmental-security/ "mention").
 
 ***
 

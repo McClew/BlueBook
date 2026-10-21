@@ -26,7 +26,7 @@ layout:
 Physical and environmental controls protect the facility and everything in it from power problems, heat, water, fire and electromagnetic threats. <mark style="color:$primary;">**If the power, cooling or building fails, every logical control fails with it.**</mark> These controls mainly protect <mark style="color:$success;">**availability**</mark>, with emanation security also protecting <mark style="color:$success;">**confidentiality**</mark>.
 
 {% hint style="info" %}
-For how network media themselves resist EMI and power fluctuations, see [networking](networking/ "mention") > [cabling.md](networking/cabling.md "mention").
+For how network media themselves resist EMI and power fluctuations, see [networking](../networking/ "mention") > [cabling.md](../networking/cabling.md "mention").
 {% endhint %}
 
 ***
@@ -136,4 +136,4 @@ Electronic equipment and copper cabling leak electromagnetic signals that can be
 * **Faraday cage:** an enclosure (room, rack or bag) that blocks electromagnetic signals in both directions.
 * **White noise:** broadcasting random noise to mask real emanations.
 * **Control zones:** keeping a large enough physical distance, or shielded area, between sensitive equipment and anywhere an attacker could position receiving equipment.
-* **Media choice:** fiber does not emit electromagnetic signals (see [Cabling](networking/cabling.md)).
+* **Media choice:** fiber does not emit electromagnetic signals (see [Cabling](../networking/cabling.md)).
