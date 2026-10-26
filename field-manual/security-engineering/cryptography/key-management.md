@@ -55,3 +55,26 @@ Effective key management requires addressing multiple operational elements: secu
 
 Each element requires documented policies, trained personnel and technical controls working in concert.
 
+### The Four Pillars
+
+Key management encompasses four primary operational elements that work together to protect cryptographic keys throughout their existence. These elements are key generation, key distribution, key storage and protection, and key lifecycle management.
+
+Each element presents distinct security challenges and requires specific technical controls and organisational policies. Understanding these elements helps practitioners recognise what key management actually encompasses and why it is so critical to overall security posture.
+
+#### Key Generation
+
+Key generation involves creating cryptographic keys using appropriate randomness sources and algorithms. Poor key generation - such as using predictable sources or insufficient entropy - can create keys that appear strong but are actually vulnerable to attack.
+
+#### Key Distribution
+
+Key distribution addresses the challenge of securely transporting keys from generation points to users who need them.
+
+#### Key Storage & Protection
+
+Key storage and protection ensures that keys remain confidential and integral while at rest. this includes secure storage mechanisms such as hardware security modules, encrypted key stores and access controls that limit who can retrieve or use keys.
+
+Organisations must implement technical controls that prevent unauthorised access while maintaining availability for legitimate users and applications that need the keys.
+
+#### Key Lifecycle Management
+
+Key lifecycle management encompasses the ongoing operational processes that maintain security over time. This includes regular key rotation to limit the impact of potential key compromise.It also includes secure key retirement and destruction when keys reach the end of their useful life ensuring that retired keys cannot be recovered and misused by attackers.
