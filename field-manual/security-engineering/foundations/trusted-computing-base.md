@@ -24,7 +24,9 @@ layout:
 # Trusted Computing Base
 
 {% hint style="info" %}
-**In one sentence:** the Trusted Computing Base (TCB) is the set of hardware, firmware and software in a system that you have no choice but to trust, because if any part of it fails or is compromised, none of the system's other security controls can be relied upon.
+#### Quick Definition
+
+The Trusted Computing Base (TCB) is the set of hardware, firmware and software in a system that we have no choice but to trust, because if any part of it fails or is compromised, none of the system's other security controls can be relied upon.
 {% endhint %}
 
 ## Overview
@@ -35,15 +37,13 @@ The authoritative definition (CNSSI 4009, used by NIST) describes the TCB as:
 
 In practice, the TCB is the minimal, core set of hardware and operating system functions that provides a reliable, protected foundation for everything else. It is the part of the system that stops user-mode programs from gaining privileged status, which would let them manipulate hardware directly, bypass access controls, or interfere with other processes.
 
-Every security control you add higher up the stack (antivirus, file permissions, application allow-listing, a SIEM agent) is ultimately _asking the TCB_ to enforce something. If the TCB is compromised, those controls are only as trustworthy as the thing an attacker now controls.
+Every security control we add higher up the stack (antivirus, file permissions, application allow-listing, a SIEM agent) is ultimately _asking the TCB_ to enforce something. If the TCB is compromised, those controls are only as trustworthy as the thing an attacker now controls.
 
-### It Is a Concept, Not a Product
+### The Concept
 
-The TCB is not something you buy, install or switch on, and it is not a methodology or a process. It is a **boundary you draw** around the components of a system that must work correctly for the system's security policy to hold.
+<mark style="color:$info;">The TCB is a</mark> <mark style="color:$info;"></mark><mark style="color:$info;">**boundary you draw**</mark> around the components of a system that must work correctly for the system's security policy to hold.
 
-Think of it like the foundations of a building: you don't "deploy" foundations as a separate feature, but every floor above depends on them, and you treat any work on them very differently from redecorating an office.
-
-Because it is a boundary, the TCB is **managed** rather than deployed. You:
+Because it is a boundary, the TCB is **managed** rather than deployed. We:
 
 1. **Identify** it: which components must I trust on this platform?
 2. **Minimise** it: trust as few components as possible.
@@ -51,7 +51,9 @@ Because it is a boundary, the TCB is **managed** rather than deployed. You:
 4. **Control changes** to it: supply chain, configuration management and change approval.
 
 {% hint style="success" %}
-**Practitioner analogy:** Tier 0 in the Active Directory tiering model (domain controllers, Domain Admins, AD CS, Entra Connect) is effectively the TCB of your identity system. Compromise Tier 0 and every downstream control becomes untrustworthy, which is exactly why Tier 0 is kept small, isolated, and tightly change-controlled. An endpoint's TCB works on the same logic.
+#### Practitioner Analogy
+
+Tier 0 in the Active Directory tiering model (domain controllers, Domain Admins, AD CS, Entra Connect) is effectively the TCB of your identity system. Compromise Tier 0 and every downstream control becomes untrustworthy, which is exactly why Tier 0 is kept small, isolated, and tightly change-controlled. An endpoint's TCB works on the same logic.
 {% endhint %}
 
 ### "Trusted" Does Not Mean "Trustworthy"
@@ -59,15 +61,15 @@ Because it is a boundary, the TCB is **managed** rather than deployed. You:
 This is the single most important idea for understanding the TCB, and the one most often misunderstood.
 
 * In everyday language, _trusted_ means "reliable, worthy of confidence".
-* In computer security, _trusted_ means **"security-critical: we are forced to rely on it"**.
+* In computer security, _trusted_ means **"**<mark style="color:$info;">**security-critical: we are forced to rely on it**</mark>**"**.
 
-A trusted component is one you **have** to trust, regardless of whether you **can** or **should**. The term says nothing about whether the component is actually secure. A buggy kernel driver running in ring 0 is still part of the TCB; it is just a bad part of it.
+A trusted component is one we **have** to trust, regardless of whether we **can** or **should**. The term says nothing about whether the component is actually secure. A buggy kernel driver running in ring 0 is still part of the TCB; it is just a bad part of it.
 
 This is why every component inside the TCB deserves _extra_ scrutiny, not less, and why a smaller TCB is a better TCB.
 
 ### Trust Is Inherited
 
-If a component is in the TCB, **so is every component it depends on**, because if those dependencies fail, it cannot be guaranteed to work either.
+If a component is in the TCB, <mark style="color:$info;">**so is every component it depends on**</mark>, because if those dependencies fail, it cannot be guaranteed to work either.
 
 The kernel depends on its drivers, which depend on the firmware that loaded them, which depends on the CPU and the boot ROM. That chain is why the TCB of a modern laptop extends from the silicon all the way up to security-critical services in the operating system.
 
@@ -75,15 +77,23 @@ The kernel depends on its drivers, which depend on the firmware that loaded them
 
 ## Key Terms
 
-The original ISC2 material blends several closely related terms together. Separating them makes the topic much easier to reason about.
-
 <table><thead><tr><th width="170">Term</th><th width="260">What It Is</th><th width="130">Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>Trusted Computing Base</strong></td><td>Everything (hardware, firmware, software) responsible for enforcing the security policy.</td><td><mark style="color:$info;">Boundary</mark></td><td>CPU, UEFI firmware, hypervisor, kernel, drivers, LSASS on a Windows laptop.</td></tr><tr><td><strong>Reference Monitor</strong></td><td>An abstract machine that mediates <em>every</em> access by a subject to an object.</td><td><mark style="color:$info;">Concept</mark></td><td>The idea that "something must check every file open against the ACL".</td></tr><tr><td><strong>Security Kernel</strong></td><td>The hardware, firmware and software that <em>implement</em> the reference monitor.</td><td><mark style="color:$success;">Component</mark></td><td>The Windows Security Reference Monitor, SELinux in the Linux kernel.</td></tr><tr><td><strong>Security Perimeter</strong></td><td>The imaginary line separating the TCB from everything outside it.</td><td><mark style="color:$info;">Boundary</mark></td><td>The user-mode / kernel-mode transition (system call interface).</td></tr><tr><td><strong>Trusted Path</strong></td><td>A protected communication channel between the <em>user</em> and the TCB that cannot be imitated or intercepted.</td><td><mark style="color:$success;">Mechanism</mark></td><td>Ctrl+Alt+Del (Secure Attention Sequence) before the Windows logon screen.</td></tr><tr><td><strong>Trusted Channel</strong></td><td>A protected communication channel between the TCB and another trusted system.</td><td><mark style="color:$success;">Mechanism</mark></td><td>A mutually authenticated, encrypted link between two trusted systems.</td></tr><tr><td><strong>Trusted Platform Module (TPM)</strong></td><td>A dedicated security chip providing a hardware root of trust (key storage, boot measurements, attestation).</td><td><mark style="color:$success;">Component</mark></td><td>A TPM 2.0 chip sealing BitLocker keys to a known-good boot state.</td></tr></tbody></table>
 
 {% hint style="warning" %}
-**TCB vs TPM:** despite the similar names, they are different kinds of thing. The TCB is a _boundary_; the TPM is a _chip_. A TPM is commonly part of a modern TCB, but a system can have a TCB without a TPM.
+#### TCB vs TPM
+
+The TCB is a _boundary_; the TPM is a _chip_.
+
+A TPM is commonly part of a modern TCB, but a system can have a TCB without a TPM.
 {% endhint %}
 
-The relationship in one line: **the reference monitor is the idea, the security kernel is its implementation, and the TCB contains the security kernel plus every other protection mechanism the system relies on.**
+{% hint style="info" %}
+#### The relationship in one line
+
+The reference monitor is the idea, the security kernel is its implementation, and the TCB contains the security kernel plus every other protection mechanism the system relies on.
+
+<p align="center"><img src="../../../.gitbook/assets/TCB-relationship.jpeg" alt=""></p>
+{% endhint %}
 
 ***
 
@@ -95,19 +105,13 @@ Any implementation of a reference monitor (a _reference validation mechanism_) m
 
 <table><thead><tr><th width="190">Property</th><th width="300">Requirement</th><th>Fails When…</th></tr></thead><tbody><tr><td><strong>Complete Mediation</strong> (always invoked)</td><td>Every access to every object is checked, every time. There is no route around it.</td><td>An old API, a cached handle, or a debug interface lets a process reach an object without the check.</td></tr><tr><td><strong>Tamper-Proof</strong> (isolation)</td><td>The mechanism itself cannot be modified or disabled by anything it is supervising.</td><td>Malware loads a kernel driver and patches out the access check.</td></tr><tr><td><strong>Verifiable</strong> (small enough to analyse)</td><td>It is small and simple enough to be tested and analysed so its correctness can be assured.</td><td>The enforcement logic is spread across millions of lines of code nobody can fully review.</td></tr></tbody></table>
 
-Modern literature often says _tamper-resistant_ rather than _tamper-proof_, to avoid implying that anything is unbreakable. For the exam, recognise both.
-
 ### How the Reference Monitor Responds to Violations
 
 The reference monitor's normal job is simply to **deny** an unauthorised access: the process asks to read a file it has no rights to, and the request fails.
 
-The ISC2 material notes that if the reference monitor detects a violation, such as one user-mode program attempting to access RAM or CPU registers allocated to another, it can and will **shut down the system** rather than allow the violation to escalate. This reflects a **fail-secure** design: when the integrity of the TCB itself is in doubt, stopping is safer than continuing in an unknown state.
+If the reference monitor detects a violation, such as one user-mode program attempting to access RAM or CPU registers allocated to another, it can and will **shut down the system** rather than allow the violation to escalate. <mark style="color:$info;">This reflects a</mark> <mark style="color:$info;"></mark><mark style="color:$info;">**fail-secure**</mark> <mark style="color:$info;"></mark><mark style="color:$info;">design</mark>: when the integrity of the TCB itself is in doubt, stopping is safer than continuing in an unknown state.
 
 <mark style="color:$info;">**Implementation Example:**</mark> Windows Kernel Patch Protection (PatchGuard) monitors critical kernel structures. If it detects that they have been modified, it deliberately crashes the system (bug check `0x109 CRITICAL_STRUCTURE_CORRUPTION`) rather than keep running with a tampered kernel.
-
-{% hint style="info" %}
-**Exam framing:** remember the ISC2 line that the reference monitor will shut the system down rather than allow a violation to escalate. Understand it as _fail-secure behaviour when the TCB's own integrity is threatened_, not as the response to every denied file access.
-{% endhint %}
 
 ***
 
@@ -142,6 +146,8 @@ The TCB is the lowest-level enforcer of access control policies. It enforces the
 
 CPUs provide hardware privilege levels, usually drawn as concentric rings. Code in an inner ring can do things code in an outer ring cannot.
 
+<figure><img src="../../../.gitbook/assets/protection-rings.png" alt=""><figcaption></figcaption></figure>
+
 <table><thead><tr><th width="120">Ring</th><th width="200">Mode</th><th>What Runs There</th></tr></thead><tbody><tr><td><strong>Ring -1</strong> (informal)</td><td>Hypervisor</td><td>Hyper-V, VMware ESXi, KVM. Controls the operating systems themselves.</td></tr><tr><td><strong>Ring 0</strong></td><td>Kernel / supervisor mode</td><td>OS kernel, security kernel, device drivers. Full access to memory and hardware.</td></tr><tr><td><strong>Rings 1-2</strong></td><td>Rarely used</td><td>Historically drivers or OS services; most modern OSs skip these.</td></tr><tr><td><strong>Ring 3</strong></td><td>User mode</td><td>Applications, browsers, Office. Must ask the kernel (via system calls) to touch hardware or other processes.</td></tr></tbody></table>
 
 The boundary between ring 3 and ring 0 is where the **security perimeter** usually sits on a single machine. A user-mode program that wants to open a file, allocate memory or talk to a device must cross that boundary through a controlled interface (a system call), where the security kernel can check the request.
@@ -163,7 +169,7 @@ The TCB also creates and controls **trusted paths**, protected routes that canno
 * A **trusted path** links the **user** to the TCB. Its purpose is to guarantee that when you type your password, you are talking to the real operating system and not a fake login screen.
 * A **trusted channel** links the TCB to **another trusted system** (for example, a mutually authenticated, encrypted link).
 
-The ISC2 material also describes the TCB managing trusted paths between processes and hardware devices by means of their device drivers and service handlers. This is the same idea applied inside the machine: user-mode code never talks to hardware directly, only through the TCB's controlled interfaces.
+The TCB manages trusted paths between processes and hardware devices by means of their device drivers and service handlers. This is the same idea applied inside the machine: user-mode code never talks to hardware directly, only through the TCB's controlled interfaces.
 
 <mark style="color:$info;">**Implementation Example:**</mark> Pressing **Ctrl+Alt+Del** before logging on to Windows is a _Secure Attention Sequence_. The key combination is intercepted by the kernel and cannot be captured by any user-mode application, so whatever appears afterwards is guaranteed to be the genuine Windows logon interface rather than a password-stealing imitation.
 
@@ -173,7 +179,7 @@ The separation of process resources and the management of trusted paths are fund
 
 ## What's Inside a Modern TCB
 
-The ISC2 material says the TCB typically consists of the TPM, the reference monitor and elements of the OS kernel. More precisely, a modern TCB is a **layered stack**, where each layer depends on (and is verified by) the one beneath it. This chain is often called the **chain of trust**.
+The TCB typically consists of the TPM, the reference monitor and elements of the OS kernel. More precisely, a modern TCB is a **layered stack**, where each layer depends on (and is verified by) the one beneath it. This chain is often called the **chain of trust**.
 
 <table><thead><tr><th width="200">Layer</th><th width="280">Examples</th><th>Role in the TCB</th></tr></thead><tbody><tr><td><strong>Hardware Root of Trust</strong></td><td>CPU, boot ROM, TPM, Secure Enclave / Pluton</td><td>Immutable starting point. Stores keys and records boot measurements that cannot be faked by software.</td></tr><tr><td><strong>Firmware</strong></td><td>UEFI / BIOS, Secure Boot, device firmware</td><td>Initialises hardware and verifies the signature of the bootloader before handing over control.</td></tr><tr><td><strong>Hypervisor</strong></td><td>Hyper-V (including VBS), ESXi, KVM</td><td>Isolates operating systems from each other and, with VBS, isolates security functions from the OS kernel itself.</td></tr><tr><td><strong>OS Kernel &#x26; Drivers</strong></td><td>ntoskrnl.exe, Linux kernel, all ring 0 drivers</td><td>Contains the security kernel. Every kernel-mode driver is inside the TCB, including third-party ones.</td></tr><tr><td><strong>Security-Critical Services</strong></td><td>LSASS, Winlogon, EDR agents, disk encryption</td><td>Authenticate users, hold credentials, enforce policy. Run with high privilege and are trusted by everything else.</td></tr></tbody></table>
 
@@ -271,7 +277,7 @@ Responsibility for the TCB is shared:
 * **Vendors** design and build the TCB: they decide what runs in kernel mode, how firmware is signed, and how quickly vulnerabilities are patched.
 * **The organisation** selects the TCB (procurement), configures it (baseline), keeps it current (patching and change control), and verifies it (monitoring and attestation).
 
-You cannot design the Windows kernel, but you _can_ choose hardware that supports VBS, enforce HVCI, block vulnerable drivers, limit which third-party kernel drivers you allow, and control how updates reach your estate.
+We cannot design the Windows kernel, but _can_ choose hardware that supports VBS, enforce HVCI, block vulnerable drivers, limit which third-party kernel drivers you allow, and control how updates reach our estate.
 
 ***
 
@@ -285,7 +291,7 @@ The **Trusted Computer System Evaluation Criteria (DoD 5200.28-STD, 1985)**, kno
 
 <table><thead><tr><th width="100">Class</th><th width="260">Name</th><th>Key Requirement</th></tr></thead><tbody><tr><td><strong>D</strong></td><td>Minimal Protection</td><td>Evaluated but failed to meet higher classes.</td></tr><tr><td><strong>C1</strong></td><td>Discretionary Security Protection</td><td>Basic DAC, separation of users and data.</td></tr><tr><td><strong>C2</strong></td><td>Controlled Access Protection</td><td>Individual accountability through login and auditing; object reuse protection.</td></tr><tr><td><strong>B1</strong></td><td>Labelled Security Protection</td><td><strong>Mandatory Access Control</strong> with security labels (see <a href="classification-and-clearance.md">Classification &#x26; Clearance</a>).</td></tr><tr><td><strong>B2</strong></td><td>Structured Protection</td><td>Formal security model, trusted path, covert storage channel analysis.</td></tr><tr><td><strong>B3</strong></td><td>Security Domains</td><td>Reference monitor requirements fully met, trusted recovery, covert timing channel analysis.</td></tr><tr><td><strong>A1</strong></td><td>Verified Design</td><td>Formal, mathematically verified design.</td></tr></tbody></table>
 
-The Orange Book was cancelled in 2002 and has been replaced by the Common Criteria, but its terminology (TCB, reference monitor, security kernel, trusted path) still underpins exam questions.
+The Orange Book was cancelled in 2002 and has been replaced by the Common Criteria, but its terminology (TCB, reference monitor, security kernel, trusted path) is still used.
 
 ### Common Criteria (ISO/IEC 15408)
 
@@ -402,53 +408,3 @@ Add the new model's TCB to the inventory, define its baseline, and incorporate i
 Security should be part of the procurement decision, not informed after it.
 {% endstep %}
 {% endstepper %}
-
-***
-
-## Exam Tips
-
-{% hint style="info" %}
-* **TCB** = the _totality_ of protection mechanisms (hardware, firmware, software) enforcing the security policy. Look for "totality" or "all" in answer options.
-* **Reference monitor** = the abstract _concept_. **Security kernel** = its _implementation_.
-* The three reference monitor properties: **complete mediation**, **tamper-proof (isolation)**, **verifiable**.
-* **Security perimeter** = the boundary between the TCB and the rest of the system.
-* **Trusted path** = user ↔ TCB. **Trusted channel** = system ↔ system.
-* **Secure Boot** prevents; **Measured Boot** records and enables attestation.
-* "Trusted" means _must be relied upon_, not _proven secure_.
-* Changing hardware make or model introduces a **new TCB** into the baseline.
-{% endhint %}
-
-***
-
-## Key Takeaways
-
-* The TCB is a **boundary, not a product**: it is identified, minimised, protected and change-controlled, not deployed.
-* "Trusted" means **security-critical**, not **trustworthy**; components inside the TCB deserve the most scrutiny.
-* The TCB is the **lowest-level enforcer of access control policies**, preserving separation of memory and CPU resources between process threads.
-* The **reference monitor** must provide complete mediation, be tamper-proof and be verifiable; the **security kernel** is what implements it.
-* The reference monitor will **shut down the system** rather than allow a potential security violation to escalate (fail-secure).
-* The **OS kernel** manages process IDs, main memory, virtual memory and paging, and the CPU and other essential hardware subsystems.
-* A modern TCB is a **chain of trust** from the hardware root of trust, through firmware and the hypervisor, to the kernel, drivers and security services.
-* **Smaller is better:** every component in the TCB is a component whose failure breaks everything.
-* Even changing to a different make and model of laptop brings a **new TCB** into the organisation's security baseline, so procurement and configuration management are security activities.
-
-***
-
-## Related
-
-* [Access Control](access-control.md): the access control models the TCB enforces.
-* [Classification & Clearance](classification-and-clearance.md): the MAC rules (e.g. Bell-LaPadula) that depend on a trustworthy reference monitor.
-* [Windows Internals](../../reverse-engineering/windows-internals/): where the Windows Security Reference Monitor sits in kernel mode.
-
-## Sources
-
-* [NIST CSRC Glossary: Trusted Computing Base](https://csrc.nist.gov/glossary/term/trusted_computing_base)
-* [NIST CSRC Glossary: Security Kernel](https://csrc.nist.gov/glossary/term/security_kernel)
-* [Red Hat: What is a Trusted Computing Base?](https://next.redhat.com/2021/06/18/what-is-a-trusted-computing-base/)
-* [Orange Book §6.1: The Reference Monitor Concept](https://ftp.ntu.edu.tw/linux/libs/security/Orange-Linux/refs/Orange/OrangeI-II-6.html)
-* [NIST SP 800-53 AC-25: Reference Monitor](https://opensecurityarchitecture.org/controls/ac-25)
-* [NIST SP 800-160 Vol. 1 Rev. 1: Engineering Trustworthy Secure Systems](https://csrc.nist.gov/pubs/sp/800/160/v1/r1/final)
-* [NIST SP 800-193: Platform Firmware Resiliency Guidelines](https://csrc.nist.gov/pubs/sp/800/193/final)
-* [Microsoft Learn: Virtualization-based protection of code integrity](https://learn.microsoft.com/en-us/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity)
-* [Wikipedia: Trusted Computer System Evaluation Criteria](https://en.wikipedia.org/wiki/Trusted_Computer_System_Evaluation_Criteria)
-* ISC2 SSCP Official Study App: Trusted Computing Base
