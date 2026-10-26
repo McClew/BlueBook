@@ -164,6 +164,7 @@
   * [Foundations](field-manual/security-engineering/foundations/README.md)
     * [Network Models](field-manual/security-engineering/foundations/network-models.md)
     * [Access Control](field-manual/security-engineering/foundations/access-control.md)
+    * [Trusted Computing Base](field-manual/security-engineering/foundations/trusted-computing-base.md)
     * [Classification & Clearance](field-manual/security-engineering/foundations/classification-and-clearance.md)
     * [Cryptography](field-manual/security-engineering/foundations/cryptography.md)
   * [Networking](field-manual/security-engineering/networking/README.md)
