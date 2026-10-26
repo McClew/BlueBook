@@ -166,6 +166,7 @@
   * [Identity & Access Management](field-manual/security-engineering/identity-and-access-management/README.md)
     * [Access Control](field-manual/security-engineering/identity-and-access-management/access-control.md)
     * [Classification & Clearance](field-manual/security-engineering/identity-and-access-management/classification-and-clearance.md)
+    * [Biometrics](field-manual/security-engineering/identity-and-access-management/biometrics.md)
   * [Networking](field-manual/security-engineering/networking/README.md)
     * [Network Models](field-manual/security-engineering/networking/network-models.md)
     * [Cabling](field-manual/security-engineering/networking/cabling.md)
