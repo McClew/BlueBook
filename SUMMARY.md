@@ -58,6 +58,7 @@
     * [Disk Acquisition Techniques](field-manual/digital-forensics/evidence-acquisition/disk-acquisition-techniques.md)
     * [Memory Capture Methods](field-manual/digital-forensics/evidence-acquisition/memory-capture-methods.md)
     * [Network Traffic Collection](field-manual/digital-forensics/evidence-acquisition/network-traffic-collection.md)
+    * [Evidence Admissibility](field-manual/digital-forensics/evidence-acquisition/evidence-admissibility.md)
   * [IR Forensics](field-manual/digital-forensics/ir-forensics/README.md)
     * [Browser Forensics](field-manual/digital-forensics/ir-forensics/browser-forensics/README.md)
       * [Chrome File Downloads](field-manual/digital-forensics/ir-forensics/browser-forensics/chrome-file-downloads.md)
