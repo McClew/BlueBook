@@ -1,9 +1,36 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
+
 # Data Sensitivity & Regulation
 
-Data sensitivity and regulation decide where cryptography is applied and how strong it must be. Sensitivity is the internal driver: the impact if data is disclosed, altered or lost. Regulation is the external driver: the minimum the organisation must meet regardless of its own risk appetite.
+Data sensitivity and regulation decide where cryptography is applied and how strong it must be.&#x20;
+
+<mark style="color:$primary;">Sensitivity is the internal driver</mark>: the impact if data is disclosed, altered or lost.&#x20;
+
+<mark style="color:$primary;">Regulation is the external driver</mark>: the minimum the organisation must meet regardless of its own risk appetite.
 
 {% hint style="info" %}
-Most regulations are written around a type of data. You can't choose or evidence controls until you know what data you hold, where it lives and how it moves.
+Most regulations are written around a type of data. We can't choose or evidence controls until we know what data is held, where it lives and how it moves.
 {% endhint %}
 
 ***
@@ -20,11 +47,7 @@ Classification assigns a label to data based on the impact of a loss of confiden
 
 ### Common Schemes
 
-| Scheme        | Levels (low → high)                                           |
-| ------------- | ------------------------------------------------------------- |
-| Commercial    | Public → Internal → Confidential → Restricted                 |
-| UK Government | OFFICIAL (incl. OFFICIAL-SENSITIVE) → SECRET → TOP SECRET     |
-| US Government | Unclassified (incl. CUI) → Confidential → Secret → Top Secret |
+<table><thead><tr><th width="196">Scheme</th><th>Levels (low > high)</th></tr></thead><tbody><tr><td>Commercial</td><td>Public <i class="fa-right">:right:</i> Internal <i class="fa-right">:right:</i> Confidential <i class="fa-right">:right:</i> Restricted</td></tr><tr><td>UK Government</td><td>OFFICIAL (incl. OFFICIAL-SENSITIVE) <i class="fa-right">:right:</i> SECRET <i class="fa-right">:right:</i> TOP SECRET</td></tr><tr><td>US Government</td><td>Unclassified (incl. CUI) <i class="fa-right">:right:</i> Confidential <i class="fa-right">:right:</i> Secret <i class="fa-right">:right:</i> Top Secret</td></tr></tbody></table>
 
 ### Setting the Level
 
@@ -36,11 +59,7 @@ Classification assigns a label to data based on the impact of a loss of confiden
 
 ### States of Data
 
-| State      | Typical Cryptographic Control                                                                 |
-| ---------- | --------------------------------------------------------------------------------------------- |
-| At rest    | Full-disk, volume, database (TDE) or field-level encryption; slow salted hashes for passwords |
-| In transit | TLS 1.2+ (prefer 1.3), IPsec/VPN, SSH/SFTP, S/MIME or PGP                                     |
-| In use     | Access control, confidential computing (secure enclaves)                                      |
+<table><thead><tr><th width="177">State</th><th>Typical Cryptographic Control</th></tr></thead><tbody><tr><td>At rest</td><td>Full-disk, volume, database (TDE) or field-level encryption; slow salted hashes for passwords</td></tr><tr><td>In transit</td><td>TLS 1.2+ (prefer 1.3), IPsec/VPN, SSH/SFTP, S/MIME or PGP</td></tr><tr><td>In use</td><td>Access control, confidential computing (secure enclaves)</td></tr></tbody></table>
 
 <mark style="color:$info;">**Crypto-shredding:**</mark> Destroying the encryption keys so the data becomes unrecoverable. Often the only practical way to sanitise cloud storage and SSDs.
 
@@ -117,18 +136,7 @@ Most of these require "strong cryptography" or "appropriate measures" rather tha
 
 <mark style="color:$info;">**Status:**</mark> Only active version since v4.0 retired on 31 December 2024. Future-dated requirements became mandatory on 31 March 2025.
 
-| Requirement | Summary                                                                                                      |
-| ----------- | ------------------------------------------------------------------------------------------------------------ |
-| 3.2–3.3     | Minimise stored account data. Never store SAD after authorisation.                                           |
-| 3.4         | Mask displayed PAN (max first six / last four).                                                              |
-| 3.5         | Render stored PAN unreadable: keyed hashes, truncation, tokens or strong encryption.                         |
-| 3.5.1.1     | Hashes of PAN must be keyed (e.g. HMAC). Plain hashes are brute-forceable.                                   |
-| 3.5.1.2     | Disk-level encryption only satisfies 3.5 for removable media.                                                |
-| 3.6–3.7     | Key management: protect and minimise key storage, cryptoperiods, rotation, split knowledge and dual control. |
-| 4.2.1       | Strong crypto for PAN over public networks; only valid, unexpired certificates.                              |
-| 4.2.1.1     | Inventory of trusted keys and certificates.                                                                  |
-| 4.2.2       | Secure PAN in end-user messaging (email, chat), or don't send it.                                            |
-| 12.3.3      | Review cipher suites and protocols at least every 12 months.                                                 |
+<table><thead><tr><th width="141">Requirement</th><th>Summary</th></tr></thead><tbody><tr><td>3.2-3.3</td><td>Minimise stored account data. Never store SAD after authorisation.</td></tr><tr><td>3.4</td><td>Mask displayed PAN (max first six / last four).</td></tr><tr><td>3.5</td><td>Render stored PAN unreadable: keyed hashes, truncation, tokens or strong encryption.</td></tr><tr><td>3.5.1.1</td><td>Hashes of PAN must be keyed (e.g. HMAC). Plain hashes are brute-forceable.</td></tr><tr><td>3.5.1.2</td><td>Disk-level encryption only satisfies 3.5 for removable media.</td></tr><tr><td>3.6-3.7</td><td><a data-mention href="key-management.md">key-management.md</a>: protect and minimise key storage, cryptoperiods, rotation, split knowledge and dual control.</td></tr><tr><td>4.2.1</td><td>Strong crypto for PAN over public networks; only valid, unexpired certificates.</td></tr><tr><td>4.2.1.1</td><td>Inventory of trusted keys and certificates.</td></tr><tr><td>4.2.2</td><td>Secure PAN in end-user messaging (email, chat), or don't send it.</td></tr><tr><td>12.3.3</td><td>Review cipher suites and protocols at least every 12 months.</td></tr></tbody></table>
 
 <mark style="color:$info;">**In Practice:**</mark> TLS 1.2+ with strong ciphers. SSL and TLS 1.0/1.1 fail. Tokenisation through the payment provider removes most systems from scope.
 
@@ -136,13 +144,7 @@ Most of these require "strong cryptography" or "appropriate measures" rather tha
 
 Risk-based ISMS standard. Controls are selected in the Statement of Applicability.
 
-| Control     | Relevance                                                               |
-| ----------- | ----------------------------------------------------------------------- |
-| 5.12 / 5.13 | Classification and labelling of information                             |
-| 5.14        | Information transfer                                                    |
-| 5.31        | Legal and regulatory requirements, including crypto import/export laws  |
-| 5.34        | Privacy and protection of PII                                           |
-| 8.24        | Use of cryptography, including key management and a cryptography policy |
+<table><thead><tr><th width="125">Control</th><th>Relevance</th></tr></thead><tbody><tr><td>5.12 / 5.13</td><td>Classification and labelling of information</td></tr><tr><td>5.14</td><td>Information transfer</td></tr><tr><td>5.31</td><td>Legal and regulatory requirements, including crypto import/export laws</td></tr><tr><td>5.34</td><td>Privacy and protection of PII</td></tr><tr><td>8.24</td><td>Use of cryptography, including key management and a cryptography policy</td></tr></tbody></table>
 
 <mark style="color:$info;">**Related:**</mark> ISO/IEC 27701 (privacy), 27018 (PII in cloud), 19790 (crypto modules), 11770 (key management), 18033 (encryption algorithms).
 
@@ -186,13 +188,7 @@ Validation standard for cryptographic modules, with four security levels (Level 
 
 ## Quick Reference
 
-| Data Type                 | Driver                                 | Cryptographic Expectation                                                             |
-| ------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------- |
-| Personal data             | UK GDPR Art. 32, ISO 27001             | Encrypt devices, databases and backups by risk; pseudonymise where possible; TLS 1.2+ |
-| Special category / health | UK GDPR Art. 9, DSPT; HIPAA for US PHI | Encrypt by default; field-level for the most sensitive fields                         |
-| Cardholder data           | PCI DSS v4.0.1                         | PAN unreadable everywhere; never store SAD; tokenise to reduce scope                  |
-| Intellectual property     | Contracts, trade secret law            | Repository and backup encryption; DRM/IRM                                             |
-| Credentials & keys        | ISO 27001 8.24, PCI DSS Req. 8         | Salted slow hashes; vault or HSM                                                      |
+<table><thead><tr><th width="216">Data Type</th><th width="233">Driver</th><th>Cryptographic Expectation</th></tr></thead><tbody><tr><td>Personal data</td><td>UK GDPR Art. 32, ISO 27001</td><td>Encrypt devices, databases and backups by risk; pseudonymise where possible; TLS 1.2+</td></tr><tr><td>Special category / health</td><td>UK GDPR Art. 9, DSPT; HIPAA for US PHI</td><td>Encrypt by default; field-level for the most sensitive fields</td></tr><tr><td>Cardholder data</td><td>PCI DSS v4.0.1</td><td>PAN unreadable everywhere; never store SAD; tokenise to reduce scope</td></tr><tr><td>Intellectual property</td><td>Contracts, trade secret law</td><td>Repository and backup encryption; DRM/IRM</td></tr><tr><td>Credentials &#x26; keys</td><td>ISO 27001 8.24, PCI DSS Req. 8</td><td>Salted slow hashes; vault or HSM</td></tr></tbody></table>
 
 {% hint style="warning" %}
 Compliance is a floor, not a ceiling. Full-disk encryption on a running server, TLS that terminates at the edge, and keys stored beside the data they protect all pass audits while protecting little.
