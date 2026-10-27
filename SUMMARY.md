@@ -183,7 +183,7 @@
   * [Cryptography](field-manual/security-engineering/cryptography/README.md)
     * [Hashing](field-manual/security-engineering/cryptography/hashing.md)
     * [Cryptography Entropy](field-manual/security-engineering/cryptography/cryptography-entropy.md)
-    * [Data Sensitivity](field-manual/security-engineering/cryptography/data-sensitivity.md)
+    * [Data Sensitivity & Regulations](field-manual/security-engineering/cryptography/data-sensitivity-and-regulations.md)
     * [Key Management](field-manual/security-engineering/cryptography/key-management.md)
   * [Physical & Environmental Security](field-manual/security-engineering/physical-and-environmental-security/README.md)
     * [Site & Facility Design](field-manual/security-engineering/physical-and-environmental-security/site-and-facility-design.md)
