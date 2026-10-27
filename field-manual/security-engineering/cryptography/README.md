@@ -17,6 +17,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Cryptography
@@ -31,7 +33,7 @@ Also known as secret-key cryptography, it uses a single shared key for both encr
 
 <mark style="color:$info;">**Use Cases:**</mark> Because of its speed, it is the go-to method for bulk data encryption. Use symmetric encryption when the primary goal is strictly Confidentiality, such as encrypting an entire hard drive, securing a large database, or protecting files stored locally.
 
-<mark style="color:$info;">**Common Algorithms:**</mark> AES, DES, 3DES, Blowfish.
+<mark style="color:$info;">**Common Algorithms:**</mark> AES. Legacy (avoid in new systems): DES, 3DES, Blowfish.
 
 <mark style="color:$info;">**Supports:**</mark> Confidentiality.
 
@@ -41,7 +43,7 @@ Also known as secret-key cryptography, it uses a single shared key for both encr
 
 Also known as public-key cryptography, it uses a mathematically related key pair: a public key and a private key. Data encrypted with one key can only be decrypted by the other.
 
-<i class="fa-chevron-up" style="color:$success;">:chevron-up:</i> <mark style="color:$success;">**Pros:**</mark> Solves the key distribution problem. Provides non-repudiation (if you encrypt with your private key, everyone knows it came from you).
+<i class="fa-chevron-up" style="color:$success;">:chevron-up:</i> <mark style="color:$success;">**Pros:**</mark> Solves the key distribution problem. Provides non-repudiation (if you sign with your private key, anyone with your public key can verify it came from you).
 
 <i class="fa-chevron-down" style="color:$danger;">:chevron-down:</i> <mark style="color:$danger;">**Cons:**</mark> Much slower and more computationally intensive than symmetric cryptography.
 
@@ -61,6 +63,6 @@ Unlike symmetric and asymmetric cryptography, hashing is a one-way function. It 
 
 <mark style="color:$info;">**Use Cases:**</mark> Storing passwords, verifying file downloads, digital signatures.
 
-<mark style="color:$info;">**Common Algorithms:**</mark> SHA-256, MD5 (deprecated, but you should know it).
+<mark style="color:$info;">**Common Algorithms:**</mark> SHA-256. MD5 is broken and now only appears in legacy systems or non-security checksums.
 
 <mark style="color:$info;">**Supports:**</mark> Integrity.

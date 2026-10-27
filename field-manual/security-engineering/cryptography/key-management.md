@@ -23,15 +23,15 @@ layout:
 
 # Key Management
 
-Key Management is the comprehensive set of processes, policies and procedures required to securely handle cryptographic keys throughout their entire lifecycle.&#x20;
+Key Management is the comprehensive set of processes, policies and procedures required to securely handle cryptographic keys throughout their entire lifecycle.
 
 {% hint style="info" %}
 Key management is a holistic discipline, not just a technical function.
 {% endhint %}
 
-Understanding key management is critical because it represents one of the most significant operational challenges in deploying cryptographic systems at scale. While cryptographic algorithms provide the mathematical foundation for security, key management determines whether those algorithms actually protect our organisations data or become a liability.
+Understanding key management is critical because it represents one of the most significant operational challenges in deploying cryptographic systems at scale. While cryptographic algorithms provide the mathematical foundation for security, key management determines whether those algorithms actually protect our organisation's data or become a liability.
 
-Effective key management requires addressing multiple elements - <mark style="color:$info;">**secure generation**</mark>, <mark style="color:$info;">**protected distribution**</mark>, <mark style="color:$info;">**secure storage**</mark>, <mark style="color:$info;">**regular rotation**</mark>, <mark style="color:$info;">**secure retirement**</mark> and <mark style="color:$info;">**recovery procedures**</mark> - across both symmetric systems (which face exponential key exchange burdens) and asymmetric systems (which reduce distribution complexity but require private key protection and certificate lifecycle management).
+Effective key management requires addressing multiple elements - <mark style="color:$info;">**secure generation**</mark>, <mark style="color:$info;">**protected distribution**</mark>, <mark style="color:$info;">**secure storage**</mark>, <mark style="color:$info;">**regular rotation**</mark>, <mark style="color:$info;">**secure retirement**</mark> and <mark style="color:$info;">**recovery procedures**</mark> - across both symmetric systems (where the number of keys grows rapidly with every user added) and asymmetric systems (which reduce distribution complexity but require private key protection and certificate lifecycle management).
 
 ***
 
@@ -39,7 +39,7 @@ Effective key management requires addressing multiple elements - <mark style="co
 
 ### Symmetric Systems
 
-Symmetric key cryptography presents unique key management challenges. With n users in a system, we must n^2 potential key exchanges. this creates enormous operational complexity: every time a key must be retired and replaced, all of those exchanges must be updated. keys in motion, storage and use become vulnerable to interception and unauthorised copying, making secure key distribution a persistent challenge.
+Symmetric key cryptography presents unique key management challenges. Every pair of users needs its own shared key, so with n users in a system we need n(n−1)/2 keys: 45 keys for 10 users, 4,950 for 100. This creates enormous operational complexity: every time a key must be retired and replaced, it must be redistributed securely to both parties. Keys in motion, storage and use become vulnerable to interception and unauthorised copying, making secure key distribution a persistent challenge.
 
 ### Asymmetric Systems
 
@@ -51,7 +51,7 @@ However, this does not eliminate key management responsibilities - it transforms
 
 ## Management in Practice
 
-Effective key management requires addressing multiple operational elements: secure key generation using appropriate randomness sources, protected distribution channels that prevent interception, secure storage mechanism with access controls, regular key rotation schedules, secure key retirement and destruction, and recovery procedures for lots or compromised keys.
+Effective key management requires addressing multiple operational elements: secure key generation using appropriate randomness sources, protected distribution channels that prevent interception, secure storage mechanisms with access controls, regular key rotation schedules, secure key retirement and destruction, and recovery procedures for lost or compromised keys.
 
 Each element requires documented policies, trained personnel and technical controls working in concert.
 
@@ -71,10 +71,10 @@ Key distribution addresses the challenge of securely transporting keys from gene
 
 #### Key Storage & Protection
 
-Key storage and protection ensures that keys remain confidential and integral while at rest. this includes secure storage mechanisms such as hardware security modules, encrypted key stores and access controls that limit who can retrieve or use keys.
+Key storage and protection ensures that keys remain confidential and integral while at rest. This includes secure storage mechanisms such as hardware security modules, encrypted key stores and access controls that limit who can retrieve or use keys.
 
 Organisations must implement technical controls that prevent unauthorised access while maintaining availability for legitimate users and applications that need the keys.
 
 #### Key Lifecycle Management
 
-Key lifecycle management encompasses the ongoing operational processes that maintain security over time. This includes regular key rotation to limit the impact of potential key compromise.It also includes secure key retirement and destruction when keys reach the end of their useful life ensuring that retired keys cannot be recovered and misused by attackers.
+Key lifecycle management encompasses the ongoing operational processes that maintain security over time. This includes regular key rotation to limit the impact of potential key compromise. It also includes secure key retirement and destruction when keys reach the end of their useful life, ensuring that retired keys cannot be recovered and misused by attackers.
