@@ -170,6 +170,7 @@
     * [Biometrics](field-manual/security-engineering/identity-and-access-management/biometrics.md)
   * [Networking](field-manual/security-engineering/networking/README.md)
     * [Network Models](field-manual/security-engineering/networking/network-models.md)
+    * [Secure Protocols](field-manual/security-engineering/networking/secure-protocols.md)
     * [Cabling](field-manual/security-engineering/networking/cabling.md)
     * [Wi-Fi](field-manual/security-engineering/networking/wi-fi.md)
   * [Endpoint](field-manual/security-engineering/endpoint/README.md)
